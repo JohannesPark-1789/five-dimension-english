@@ -1,5 +1,5 @@
 /* 5차원 영어 · BASIC DRILL — 서비스워커 (오프라인 캐시) */
-const CACHE = 'fivedim-v4';
+const CACHE = 'fivedim-v5';
 const ASSETS = [
   '.',
   'index.html',

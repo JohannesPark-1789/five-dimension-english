@@ -5,12 +5,13 @@
    원동연 박사 5차원영어학습법의 BASIC DRILL 원리를 코드로 옮긴 것.
    하나의 동사를 11가지 시제·조동사 형태로 변형하고,
    거기에 5개 의문사(What/Where/How/Why/When)를 결합한다.
-   동사를 추가할수록 연습량이 무한히 늘어난다.
+
+   ※ 동사는 모두 "사물 목적어를 받는 타동사"만 쓴다.
+      그래야 "What do you ~?"(뭘 ~?)가 자연스러운 문장이 된다.
+      (자동사 go·come 등은 "What do you go?"처럼 비문이 되므로 제외)
    ===================================================================== */
 
 /* --- 11가지 시제·조동사 형태 --------------------------------------- */
-/* en(verb)  -> 영어 의문문 (의문사 없는 기본형)
-   ko(verb)  -> 한국어 의문문 (의문사 없는 기본형)               */
 const FORMS = [
   { id: 'present',    label: '현재',          group: '기본 시제',
     en: v => `Do you ${v.base}?`,          ko: v => v.ko.present },
@@ -46,7 +47,7 @@ const QWORDS = [
   { id: 'when',  en: 'When',  ko: '언제 ' },
 ];
 
-/* --- 동사 사전 ------------------------------------------------------ */
+/* --- 동사 사전 (사물목적어 타동사 24개) ---------------------------- */
 /* base : 동사원형, ing : 진행형
    ko   : 11개 한국어 변형 (의문사 없는 기본형, "(너)" 주어 생략)     */
 const VERBS = [
@@ -68,16 +69,6 @@ const VERBS = [
       haveTo: '먹어야 하니?', hadTo: '먹어야 했니?',
       wantTo: '먹고 싶니?', wantedTo: '먹고 싶었니?',
       enjoy: '먹는 걸 즐기니?', enjoyed: '먹는 걸 즐겼니?',
-    },
-  },
-  {
-    id: 'meet', base: 'meet', ing: 'meeting', emoji: '🤝', meaning: '만나다',
-    ko: {
-      present: '만나니?', continuous: '만나고 있니?', past: '만났니?',
-      future: '만날 거니?', can: '만날 수 있니?',
-      haveTo: '만나야 하니?', hadTo: '만나야 했니?',
-      wantTo: '만나고 싶니?', wantedTo: '만나고 싶었니?',
-      enjoy: '만나는 걸 즐기니?', enjoyed: '만나는 걸 즐겼니?',
     },
   },
   {
@@ -141,56 +132,6 @@ const VERBS = [
     },
   },
   {
-    id: 'play', base: 'play', ing: 'playing', emoji: '⚽', meaning: '놀다',
-    ko: {
-      present: '노니?', continuous: '놀고 있니?', past: '놀았니?',
-      future: '놀 거니?', can: '놀 수 있니?',
-      haveTo: '놀아야 하니?', hadTo: '놀아야 했니?',
-      wantTo: '놀고 싶니?', wantedTo: '놀고 싶었니?',
-      enjoy: '노는 걸 즐기니?', enjoyed: '노는 걸 즐겼니?',
-    },
-  },
-  {
-    id: 'go', base: 'go', ing: 'going', emoji: '🚶', meaning: '가다',
-    ko: {
-      present: '가니?', continuous: '가고 있니?', past: '갔니?',
-      future: '갈 거니?', can: '갈 수 있니?',
-      haveTo: '가야 하니?', hadTo: '가야 했니?',
-      wantTo: '가고 싶니?', wantedTo: '가고 싶었니?',
-      enjoy: '가는 걸 즐기니?', enjoyed: '가는 걸 즐겼니?',
-    },
-  },
-  {
-    id: 'come', base: 'come', ing: 'coming', emoji: '👋', meaning: '오다',
-    ko: {
-      present: '오니?', continuous: '오고 있니?', past: '왔니?',
-      future: '올 거니?', can: '올 수 있니?',
-      haveTo: '와야 하니?', hadTo: '와야 했니?',
-      wantTo: '오고 싶니?', wantedTo: '오고 싶었니?',
-      enjoy: '오는 걸 즐기니?', enjoyed: '오는 걸 즐겼니?',
-    },
-  },
-  {
-    id: 'walk', base: 'walk', ing: 'walking', emoji: '🚶‍♂️', meaning: '걷다',
-    ko: {
-      present: '걷니?', continuous: '걷고 있니?', past: '걸었니?',
-      future: '걸을 거니?', can: '걸을 수 있니?',
-      haveTo: '걸어야 하니?', hadTo: '걸어야 했니?',
-      wantTo: '걷고 싶니?', wantedTo: '걷고 싶었니?',
-      enjoy: '걷는 걸 즐기니?', enjoyed: '걷는 걸 즐겼니?',
-    },
-  },
-  {
-    id: 'run', base: 'run', ing: 'running', emoji: '🏃', meaning: '달리다',
-    ko: {
-      present: '달리니?', continuous: '달리고 있니?', past: '달렸니?',
-      future: '달릴 거니?', can: '달릴 수 있니?',
-      haveTo: '달려야 하니?', hadTo: '달려야 했니?',
-      wantTo: '달리고 싶니?', wantedTo: '달리고 싶었니?',
-      enjoy: '달리는 걸 즐기니?', enjoyed: '달리는 걸 즐겼니?',
-    },
-  },
-  {
     id: 'cook', base: 'cook', ing: 'cooking', emoji: '🍳', meaning: '요리하다',
     ko: {
       present: '요리하니?', continuous: '요리하고 있니?', past: '요리했니?',
@@ -251,16 +192,6 @@ const VERBS = [
     },
   },
   {
-    id: 'call', base: 'call', ing: 'calling', emoji: '📞', meaning: '전화하다',
-    ko: {
-      present: '전화하니?', continuous: '전화하고 있니?', past: '전화했니?',
-      future: '전화할 거니?', can: '전화할 수 있니?',
-      haveTo: '전화해야 하니?', hadTo: '전화해야 했니?',
-      wantTo: '전화하고 싶니?', wantedTo: '전화하고 싶었니?',
-      enjoy: '전화하는 걸 즐기니?', enjoyed: '전화하는 걸 즐겼니?',
-    },
-  },
-  {
     id: 'sing', base: 'sing', ing: 'singing', emoji: '🎤', meaning: '노래하다',
     ko: {
       present: '노래하니?', continuous: '노래하고 있니?', past: '노래했니?',
@@ -271,16 +202,6 @@ const VERBS = [
     },
   },
   {
-    id: 'swim', base: 'swim', ing: 'swimming', emoji: '🏊', meaning: '수영하다',
-    ko: {
-      present: '수영하니?', continuous: '수영하고 있니?', past: '수영했니?',
-      future: '수영할 거니?', can: '수영할 수 있니?',
-      haveTo: '수영해야 하니?', hadTo: '수영해야 했니?',
-      wantTo: '수영하고 싶니?', wantedTo: '수영하고 싶었니?',
-      enjoy: '수영하는 걸 즐기니?', enjoyed: '수영하는 걸 즐겼니?',
-    },
-  },
-  {
     id: 'drive', base: 'drive', ing: 'driving', emoji: '🚗', meaning: '운전하다',
     ko: {
       present: '운전하니?', continuous: '운전하고 있니?', past: '운전했니?',
@@ -288,6 +209,86 @@ const VERBS = [
       haveTo: '운전해야 하니?', hadTo: '운전해야 했니?',
       wantTo: '운전하고 싶니?', wantedTo: '운전하고 싶었니?',
       enjoy: '운전하는 걸 즐기니?', enjoyed: '운전하는 걸 즐겼니?',
+    },
+  },
+  {
+    id: 'draw', base: 'draw', ing: 'drawing', emoji: '🎨', meaning: '그리다',
+    ko: {
+      present: '그리니?', continuous: '그리고 있니?', past: '그렸니?',
+      future: '그릴 거니?', can: '그릴 수 있니?',
+      haveTo: '그려야 하니?', hadTo: '그려야 했니?',
+      wantTo: '그리고 싶니?', wantedTo: '그리고 싶었니?',
+      enjoy: '그리는 걸 즐기니?', enjoyed: '그리는 걸 즐겼니?',
+    },
+  },
+  {
+    id: 'wash', base: 'wash', ing: 'washing', emoji: '🧼', meaning: '씻다',
+    ko: {
+      present: '씻니?', continuous: '씻고 있니?', past: '씻었니?',
+      future: '씻을 거니?', can: '씻을 수 있니?',
+      haveTo: '씻어야 하니?', hadTo: '씻어야 했니?',
+      wantTo: '씻고 싶니?', wantedTo: '씻고 싶었니?',
+      enjoy: '씻는 걸 즐기니?', enjoyed: '씻는 걸 즐겼니?',
+    },
+  },
+  {
+    id: 'watch', base: 'watch', ing: 'watching', emoji: '📺', meaning: '보다',
+    ko: {
+      present: '보니?', continuous: '보고 있니?', past: '봤니?',
+      future: '볼 거니?', can: '볼 수 있니?',
+      haveTo: '봐야 하니?', hadTo: '봐야 했니?',
+      wantTo: '보고 싶니?', wantedTo: '보고 싶었니?',
+      enjoy: '보는 걸 즐기니?', enjoyed: '보는 걸 즐겼니?',
+    },
+  },
+  {
+    id: 'catch', base: 'catch', ing: 'catching', emoji: '⚾', meaning: '잡다',
+    ko: {
+      present: '잡니?', continuous: '잡고 있니?', past: '잡았니?',
+      future: '잡을 거니?', can: '잡을 수 있니?',
+      haveTo: '잡아야 하니?', hadTo: '잡아야 했니?',
+      wantTo: '잡고 싶니?', wantedTo: '잡고 싶었니?',
+      enjoy: '잡는 걸 즐기니?', enjoyed: '잡는 걸 즐겼니?',
+    },
+  },
+  {
+    id: 'fix', base: 'fix', ing: 'fixing', emoji: '🔧', meaning: '고치다',
+    ko: {
+      present: '고치니?', continuous: '고치고 있니?', past: '고쳤니?',
+      future: '고칠 거니?', can: '고칠 수 있니?',
+      haveTo: '고쳐야 하니?', hadTo: '고쳐야 했니?',
+      wantTo: '고치고 싶니?', wantedTo: '고치고 싶었니?',
+      enjoy: '고치는 걸 즐기니?', enjoyed: '고치는 걸 즐겼니?',
+    },
+  },
+  {
+    id: 'build', base: 'build', ing: 'building', emoji: '🏗️', meaning: '짓다',
+    ko: {
+      present: '짓니?', continuous: '짓고 있니?', past: '지었니?',
+      future: '지을 거니?', can: '지을 수 있니?',
+      haveTo: '지어야 하니?', hadTo: '지어야 했니?',
+      wantTo: '짓고 싶니?', wantedTo: '짓고 싶었니?',
+      enjoy: '짓는 걸 즐기니?', enjoyed: '짓는 걸 즐겼니?',
+    },
+  },
+  {
+    id: 'sell', base: 'sell', ing: 'selling', emoji: '🏷️', meaning: '팔다',
+    ko: {
+      present: '파니?', continuous: '팔고 있니?', past: '팔았니?',
+      future: '팔 거니?', can: '팔 수 있니?',
+      haveTo: '팔아야 하니?', hadTo: '팔아야 했니?',
+      wantTo: '팔고 싶니?', wantedTo: '팔고 싶었니?',
+      enjoy: '파는 걸 즐기니?', enjoyed: '파는 걸 즐겼니?',
+    },
+  },
+  {
+    id: 'throw', base: 'throw', ing: 'throwing', emoji: '🥏', meaning: '던지다',
+    ko: {
+      present: '던지니?', continuous: '던지고 있니?', past: '던졌니?',
+      future: '던질 거니?', can: '던질 수 있니?',
+      haveTo: '던져야 하니?', hadTo: '던져야 했니?',
+      wantTo: '던지고 싶니?', wantedTo: '던지고 싶었니?',
+      enjoy: '던지는 걸 즐기니?', enjoyed: '던지는 걸 즐겼니?',
     },
   },
 ];
