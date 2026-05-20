@@ -37,15 +37,37 @@ const FORMS = [
     en: v => `Did you enjoy ${v.ing}?`,    ko: v => v.ko.enjoyed },
 ];
 
-/* --- 의문사 (없음 + 5개) ------------------------------------------- */
-const QWORDS = [
-  { id: 'none',  en: '',      ko: '' },
-  { id: 'what',  en: 'What',  ko: '뭘 ' },
-  { id: 'where', en: 'Where', ko: '어디서 ' },
-  { id: 'how',   en: 'How',   ko: '어떻게 ' },
-  { id: 'why',   en: 'Why',   ko: '왜 ' },
-  { id: 'when',  en: 'When',  ko: '언제 ' },
-];
+/* --- 의문사 ---------------------------------------------------------
+   동사 종류에 따라 쓰는 의문사가 다르다.
+   - 사물 타동사 : What  (뭘 사니?)
+   - 사람 타동사 : Who   (누구를 만나니?)
+   - 자동사      : What/Who 없음 (목적어가 없으므로)                  */
+const QWORDS = {
+  none:  { id: 'none',  en: '',      ko: '' },
+  what:  { id: 'what',  en: 'What',  ko: '뭘 ' },
+  who:   { id: 'who',   en: 'Who',   ko: '누구를 ' },
+  where: { id: 'where', en: 'Where', ko: '어디서 ' },
+  how:   { id: 'how',   en: 'How',   ko: '어떻게 ' },
+  why:   { id: 'why',   en: 'Why',   ko: '왜 ' },
+  when:  { id: 'when',  en: 'When',  ko: '언제 ' },
+};
+
+/* 동사 종류별 의문사 단계 구성 (마지막에 '종합'이 추가됨) */
+const TYPE_QWORDS = {
+  thing:        ['none', 'what',  'where', 'how', 'why', 'when'],
+  person:       ['none', 'who',   'where', 'how', 'why', 'when'],
+  intransitive: ['none', 'where', 'how',   'why', 'when'],
+};
+
+const QWORD_INFO = {
+  none:  { title: '기본 의문문',  sub: '의문사 없이 11가지 시제·조동사' },
+  what:  { title: 'What 의문문',  sub: '무엇을 ~?' },
+  who:   { title: 'Who 의문문',   sub: '누구를 ~?' },
+  where: { title: 'Where 의문문', sub: '어디서 ~?' },
+  how:   { title: 'How 의문문',   sub: '어떻게 ~?' },
+  why:   { title: 'Why 의문문',   sub: '왜 ~?' },
+  when:  { title: 'When 의문문',  sub: '언제 ~?' },
+};
 
 /* --- 동사 사전 (사물목적어 타동사 24개) ---------------------------- */
 /* base : 동사원형, ing : 진행형
@@ -291,19 +313,124 @@ const VERBS = [
       enjoy: '던지는 걸 즐기니?', enjoyed: '던지는 걸 즐겼니?',
     },
   },
+
+  /* --- 사람 목적어 타동사 (Who 의문문) --- */
+  {
+    id: 'meet', base: 'meet', ing: 'meeting', emoji: '🤝', meaning: '만나다',
+    type: 'person',
+    ko: {
+      present: '만나니?', continuous: '만나고 있니?', past: '만났니?',
+      future: '만날 거니?', can: '만날 수 있니?',
+      haveTo: '만나야 하니?', hadTo: '만나야 했니?',
+      wantTo: '만나고 싶니?', wantedTo: '만나고 싶었니?',
+      enjoy: '만나는 걸 즐기니?', enjoyed: '만나는 걸 즐겼니?',
+    },
+  },
+  {
+    id: 'help', base: 'help', ing: 'helping', emoji: '🆘', meaning: '돕다',
+    type: 'person',
+    ko: {
+      present: '돕니?', continuous: '돕고 있니?', past: '도왔니?',
+      future: '도울 거니?', can: '도울 수 있니?',
+      haveTo: '도와야 하니?', hadTo: '도와야 했니?',
+      wantTo: '돕고 싶니?', wantedTo: '돕고 싶었니?',
+      enjoy: '돕는 걸 즐기니?', enjoyed: '돕는 걸 즐겼니?',
+    },
+  },
+  {
+    id: 'invite', base: 'invite', ing: 'inviting', emoji: '💌', meaning: '초대하다',
+    type: 'person',
+    ko: {
+      present: '초대하니?', continuous: '초대하고 있니?', past: '초대했니?',
+      future: '초대할 거니?', can: '초대할 수 있니?',
+      haveTo: '초대해야 하니?', hadTo: '초대해야 했니?',
+      wantTo: '초대하고 싶니?', wantedTo: '초대하고 싶었니?',
+      enjoy: '초대하는 걸 즐기니?', enjoyed: '초대하는 걸 즐겼니?',
+    },
+  },
+
+  /* --- 자동사 (목적어 없음 · What/Who 단계 없음) --- */
+  {
+    id: 'go', base: 'go', ing: 'going', emoji: '🚶', meaning: '가다',
+    type: 'intransitive',
+    ko: {
+      present: '가니?', continuous: '가고 있니?', past: '갔니?',
+      future: '갈 거니?', can: '갈 수 있니?',
+      haveTo: '가야 하니?', hadTo: '가야 했니?',
+      wantTo: '가고 싶니?', wantedTo: '가고 싶었니?',
+      enjoy: '가는 걸 즐기니?', enjoyed: '가는 걸 즐겼니?',
+    },
+  },
+  {
+    id: 'come', base: 'come', ing: 'coming', emoji: '👋', meaning: '오다',
+    type: 'intransitive',
+    ko: {
+      present: '오니?', continuous: '오고 있니?', past: '왔니?',
+      future: '올 거니?', can: '올 수 있니?',
+      haveTo: '와야 하니?', hadTo: '와야 했니?',
+      wantTo: '오고 싶니?', wantedTo: '오고 싶었니?',
+      enjoy: '오는 걸 즐기니?', enjoyed: '오는 걸 즐겼니?',
+    },
+  },
+  {
+    id: 'walk', base: 'walk', ing: 'walking', emoji: '🚶‍♂️', meaning: '걷다',
+    type: 'intransitive',
+    ko: {
+      present: '걷니?', continuous: '걷고 있니?', past: '걸었니?',
+      future: '걸을 거니?', can: '걸을 수 있니?',
+      haveTo: '걸어야 하니?', hadTo: '걸어야 했니?',
+      wantTo: '걷고 싶니?', wantedTo: '걷고 싶었니?',
+      enjoy: '걷는 걸 즐기니?', enjoyed: '걷는 걸 즐겼니?',
+    },
+  },
+  {
+    id: 'run', base: 'run', ing: 'running', emoji: '🏃', meaning: '달리다',
+    type: 'intransitive',
+    ko: {
+      present: '달리니?', continuous: '달리고 있니?', past: '달렸니?',
+      future: '달릴 거니?', can: '달릴 수 있니?',
+      haveTo: '달려야 하니?', hadTo: '달려야 했니?',
+      wantTo: '달리고 싶니?', wantedTo: '달리고 싶었니?',
+      enjoy: '달리는 걸 즐기니?', enjoyed: '달리는 걸 즐겼니?',
+    },
+  },
+  {
+    id: 'swim', base: 'swim', ing: 'swimming', emoji: '🏊', meaning: '수영하다',
+    type: 'intransitive',
+    ko: {
+      present: '수영하니?', continuous: '수영하고 있니?', past: '수영했니?',
+      future: '수영할 거니?', can: '수영할 수 있니?',
+      haveTo: '수영해야 하니?', hadTo: '수영해야 했니?',
+      wantTo: '수영하고 싶니?', wantedTo: '수영하고 싶었니?',
+      enjoy: '수영하는 걸 즐기니?', enjoyed: '수영하는 걸 즐겼니?',
+    },
+  },
+  {
+    id: 'play', base: 'play', ing: 'playing', emoji: '⚽', meaning: '놀다',
+    type: 'intransitive',
+    ko: {
+      present: '노니?', continuous: '놀고 있니?', past: '놀았니?',
+      future: '놀 거니?', can: '놀 수 있니?',
+      haveTo: '놀아야 하니?', hadTo: '놀아야 했니?',
+      wantTo: '놀고 싶니?', wantedTo: '놀고 싶었니?',
+      enjoy: '노는 걸 즐기니?', enjoyed: '노는 걸 즐겼니?',
+    },
+  },
 ];
 
-/* --- 7단계 정의 ----------------------------------------------------- */
-/* 1~6단계 : 의문사별 11문장,  7단계 : 전체 66문장 종합              */
-const STEPS = [
-  { title: '기본 의문문',  sub: '의문사 없이 11가지 시제·조동사', qword: 'none'  },
-  { title: 'What 의문문',  sub: '무엇을 ~?',                     qword: 'what'  },
-  { title: 'Where 의문문', sub: '어디서 ~?',                     qword: 'where' },
-  { title: 'How 의문문',   sub: '어떻게 ~?',                     qword: 'how'   },
-  { title: 'Why 의문문',   sub: '왜 ~?',                         qword: 'why'   },
-  { title: 'When 의문문',  sub: '언제 ~?',                       qword: 'when'  },
-  { title: '종합 드릴',    sub: '전체 66문장 섞어서',            qword: '__all__' },
-];
+/* --- 단계 구성 ------------------------------------------------------ */
+/* 동사 종류에 맞춰 단계 목록을 만든다.
+   사물·사람 타동사 : 7단계,  자동사 : 6단계 (What/Who 단계 없음)     */
+function stepsForVerb(verb) {
+  const qids = TYPE_QWORDS[verb.type] || TYPE_QWORDS.thing;
+  const steps = qids.map(qid => ({
+    qword: qid,
+    title: QWORD_INFO[qid].title,
+    sub: QWORD_INFO[qid].sub,
+  }));
+  steps.push({ qword: '__all__', title: '종합 드릴', sub: '전체 문장 섞어서' });
+  return steps;
+}
 
 /* --- 카드 생성 ------------------------------------------------------ */
 function makeCard(verb, form, qword) {
@@ -335,14 +462,14 @@ function shuffle(arr) {
 
 /* 한 동사의 한 단계에 해당하는 카드 묶음을 만든다 */
 function buildDeck(verb, stepIndex) {
-  const step = STEPS[stepIndex];
+  const step = stepsForVerb(verb)[stepIndex];
   if (step.qword === '__all__') {
     const all = [];
-    QWORDS.forEach(q => FORMS.forEach(f => all.push(makeCard(verb, f, q))));
+    (TYPE_QWORDS[verb.type] || TYPE_QWORDS.thing).forEach(qid =>
+      FORMS.forEach(f => all.push(makeCard(verb, f, QWORDS[qid]))));
     return shuffle(all);                   // 종합 단계는 섞어서
   }
-  const q = QWORDS.find(x => x.id === step.qword);
-  return FORMS.map(f => makeCard(verb, f, q));   // 기초 단계는 순서대로
+  return FORMS.map(f => makeCard(verb, f, QWORDS[step.qword]));  // 순서대로
 }
 
-window.DRILL = { FORMS, QWORDS, VERBS, STEPS, buildDeck };
+window.DRILL = { FORMS, QWORDS, VERBS, stepsForVerb, buildDeck };

@@ -6,7 +6,7 @@
 (function () {
   'use strict';
 
-  const { VERBS, STEPS, buildDeck } = window.DRILL;
+  const { VERBS, stepsForVerb, buildDeck } = window.DRILL;
   const { PATTERN_GROUPS, PATTERNS, buildPatternDeck, patternCount } = window.PATTERN;
   const STORAGE_KEY = 'fivedim:v1';
 
@@ -153,7 +153,7 @@
     const box = document.getElementById('overall-progress');
     let done, total, label;
     if (currentTrack === 'basic') {
-      total = VERBS.length * STEPS.length;
+      total = VERBS.reduce((s, v) => s + stepsForVerb(v).length, 0);
       done = VERBS.reduce((s, v) => s + completedSteps(v.id).length, 0);
       label = '동사 변형 ' + done + ' / ' + total + ' 단계';
     } else {
@@ -185,7 +185,7 @@
         '<span class="verb-emoji">' + v.emoji + '</span>' +
         '<span class="verb-text"><strong>' + v.base + '</strong>' +
         '<span class="verb-meaning">' + v.meaning + '</span></span>' +
-        '<span class="verb-prog">' + done + '/' + STEPS.length + '</span>';
+        '<span class="verb-prog">' + done + '/' + stepsForVerb(v).length + '</span>';
       li.addEventListener('click', () => openVerb(v.id));
       list.appendChild(li);
     });
@@ -236,7 +236,7 @@
       '<div><h2>' + v.base + '</h2><p>' + v.meaning + '</p></div>';
     const list = document.getElementById('step-list');
     list.innerHTML = '';
-    STEPS.forEach((step, i) => {
+    stepsForVerb(v).forEach((step, i) => {
       const unlocked = isStepUnlocked(v.id, i);
       const done = completedSteps(v.id).indexOf(i) !== -1;
       const li = document.createElement('li');
@@ -329,17 +329,18 @@
 
   /* BASIC 드릴 시작 */
   function startBasicDrill(verb, stepIndex) {
+    const steps = stepsForVerb(verb);
     runDrill({
       main: verb.emoji + ' ' + verb.base,
-      sub: (stepIndex + 1) + '단계 · ' + STEPS[stepIndex].title,
+      sub: (stepIndex + 1) + '단계 · ' + steps[stepIndex].title,
       cards: buildDeck(verb, stepIndex),
       onComplete: () => markStepComplete(verb.id, stepIndex),
       restart: () => startBasicDrill(verb, stepIndex),
-      nextFn: stepIndex < STEPS.length - 1
+      nextFn: stepIndex < steps.length - 1
         ? () => startBasicDrill(verb, stepIndex + 1) : null,
       exitFn: () => openVerb(verb.id),
       doneTitle: (stepIndex + 1) + '단계 완료!',
-      doneSub: verb.base + ' · ' + STEPS[stepIndex].title,
+      doneSub: verb.base + ' · ' + steps[stepIndex].title,
     });
   }
 
