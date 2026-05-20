@@ -1,0 +1,10 @@
+# 교재 원본 PDF — 앱 저장소에는 포함하지 않음 (폴더에는 그대로 보관됨)
+*.pdf
+
+# OS / 편집기 부산물
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 로그
+*.log

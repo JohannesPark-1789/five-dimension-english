@@ -1,0 +1,20 @@
+{
+  "name": "5차원 영어 · 동사 변형과 문장 패턴",
+  "short_name": "5차원 영어",
+  "description": "원동연 박사 5차원영어학습법 — 동사 변형(BASIC DRILL)과 문장 패턴(PATTERN DRILL) 훈련",
+  "lang": "ko",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fffdf3",
+  "theme_color": "#6e1a6e",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
