@@ -1,14 +1,14 @@
 /* 5차원 영어 · BASIC DRILL — 서비스워커 (오프라인 캐시) */
-const CACHE = 'fivedim-v7';
+const CACHE = 'fivedim-v8';
 const ASSETS = [
   '.',
   'index.html',
-  'styles.css?v=6',
-  'data.js?v=6',
-  'patterns.js?v=6',
-  'app.js?v=6',
+  'styles.css?v=8',
+  'data.js?v=8',
+  'patterns.js?v=8',
+  'app.js?v=8',
   'manifest.webmanifest',
-  'icon.png',
+  'icon.png?v=8',
 ];
 
 self.addEventListener('install', e => {

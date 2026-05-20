@@ -451,25 +451,17 @@ function makeCard(verb, form, qword) {
   };
 }
 
-function shuffle(arr) {
-  const a = arr.slice();
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
-/* 한 동사의 한 단계에 해당하는 카드 묶음을 만든다 */
+/* 한 동사의 한 단계에 해당하는 카드 묶음을 만든다 (항상 정해진 순서).
+   섞을지 여부는 드릴 시작 시 설정에 따라 app.js에서 결정한다. */
 function buildDeck(verb, stepIndex) {
   const step = stepsForVerb(verb)[stepIndex];
   if (step.qword === '__all__') {
     const all = [];
     (TYPE_QWORDS[verb.type] || TYPE_QWORDS.thing).forEach(qid =>
       FORMS.forEach(f => all.push(makeCard(verb, f, QWORDS[qid]))));
-    return shuffle(all);                   // 종합 단계는 섞어서
+    return all;
   }
-  return FORMS.map(f => makeCard(verb, f, QWORDS[step.qword]));  // 순서대로
+  return FORMS.map(f => makeCard(verb, f, QWORDS[step.qword]));
 }
 
 window.DRILL = { FORMS, QWORDS, VERBS, stepsForVerb, buildDeck };

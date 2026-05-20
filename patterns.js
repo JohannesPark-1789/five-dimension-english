@@ -259,22 +259,13 @@ const SENTENCES = [
 ];
 
 /* --- 카드 생성 ------------------------------------------------------ */
-function shufflePat(arr) {
-  const a = arr.slice();
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
-/* 한 패턴에 속한 문장들을 카드 묶음으로 (섞어서) */
+/* 한 패턴에 속한 문장들을 카드 묶음으로 (교재 순서 그대로).
+   섞을지 여부는 드릴 시작 시 설정에 따라 app.js에서 결정한다. */
 function buildPatternDeck(patternId) {
   const pat = PATTERNS.find(p => p.id === patternId);
-  const cards = SENTENCES
+  return SENTENCES
     .filter(s => s.p === patternId)
     .map(s => ({ ko: s.ko, en: s.en, hint: pat ? pat.label : '' }));
-  return shufflePat(cards);
 }
 
 /* 한 패턴의 문장 개수 */

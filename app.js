@@ -43,6 +43,30 @@
   function isPatternDone(pid) { return !!progress.patterns[pid]; }
   function markPatternDone(pid) { progress.patterns[pid] = true; saveProgress(); }
 
+  /* ---------- 카드 순서 설정 -------------------------------------- */
+  const ORDER_KEY = 'fivedim:order';
+  function getOrder() {
+    return localStorage.getItem(ORDER_KEY) === 'inorder' ? 'inorder' : 'shuffle';
+  }
+  function setOrder(v) {
+    try { localStorage.setItem(ORDER_KEY, v); } catch (e) { /* 무시 */ }
+    renderOrderToggle();
+  }
+  function renderOrderToggle() {
+    const o = getOrder();
+    document.querySelectorAll('.order-btn').forEach(b => {
+      b.classList.toggle('active', b.getAttribute('data-order') === o);
+    });
+  }
+  function shuffleArr(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
   /* ---------- TTS (발음 듣기) ------------------------------------- */
   const VOICE_KEY = 'fivedim:voice';
   let enVoices = [];
@@ -268,8 +292,10 @@
   const elProgText   = document.getElementById('progress-text');
 
   function runDrill(opts) {
-    drill.queue = opts.cards.slice();
-    drill.total = opts.cards.length;
+    // 설정이 '무작위'면 카드 순서를 섞는다
+    const cards = getOrder() === 'shuffle' ? shuffleArr(opts.cards) : opts.cards;
+    drill.queue = cards.slice();
+    drill.total = cards.length;
     drill.onComplete = opts.onComplete;
     drill.restart    = opts.restart;
     drill.nextFn     = opts.nextFn || null;
@@ -367,6 +393,9 @@
   document.querySelectorAll('.track-btn').forEach(btn => {
     btn.addEventListener('click', () => setTrack(btn.getAttribute('data-track')));
   });
+  document.querySelectorAll('.order-btn').forEach(btn => {
+    btn.addEventListener('click', () => setOrder(btn.getAttribute('data-order')));
+  });
 
   elCard.addEventListener('click', revealCard);
   document.getElementById('btn-speak').addEventListener('click', e => {
@@ -433,5 +462,6 @@
   /* ---------- 시작 ------------------------------------------------- */
   renderHome();
   setTrack('basic');
+  renderOrderToggle();
   showScreen('home');
 })();

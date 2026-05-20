@@ -114,6 +114,18 @@ body {
 #btn-voice-test { flex: none; }
 .voice-tip { font-size: 12px; color: var(--muted); line-height: 1.5; }
 
+.settings-divider { height: 1px; background: var(--line); margin: 6px 0 2px; }
+.order-toggle {
+  display: flex; gap: 4px; background: #f0ecef;
+  border-radius: 10px; padding: 4px;
+}
+.order-btn {
+  flex: 1; border: none; background: none; cursor: pointer;
+  padding: 9px 8px; border-radius: 7px;
+  font-size: 13px; font-weight: 700; color: var(--muted);
+}
+.order-btn.active { background: var(--purple); color: #fff; }
+
 /* ---------- 동사 목록 ---------- */
 .verb-list, .step-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 

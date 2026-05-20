@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#6e1a6e" />
   <title>5차원 영어</title>
   <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="icon" href="icon.png?v=7" type="image/png" />
-  <link rel="apple-touch-icon" href="icon.png?v=7" />
-  <link rel="stylesheet" href="styles.css?v=6" />
+  <link rel="icon" href="icon.png?v=8" type="image/png" />
+  <link rel="apple-touch-icon" href="icon.png?v=8" />
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body>
 <div id="app">
@@ -34,6 +34,14 @@
         <button id="btn-voice-test" class="speak-btn">테스트</button>
       </div>
       <p id="voice-tip" class="voice-tip"></p>
+
+      <div class="settings-divider"></div>
+      <label>🔀 카드 순서</label>
+      <div class="order-toggle">
+        <button class="order-btn" data-order="shuffle">무작위</button>
+        <button class="order-btn" data-order="inorder">순서대로</button>
+      </div>
+      <p class="voice-tip">무작위로 풀면 순서를 외우지 않고 문장에 집중하게 됩니다.</p>
     </div>
 
     <!-- BASIC: 동사 목록 -->
@@ -117,8 +125,8 @@
 
 </div>
 
-<script src="data.js?v=6"></script>
-<script src="patterns.js?v=6"></script>
-<script src="app.js?v=6"></script>
+<script src="data.js?v=8"></script>
+<script src="patterns.js?v=8"></script>
+<script src="app.js?v=8"></script>
 </body>
 </html>
