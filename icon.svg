@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="112" fill="#fbf178"/>
-  <path d="M256 96l34 78 85 8-64 56 19 84-74-44-74 44 19-84-64-56 85-8z" fill="#6e1a6e"/>
-  <text x="256" y="372" font-family="Segoe UI, Arial, sans-serif" font-size="150"
-        font-weight="800" fill="#1c1c6e" text-anchor="middle">5D</text>
-</svg>
