@@ -271,3 +271,55 @@ body {
   font-size: 13px; cursor: pointer; padding: 8px; text-decoration: underline;
 }
 #btn-install { color: var(--purple); font-weight: 700; }
+
+/* =====================================================================
+   ROOT DRILL — 어원 학습
+   ===================================================================== */
+
+/* ---------- 어근 목록 칩 ---------- */
+.root-chip {
+  flex: none; min-width: 64px; text-align: center;
+  font-size: 14px; font-weight: 800; color: var(--navy);
+  background: #eef0fb; border-radius: 8px; padding: 9px 8px;
+  letter-spacing: .2px;
+}
+
+/* ---------- 어원 카드 — 앞면(영어 단어) ---------- */
+.card.root-card .card-front { background: #eef0fb; }
+.card.root-card .card-back  { background: #e1e4f4; }
+
+.root-card .card-ko {
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+}
+.rootword {
+  font-size: 36px; font-weight: 800; color: var(--navy);
+  letter-spacing: -0.5px;
+}
+.lv-badge {
+  font-size: 12px; font-weight: 700; border-radius: 99px;
+  padding: 4px 14px;
+}
+.lv-기초 { background: #e3f4e9; color: #2f9e62; }
+.lv-수능 { background: #fbeed0; color: #b9821a; }
+.lv-고급 { background: #f8dede; color: #c0392b; }
+
+/* ---------- 어원 카드 — 뒷면(분해·뜻) ---------- */
+.root-card .card-en {
+  display: flex; flex-direction: column; align-items: center; gap: 14px;
+}
+.mph-row {
+  display: flex; align-items: center; gap: 6px;
+  flex-wrap: wrap; justify-content: center;
+}
+.mph {
+  font-size: 18px; font-weight: 800; color: var(--navy);
+  background: #fff; border-radius: 10px; padding: 8px 12px;
+}
+.mph-op { font-size: 16px; font-weight: 700; color: var(--muted); }
+.mph-mean {
+  font-size: 14px; color: var(--purple); font-weight: 600;
+}
+.mph-bridge {
+  font-size: 17px; color: var(--ink); font-weight: 600; line-height: 1.5;
+}
+.mph-bridge b { color: var(--navy); font-weight: 800; }

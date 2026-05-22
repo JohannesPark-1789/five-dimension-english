@@ -8,7 +8,7 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="icon.png?v=9" type="image/png" />
   <link rel="apple-touch-icon" href="icon.png?v=9" />
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=9" />
 </head>
 <body>
 <div id="app">
@@ -21,8 +21,9 @@
     </header>
 
     <div class="track-toggle">
-      <button class="track-btn active" data-track="basic">BASIC DRILL</button>
-      <button class="track-btn" data-track="pattern">PATTERN DRILL</button>
+      <button class="track-btn active" data-track="basic">BASIC</button>
+      <button class="track-btn" data-track="pattern">PATTERN</button>
+      <button class="track-btn" data-track="root">ROOT</button>
     </div>
 
     <div id="overall-progress" class="overall"></div>
@@ -54,6 +55,12 @@
     <div id="track-pattern" class="track-panel hidden">
       <p class="section-label">교재 PATTERN DRILL · 4그룹 22패턴 · 문장 207개</p>
       <div id="pattern-list"></div>
+    </div>
+
+    <!-- ROOT: 어원 목록 -->
+    <div id="track-root" class="track-panel hidden">
+      <p class="section-label">어원 학습 · 접두사·라틴어·그리스어 어근 40개 · 단어 약 200개</p>
+      <div id="root-list"></div>
     </div>
 
     <footer class="app-footer">
@@ -92,7 +99,7 @@
           <span class="tap-hint">탭하면 정답이 보여요</span>
         </div>
         <div class="card-face card-back">
-          <span class="card-hint">English</span>
+          <span id="card-back-hint" class="card-hint">English</span>
           <p id="card-en" class="card-en"></p>
           <div class="speak-row">
             <button id="btn-speak" class="speak-btn">🔊 듣기</button>
@@ -125,8 +132,9 @@
 
 </div>
 
-<script src="data.js?v=8"></script>
-<script src="patterns.js?v=8"></script>
-<script src="app.js?v=8"></script>
+<script src="data.js?v=9"></script>
+<script src="patterns.js?v=9"></script>
+<script src="roots.js?v=9"></script>
+<script src="app.js?v=9"></script>
 </body>
 </html>

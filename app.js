@@ -8,6 +8,7 @@
 
   const { VERBS, stepsForVerb, buildDeck } = window.DRILL;
   const { PATTERN_GROUPS, PATTERNS, buildPatternDeck, patternCount } = window.PATTERN;
+  const { ROOT_GROUPS, ROOTS, buildRootDeck, rootWordCount } = window.ROOT;
   const STORAGE_KEY = 'fivedim:v1';
 
   /* ---------- 진도 저장/불러오기 ---------------------------------- */
@@ -17,6 +18,7 @@
     catch (e) { p = {}; }
     if (!p.verbs) p.verbs = {};
     if (!p.patterns) p.patterns = {};
+    if (!p.roots) p.roots = {};
     return p;
   }
   let progress = loadProgress();
@@ -42,6 +44,9 @@
   /* PATTERN 진도 */
   function isPatternDone(pid) { return !!progress.patterns[pid]; }
   function markPatternDone(pid) { progress.patterns[pid] = true; saveProgress(); }
+  /* ROOT 진도 */
+  function isRootDone(rid) { return !!progress.roots[rid]; }
+  function markRootDone(rid) { progress.roots[rid] = true; saveProgress(); }
 
   /* ---------- 카드 순서 설정 -------------------------------------- */
   const ORDER_KEY = 'fivedim:order';
@@ -170,6 +175,8 @@
       .classList.toggle('hidden', track !== 'basic');
     document.getElementById('track-pattern')
       .classList.toggle('hidden', track !== 'pattern');
+    document.getElementById('track-root')
+      .classList.toggle('hidden', track !== 'root');
     renderOverall();
   }
 
@@ -180,10 +187,14 @@
       total = VERBS.reduce((s, v) => s + stepsForVerb(v).length, 0);
       done = VERBS.reduce((s, v) => s + completedSteps(v.id).length, 0);
       label = '동사 변형 ' + done + ' / ' + total + ' 단계';
-    } else {
+    } else if (currentTrack === 'pattern') {
       total = PATTERNS.length;
       done = PATTERNS.reduce((s, p) => s + (isPatternDone(p.id) ? 1 : 0), 0);
       label = '문장 패턴 ' + done + ' / ' + total + ' 개';
+    } else {
+      total = ROOTS.length;
+      done = ROOTS.reduce((s, r) => s + (isRootDone(r.id) ? 1 : 0), 0);
+      label = '어근 ' + done + ' / ' + total + ' 개';
     }
     const pct = total ? Math.round((done / total) * 100) : 0;
     box.innerHTML =
@@ -195,6 +206,7 @@
     renderOverall();
     renderBasicTrack();
     renderPatternTrack();
+    renderRootTrack();
   }
 
   /* BASIC 트랙: 동사 목록 */
@@ -246,6 +258,38 @@
     });
   }
 
+  /* ROOT 트랙: 3그룹 40어근 */
+  function renderRootTrack() {
+    const wrap = document.getElementById('root-list');
+    wrap.innerHTML = '';
+    ROOT_GROUPS.forEach(g => {
+      const head = document.createElement('div');
+      head.className = 'pgroup-head';
+      head.innerHTML =
+        '<span class="pgroup-emoji">' + g.emoji + '</span>' +
+        '<span><strong>' + g.title + '</strong>' +
+        '<span class="pgroup-desc">' + g.desc + '</span></span>';
+      wrap.appendChild(head);
+
+      const ul = document.createElement('ul');
+      ul.className = 'step-list';
+      ROOTS.filter(r => r.group === g.id).forEach(r => {
+        const done = isRootDone(r.id);
+        const li = document.createElement('li');
+        li.className = 'step-card' + (done ? ' done' : '');
+        li.innerHTML =
+          '<span class="root-chip">' + r.root + '</span>' +
+          '<span class="step-text"><strong>' + r.meaning + '</strong>' +
+          '<span class="step-sub">' + r.origin + ' · 단어 ' +
+            rootWordCount(r.id) + '개</span></span>' +
+          '<span class="step-state">' + (done ? '완료' : '학습') + '</span>';
+        li.addEventListener('click', () => startRootDrill(r.id));
+        ul.appendChild(li);
+      });
+      wrap.appendChild(ul);
+    });
+  }
+
   /* ---------- 동사 → 단계 화면 (BASIC) ---------------------------- */
   let currentVerb = null;
   function openVerb(verbId) {
@@ -278,7 +322,7 @@
 
   /* ---------- 드릴(플래시카드) — 공용 ---------------------------- */
   const drill = {
-    queue: [], total: 0, revealed: false,
+    queue: [], total: 0, revealed: false, mode: 'sentence', unit: '문장',
     onComplete: null, restart: null, nextFn: null, exitFn: null,
     doneTitle: '', doneSub: '',
   };
@@ -286,6 +330,7 @@
   const elCardKo     = document.getElementById('card-ko');
   const elCardEn     = document.getElementById('card-en');
   const elCardHint   = document.getElementById('card-hint');
+  const elCardBackHint = document.getElementById('card-back-hint');
   const elActions    = document.getElementById('drill-actions');
   const elRevealHint = document.getElementById('reveal-hint');
   const elFill       = document.getElementById('progress-fill');
@@ -296,6 +341,8 @@
     const cards = getOrder() === 'shuffle' ? shuffleArr(opts.cards) : opts.cards;
     drill.queue = cards.slice();
     drill.total = cards.length;
+    drill.mode = opts.mode || 'sentence';
+    drill.unit = opts.unit || '문장';
     drill.onComplete = opts.onComplete;
     drill.restart    = opts.restart;
     drill.nextFn     = opts.nextFn || null;
@@ -312,7 +359,11 @@
     const done = drill.total - drill.queue.length;
     const pct = drill.total ? Math.round((done / drill.total) * 100) : 0;
     elFill.style.width = pct + '%';
-    elProgText.textContent = done + ' / ' + drill.total + ' 문장';
+    elProgText.textContent = done + ' / ' + drill.total + ' ' + drill.unit;
+  }
+
+  function cardSpeakText(card) {
+    return drill.mode === 'root' ? card.speak : card.en;
   }
 
   function nextCard() {
@@ -321,8 +372,17 @@
     drill.revealed = false;
     elCard.classList.remove('flipped');
     elCardHint.textContent = card.hint;
-    elCardKo.textContent = card.ko;
-    elCardEn.textContent = card.en;
+    if (drill.mode === 'root') {
+      elCard.classList.add('root-card');
+      elCardKo.innerHTML = card.front;
+      elCardEn.innerHTML = card.back;
+      elCardBackHint.textContent = '어원 분해';
+    } else {
+      elCard.classList.remove('root-card');
+      elCardKo.textContent = card.ko;
+      elCardEn.textContent = card.en;
+      elCardBackHint.textContent = 'English';
+    }
     elActions.classList.add('hidden');
     elRevealHint.classList.remove('hidden');
     updateProgress();
@@ -334,7 +394,7 @@
     elCard.classList.add('flipped');
     elActions.classList.remove('hidden');
     elRevealHint.classList.add('hidden');
-    speak(drill.queue[0].en);
+    speak(cardSpeakText(drill.queue[0]));
   }
 
   function answer(known) {
@@ -348,7 +408,7 @@
     if (drill.onComplete) drill.onComplete();
     document.getElementById('done-title').textContent = drill.doneTitle;
     document.getElementById('done-sub').textContent =
-      drill.doneSub + ' (' + drill.total + '문장)';
+      drill.doneSub + ' (' + drill.total + drill.unit + ')';
     document.getElementById('btn-next-step').classList.toggle('hidden', !drill.nextFn);
     showScreen('done');
   }
@@ -389,6 +449,27 @@
     });
   }
 
+  /* ROOT 드릴 시작 */
+  function startRootDrill(rootId) {
+    const r = ROOTS.find(x => x.id === rootId);
+    const grp = ROOT_GROUPS.find(g => g.id === r.group);
+    const inGroup = ROOTS.filter(x => x.group === r.group);
+    const next = inGroup[inGroup.indexOf(r) + 1];
+    runDrill({
+      mode: 'root',
+      unit: '단어',
+      main: grp.emoji + ' ' + r.root,
+      sub: r.meaning + ' · ' + r.origin,
+      cards: buildRootDeck(rootId),
+      onComplete: () => markRootDone(rootId),
+      restart: () => startRootDrill(rootId),
+      nextFn: next ? () => startRootDrill(next.id) : null,
+      exitFn: () => { setTrack('root'); renderHome(); showScreen('home'); },
+      doneTitle: '어근 완료!',
+      doneSub: r.root + ' · ' + r.meaning,
+    });
+  }
+
   /* ---------- 이벤트 연결 ----------------------------------------- */
   document.querySelectorAll('.track-btn').forEach(btn => {
     btn.addEventListener('click', () => setTrack(btn.getAttribute('data-track')));
@@ -400,11 +481,11 @@
   elCard.addEventListener('click', revealCard);
   document.getElementById('btn-speak').addEventListener('click', e => {
     e.stopPropagation();
-    if (drill.queue.length) speak(drill.queue[0].en, 0.95);
+    if (drill.queue.length) speak(cardSpeakText(drill.queue[0]), 0.95);
   });
   document.getElementById('btn-speak-slow').addEventListener('click', e => {
     e.stopPropagation();
-    if (drill.queue.length) speak(drill.queue[0].en, 0.6);
+    if (drill.queue.length) speak(cardSpeakText(drill.queue[0]), 0.6);
   });
   document.getElementById('btn-again').addEventListener('click', () => answer(false));
   document.getElementById('btn-known').addEventListener('click', () => answer(true));
@@ -434,7 +515,7 @@
 
   document.getElementById('btn-reset').addEventListener('click', () => {
     if (confirm('모든 학습 기록을 지울까요?')) {
-      progress = { verbs: {}, patterns: {} };
+      progress = { verbs: {}, patterns: {}, roots: {} };
       saveProgress();
       renderHome();
     }
