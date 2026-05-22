@@ -17,6 +17,7 @@
 /* --- 3개 그룹 ------------------------------------------------------- */
 const ROOT_GROUPS = [
   { id: 'prefix', emoji: '🔑', title: '접두사',       desc: '단어 앞에 붙어 방향·부정·강조를 더한다' },
+  { id: 'suffix', emoji: '🧩', title: '접미사',       desc: '단어 끝에 붙어 품사와 뜻을 정한다' },
   { id: 'latin',  emoji: '🏛️', title: '라틴어 어근',  desc: '일상·추상 어휘의 뿌리' },
   { id: 'greek',  emoji: '🏺', title: '그리스어 어근', desc: '학문·과학 어휘의 뿌리' },
 ];
@@ -460,6 +461,406 @@ const ROOTS = [
       { w: 'psychic',      p: [['psych','마음'],['ic','~의']],      b: '마음·정신의',     m: '초자연적인', lv: '고급' },
     ],
   },
+
+  /* ===== 접두사 (GRE 확장) ===== */
+  {
+    id: 'ab', group: 'prefix', root: 'ab- · abs-', meaning: '떨어져 · 벗어나',
+    origin: '라틴어', originWord: 'ab (~로부터)',
+    words: [
+      { w: 'absent',   p: [['ab','떨어져'],['sent','있다']],    b: '떨어져 있는',     m: '결석한',     lv: '기초' },
+      { w: 'absorb',   p: [['ab','~로부터'],['sorb','빨아들이다']], b: '빨아들이다',   m: '흡수하다',   lv: '수능' },
+      { w: 'abnormal', p: [['ab','벗어난'],['normal','정상']],  b: '정상에서 벗어난', m: '비정상의',   lv: '수능' },
+      { w: 'abstract', p: [['abs','떨어져'],['tract','끌다']],  b: '끌어내어 떼어낸', m: '추상적인',   lv: '고급' },
+      { w: 'abstain',  p: [['abs','떨어져'],['tain','잡다']],   b: '손을 떼고 있다',  m: '삼가다',     lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'circum', group: 'prefix', root: 'circum-', meaning: '둘레에',
+    origin: '라틴어', originWord: 'circum (둘레)',
+    words: [
+      { w: 'circulate',     p: [['circul','둘레로 돌다'],['ate','~하다']], b: '둘레로 돌다',       m: '순환하다',     lv: '수능' },
+      { w: 'circumstance',  p: [['circum','둘레'],['stance','서 있음']],   b: '둘레에 서 있는 것', m: '상황',         lv: '수능' },
+      { w: 'circumference', p: [['circum','둘레'],['fer','나르다'],['ence','것']], b: '둘레를 한 바퀴 돈 것', m: '원주', lv: '고급' },
+      { w: 'circumspect',   p: [['circum','둘레'],['spect','보다']],       b: '둘레를 살피는',     m: '신중한',       lv: 'GRE' },
+      { w: 'circumvent',    p: [['circum','둘레'],['vent','가다']],        b: '둘레로 돌아가다',   m: '우회하다·교묘히 피하다', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'per', group: 'prefix', root: 'per-', meaning: '완전히 · 통하여',
+    origin: '라틴어', originWord: 'per (통과하여)',
+    words: [
+      { w: 'perform',   p: [['per','완전히'],['form','갖추다']],         b: '끝까지 갖추다',     m: '수행하다·공연하다', lv: '기초' },
+      { w: 'persuade',  p: [['per','완전히'],['suade','권하다']],        b: '완전히 마음을 돌리도록 권하다', m: '설득하다', lv: '수능' },
+      { w: 'persist',   p: [['per','끝까지'],['sist','서다']],           b: '끝까지 서 있다',    m: '고집·지속하다', lv: '수능' },
+      { w: 'pervade',   p: [['per','통하여'],['vade','가다']],           b: '구석구석 퍼져 가다', m: '만연하다',     lv: 'GRE' },
+      { w: 'perennial', p: [['per','내내'],['enn','해'],['ial','~의']],  b: '여러 해 내내 가는', m: '다년생의·끊임없는', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'super', group: 'prefix', root: 'super- · sur-', meaning: '위 · 초과',
+    origin: '라틴어', originWord: 'super (위에)',
+    words: [
+      { w: 'surface',   p: [['sur','위'],['face','면']],            b: '위쪽 면',          m: '표면',     lv: '기초' },
+      { w: 'superior',  p: [['super','위'],['ior','더한']],         b: '더 위에 있는',     m: '우월한',   lv: '수능' },
+      { w: 'surpass',   p: [['sur','넘어'],['pass','지나가다']],    b: '넘어 지나가다',    m: '능가하다', lv: '수능' },
+      { w: 'surplus',   p: [['sur','초과'],['plus','더한']],        b: '넘쳐 더해진 것',   m: '잉여',     lv: '고급' },
+      { w: 'supersede', p: [['super','위'],['sede','앉다']],        b: '위에 앉아 밀어내다', m: '대체하다', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'contra', group: 'prefix', root: 'contra- · counter-', meaning: '반대 · 맞서',
+    origin: '라틴어', originWord: 'contra (맞서)',
+    words: [
+      { w: 'contrast',     p: [['contra','반대'],['st','서다']],            b: '반대로 세워 둠',     m: '대조',     lv: '수능' },
+      { w: 'contrary',     p: [['contra','반대'],['ary','~되는']],          b: '반대되는',          m: '정반대의', lv: '수능' },
+      { w: 'contradict',   p: [['contra','반대'],['dict','말하다']],        b: '반대로 말하다',      m: '모순되다·반박하다', lv: '고급' },
+      { w: 'controversy',  p: [['contro','반대'],['vers','돌다'],['y','것']], b: '의견이 반대로 도는 것', m: '논쟁',  lv: '고급' },
+      { w: 'counterfeit',  p: [['counter','반대로'],['feit','만들다']],     b: '진짜에 맞서 만든',   m: '위조의',   lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'mal', group: 'prefix', root: 'mal-', meaning: '나쁜',
+    origin: '라틴어', originWord: 'malus (나쁜)',
+    words: [
+      { w: 'malfunction', p: [['mal','나쁜'],['function','작동']],          b: '나쁘게 작동함',   m: '오작동',   lv: '수능' },
+      { w: 'malice',      p: [['mal','나쁜'],['ice','마음']],               b: '나쁜 마음',       m: '악의',     lv: '고급' },
+      { w: 'malady',      p: [['mal','나쁜'],['ady','상태']],               b: '나쁜 상태',       m: '질병',     lv: 'GRE' },
+      { w: 'malignant',   p: [['malign','해를 끼치다'],['ant','~하는']],    b: '해를 끼치는',     m: '악성의',   lv: 'GRE' },
+      { w: 'malevolent',  p: [['mal','나쁜'],['vol','바라다'],['ent','~한']], b: '나쁘게 되길 바라는', m: '악의적인', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'bene', group: 'prefix', root: 'bene-', meaning: '좋은 · 잘',
+    origin: '라틴어', originWord: 'bene (잘·좋게)',
+    words: [
+      { w: 'benefit',     p: [['bene','좋게'],['fit','하다']],              b: '좋게 해 주는 것', m: '이익',     lv: '기초' },
+      { w: 'beneficial',  p: [['bene','좋게'],['fic','만들다'],['ial','~한']], b: '좋게 만들어 주는', m: '유익한', lv: '수능' },
+      { w: 'benefactor',  p: [['bene','좋게'],['factor','행하는 사람']],    b: '좋은 일을 하는 사람', m: '후원자', lv: '고급' },
+      { w: 'benign',      p: [['ben','좋은'],['ign','성질의']],             b: '좋은 성질의',     m: '양성의·온화한', lv: 'GRE' },
+      { w: 'benevolent',  p: [['bene','좋게'],['vol','바라다'],['ent','~한']], b: '잘되길 바라는', m: '자비로운', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'syn', group: 'prefix', root: 'syn- · sym-', meaning: '함께 · 같이',
+    origin: '그리스어', originWord: 'syn (함께)',
+    words: [
+      { w: 'symbol',      p: [['sym','함께'],['bol','던지다']],             b: '뜻을 함께 던져 놓은 것', m: '상징', lv: '수능' },
+      { w: 'sympathy',    p: [['sym','함께'],['pathy','느낌']],             b: '함께 느낌',       m: '동정·공감', lv: '수능' },
+      { w: 'synonym',     p: [['syn','같이'],['onym','이름']],              b: '같은 이름',       m: '동의어',   lv: '수능' },
+      { w: 'synthesis',   p: [['syn','함께'],['thesis','놓다']],            b: '함께 놓아 합침',  m: '종합·합성', lv: '고급' },
+      { w: 'synchronize', p: [['syn','함께'],['chron','시간'],['ize','~하다']], b: '시간을 함께 맞추다', m: '동시에 움직이다', lv: '고급' },
+    ],
+  },
+
+  /* ===== 접미사 ===== */
+  {
+    id: 'suf-able', group: 'suffix', root: '-able · -ible', meaning: '~할 수 있는',
+    origin: '라틴어', originWord: '-abilis (~할 만한)',
+    words: [
+      { w: 'reliable',   p: [['rely','의지하다'],['able','할 수 있는']],         b: '의지할 수 있는', m: '믿을 만한',   lv: '수능' },
+      { w: 'flexible',   p: [['flex','구부리다'],['ible','할 수 있는']],         b: '구부릴 수 있는', m: '유연한',     lv: '수능' },
+      { w: 'feasible',   p: [['feas','해내다'],['ible','할 수 있는']],           b: '해낼 수 있는',   m: '실현 가능한', lv: '고급' },
+      { w: 'inevitable', p: [['in','아닌'],['evit','피하다'],['able','할 수 있는']], b: '피할 수 없는', m: '불가피한', lv: 'GRE' },
+      { w: 'plausible',  p: [['plaus','박수치다'],['ible','할 만한']],           b: '박수받을 만한', m: '그럴듯한',   lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'suf-ous', group: 'suffix', root: '-ous', meaning: '~이 많은 · ~한',
+    origin: '라틴어', originWord: '-osus (~이 가득한)',
+    words: [
+      { w: 'famous',     p: [['fam','명성'],['ous','~이 많은']],               b: '명성이 많은',     m: '유명한',   lv: '기초' },
+      { w: 'generous',   p: [['gener','넉넉함'],['ous','~한']],                b: '넉넉한',          m: '관대한',   lv: '수능' },
+      { w: 'anonymous',  p: [['an','없는'],['onym','이름'],['ous','~한']],     b: '이름이 없는',     m: '익명의',   lv: '고급' },
+      { w: 'ambiguous',  p: [['ambi','양쪽'],['gu','몰다'],['ous','~한']],     b: '양쪽으로 몰리는', m: '애매한',   lv: 'GRE' },
+      { w: 'meticulous', p: [['meticul','두려움'],['ous','~한']],              b: '두려울 만큼 꼼꼼한', m: '세심한', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'suf-ize', group: 'suffix', root: '-ize', meaning: '~화하다 · ~하게 만들다',
+    origin: '그리스어', originWord: '-izein (~하게 하다)',
+    words: [
+      { w: 'realize',    p: [['real','실제'],['ize','~화하다']],               b: '실제가 되게 하다', m: '실현·깨닫다', lv: '기초' },
+      { w: 'criticize',  p: [['critic','비평'],['ize','~하다']],               b: '비평하다',         m: '비판하다',   lv: '수능' },
+      { w: 'emphasize',  p: [['emphas','강조'],['ize','~하다']],               b: '강조하다',         m: '강조하다',   lv: '수능' },
+      { w: 'jeopardize', p: [['jeopard','위험'],['ize','~화하다']],            b: '위험에 빠뜨리다',  m: '위태롭게 하다', lv: 'GRE' },
+      { w: 'scrutinize', p: [['scrutin','자세히 살핌'],['ize','~하다']],       b: '샅샅이 살피다',    m: '면밀히 조사하다', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'suf-ify', group: 'suffix', root: '-ify · -fy', meaning: '~하게 만들다',
+    origin: '라틴어', originWord: '-ficare (~로 만들다)',
+    words: [
+      { w: 'clarify',    p: [['clar','맑은'],['ify','~하게 만들다']],          b: '맑게 만들다',     m: '명확히 하다', lv: '수능' },
+      { w: 'justify',    p: [['just','옳은'],['ify','~하게 만들다']],          b: '옳게 만들다',     m: '정당화하다', lv: '수능' },
+      { w: 'magnify',    p: [['magn','큰'],['ify','~하게 만들다']],            b: '크게 만들다',     m: '확대하다',   lv: '수능' },
+      { w: 'intensify',  p: [['intens','강한'],['ify','~하게 만들다']],        b: '강하게 만들다',   m: '강화하다',   lv: '고급' },
+      { w: 'exemplify',  p: [['exempl','본보기'],['ify','~로 만들다']],        b: '본보기로 만들다', m: '예시하다',   lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'suf-ism', group: 'suffix', root: '-ism', meaning: '~주의 · ~한 태도',
+    origin: '그리스어', originWord: '-ismos (~상태·주의)',
+    words: [
+      { w: 'criticism',  p: [['critic','비평'],['ism','~하는 태도']],          b: '비평하는 태도',   m: '비판',     lv: '수능' },
+      { w: 'optimism',   p: [['optim','가장 좋은'],['ism','~주의']],           b: '가장 좋게 보는 태도', m: '낙관주의', lv: '수능' },
+      { w: 'skepticism', p: [['skeptic','의심하는'],['ism','~주의']],          b: '의심하는 태도',   m: '회의주의', lv: 'GRE' },
+      { w: 'altruism',   p: [['altru','남'],['ism','~주의']],                  b: '남을 위하는 태도', m: '이타주의', lv: 'GRE' },
+      { w: 'plagiarism', p: [['plagiar','납치자'],['ism','~하는 짓']],         b: '남의 글을 훔치는 짓', m: '표절',  lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'suf-ity', group: 'suffix', root: '-ity · -ty', meaning: '~성질 · ~상태',
+    origin: '라틴어', originWord: '-itas (~성질)',
+    words: [
+      { w: 'ability',   p: [['abil','할 수 있는'],['ity','~성질']],           b: '할 수 있는 성질', m: '능력',     lv: '기초' },
+      { w: 'adversity', p: [['advers','맞서는'],['ity','~상황']],             b: '맞서는 상황',     m: '역경',     lv: '고급' },
+      { w: 'proximity', p: [['proxim','가까운'],['ity','~상태']],             b: '가까운 상태',     m: '근접',     lv: '고급' },
+      { w: 'integrity', p: [['integr','온전한'],['ity','~상태']],             b: '온전한 상태',     m: '진실성·청렴', lv: 'GRE' },
+      { w: 'austerity', p: [['auster','엄격한'],['ity','~상태']],             b: '엄격한 상태',     m: '긴축·내핍', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'suf-cide', group: 'suffix', root: '-cide', meaning: '죽이다 · 베다',
+    origin: '라틴어', originWord: 'caedere (베다·죽이다)',
+    words: [
+      { w: 'suicide',    p: [['sui','자기'],['cide','죽이다']],                b: '자기를 죽임',     m: '자살',     lv: '수능' },
+      { w: 'pesticide',  p: [['pest','해충'],['cide','죽이다']],               b: '해충을 죽이는 것', m: '살충제',   lv: '수능' },
+      { w: 'herbicide',  p: [['herb','풀'],['cide','죽이다']],                 b: '풀을 죽이는 것',  m: '제초제',   lv: '고급' },
+      { w: 'homicide',   p: [['homi','사람'],['cide','죽이다']],               b: '사람을 죽임',     m: '살인',     lv: '고급' },
+      { w: 'genocide',   p: [['geno','종족'],['cide','죽이다']],               b: '종족을 죽임',     m: '대량 학살', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'suf-ant', group: 'suffix', root: '-ant · -ent', meaning: '~하는 (성질·사람)',
+    origin: '라틴어', originWord: '-ans / -ens (~하는)',
+    words: [
+      { w: 'persistent',  p: [['persist','버티다'],['ent','~하는']],           b: '끝까지 버티는',   m: '끈질긴',   lv: '수능' },
+      { w: 'arrogant',    p: [['arrog','요구하다'],['ant','~하는']],           b: '제 것인 양 요구하는', m: '거만한', lv: '고급' },
+      { w: 'vigilant',    p: [['vigil','깨어 있는'],['ant','~한']],            b: '깨어 지켜보는',   m: '경계하는', lv: '고급' },
+      { w: 'complacent',  p: [['com','완전히'],['plac','기쁜'],['ent','~한']], b: '스스로 만족한',   m: '안주하는', lv: 'GRE' },
+      { w: 'belligerent', p: [['belli','전쟁'],['ger','일으키다'],['ent','~하는']], b: '전쟁을 일으키는', m: '호전적인', lv: 'GRE' },
+    ],
+  },
+
+  /* ===== 라틴어 어근 (GRE 확장) ===== */
+  {
+    id: 'cred', group: 'latin', root: 'cred', meaning: '믿다',
+    origin: '라틴어', originWord: 'credere (믿다)',
+    words: [
+      { w: 'credit',      p: [['cred','믿다'],['it','것']],                    b: '믿어 주는 것',    m: '신용',     lv: '기초' },
+      { w: 'incredible',  p: [['in','아닌'],['cred','믿다'],['ible','할 수 있는']], b: '믿을 수 없는', m: '놀라운', lv: '기초' },
+      { w: 'credible',    p: [['cred','믿다'],['ible','할 수 있는']],           b: '믿을 수 있는',    m: '믿을 만한', lv: '수능' },
+      { w: 'credentials', p: [['cred','믿다'],['ential','~하게 하는 것']],      b: '믿게 해 주는 것', m: '자격 증명', lv: '고급' },
+      { w: 'credulous',   p: [['cred','믿다'],['ulous','잘 ~하는']],            b: '잘 믿는',         m: '잘 속는',   lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'loqu', group: 'latin', root: 'loqu · locu', meaning: '말하다',
+    origin: '라틴어', originWord: 'loqui (말하다)',
+    words: [
+      { w: 'eloquent',   p: [['e','밖으로'],['loqu','말하다'],['ent','~하는']], b: '말이 술술 나오는', m: '웅변의',   lv: '고급' },
+      { w: 'elocution',  p: [['e','밖으로'],['locu','말하다'],['tion','법']],   b: '말을 밖으로 내는 법', m: '발성·웅변술', lv: '고급' },
+      { w: 'colloquial', p: [['col','함께'],['loqu','말하다'],['ial','~의']],   b: '함께 나누는 말투의', m: '구어체의', lv: 'GRE' },
+      { w: 'soliloquy',  p: [['soli','혼자'],['loqu','말하다'],['y','것']],     b: '혼자 하는 말',    m: '독백',     lv: 'GRE' },
+      { w: 'loquacious', p: [['loqu','말하다'],['acious','~이 많은']],          b: '말이 많은',       m: '수다스러운', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'greg', group: 'latin', root: 'greg', meaning: '무리 · 떼',
+    origin: '라틴어', originWord: 'grex (무리)',
+    words: [
+      { w: 'congregate', p: [['con','함께'],['greg','무리'],['ate','~하다']],   b: '함께 무리 짓다',  m: '모이다',   lv: '고급' },
+      { w: 'segregate',  p: [['se','따로'],['greg','무리'],['ate','~하다']],    b: '무리에서 따로 떼다', m: '분리하다', lv: '고급' },
+      { w: 'gregarious', p: [['greg','무리'],['arious','~을 좋아하는']],        b: '무리 짓길 좋아하는', m: '사교적인', lv: 'GRE' },
+      { w: 'aggregate',  p: [['ag','~쪽으로'],['greg','무리'],['ate','~하다']], b: '무리로 끌어모으다', m: '모으다·총계', lv: 'GRE' },
+      { w: 'egregious',  p: [['e','밖으로'],['greg','무리'],['ious','~한']],    b: '무리 밖으로 튄',  m: '지독한',   lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'plac', group: 'latin', root: 'plac', meaning: '달래다 · 기쁘게 하다',
+    origin: '라틴어', originWord: 'placare (달래다)',
+    words: [
+      { w: 'placid',     p: [['plac','달래다'],['id','~한']],                  b: '잔잔히 달래진',   m: '차분한',   lv: '고급' },
+      { w: 'placebo',    p: [['plac','기쁘게 하다'],['ebo','~할 것']],         b: '마음을 기쁘게 할 것', m: '위약',  lv: '고급' },
+      { w: 'placate',    p: [['plac','달래다'],['ate','~하다']],               b: '달래다',          m: '달래어 진정시키다', lv: 'GRE' },
+      { w: 'complacent', p: [['com','완전히'],['plac','기쁜'],['ent','~한']],  b: '스스로 만족한',   m: '안주하는', lv: 'GRE' },
+      { w: 'implacable', p: [['im','아닌'],['plac','달래다'],['able','할 수 있는']], b: '달랠 수 없는', m: '누그러지지 않는', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'sequ', group: 'latin', root: 'sequ · secu', meaning: '따르다',
+    origin: '라틴어', originWord: 'sequi (따르다)',
+    words: [
+      { w: 'sequence',    p: [['sequ','따르다'],['ence','것']],                b: '줄줄이 따라옴',   m: '순서·연속', lv: '수능' },
+      { w: 'consequence', p: [['con','함께'],['sequ','따르다'],['ence','것']],  b: '뒤따라오는 것',   m: '결과',     lv: '수능' },
+      { w: 'subsequent',  p: [['sub','뒤'],['sequ','따르다'],['ent','~하는']],  b: '뒤따르는',        m: '그 다음의', lv: '고급' },
+      { w: 'consecutive', p: [['con','함께'],['secu','따르다'],['tive','~하는']], b: '줄줄이 이어 따르는', m: '연속적인', lv: '고급' },
+      { w: 'obsequious',  p: [['ob','~향해'],['sequ','따르다'],['ious','~한']], b: '굽실대며 따르는', m: '아첨하는', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'flu', group: 'latin', root: 'flu · flux', meaning: '흐르다',
+    origin: '라틴어', originWord: 'fluere (흐르다)',
+    words: [
+      { w: 'fluent',      p: [['flu','흐르다'],['ent','~하는']],               b: '술술 흐르는',     m: '유창한',   lv: '기초' },
+      { w: 'influence',   p: [['in','안으로'],['flu','흐르다'],['ence','것']],  b: '안으로 흘러듦',   m: '영향',     lv: '수능' },
+      { w: 'fluctuate',   p: [['fluctu','물결치다'],['ate','~하다']],           b: '물결처럼 흐르다', m: '변동하다', lv: '고급' },
+      { w: 'affluent',    p: [['af','~로'],['flu','흐르다'],['ent','~하는']],   b: '풍족하게 흘러드는', m: '부유한', lv: 'GRE' },
+      { w: 'superfluous', p: [['super','넘쳐'],['flu','흐르다'],['ous','~한']], b: '넘쳐흐르는',      m: '불필요한', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'pend', group: 'latin', root: 'pend · pens', meaning: '매달다 · 달아 보다',
+    origin: '라틴어', originWord: 'pendere (매달다)',
+    words: [
+      { w: 'depend',        p: [['de','아래로'],['pend','매달리다']],          b: '아래에 매달리다', m: '의존하다', lv: '기초' },
+      { w: 'suspend',       p: [['sus','아래'],['pend','매달다']],             b: '매달아 멈추다',   m: '중단·정지하다', lv: '수능' },
+      { w: 'indispensable', p: [['in','아닌'],['dis','떼다'],['pens','달다'],['able','할 수 있는']], b: '떼어낼 수 없는', m: '필수적인', lv: '고급' },
+      { w: 'impending',     p: [['im','위에'],['pend','매달리다'],['ing','~하는']], b: '머리 위에 매달려 있는', m: '임박한', lv: 'GRE' },
+      { w: 'pensive',       p: [['pens','달아 보다'],['ive','~한']],           b: '마음을 저울질하는', m: '생각에 잠긴', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'magn', group: 'latin', root: 'magn', meaning: '큰',
+    origin: '라틴어', originWord: 'magnus (큰)',
+    words: [
+      { w: 'magnify',      p: [['magn','큰'],['ify','~하게 만들다']],          b: '크게 만들다',     m: '확대하다', lv: '수능' },
+      { w: 'magnificent',  p: [['magn','큰'],['fic','만들다'],['ent','~한']],  b: '크게 만들어진',   m: '웅장한',   lv: '고급' },
+      { w: 'magnitude',    p: [['magn','큰'],['itude','정도']],                b: '큰 정도',         m: '규모·크기', lv: '고급' },
+      { w: 'magnate',      p: [['magn','큰'],['ate','사람']],                  b: '크게 된 사람',    m: '거물',     lv: 'GRE' },
+      { w: 'magnanimous',  p: [['magn','큰'],['anim','마음'],['ous','~한']],   b: '마음이 큰',       m: '도량이 넓은', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'sol', group: 'latin', root: 'sol', meaning: '홀로',
+    origin: '라틴어', originWord: 'solus (홀로)',
+    words: [
+      { w: 'solo',      p: [['sol','홀로'],['o','것']],                        b: '홀로 하는 것',    m: '독주·단독', lv: '기초' },
+      { w: 'sole',      p: [['sol','홀로']],                                   b: '홀로인',          m: '유일한',   lv: '수능' },
+      { w: 'solitary',  p: [['sol','홀로'],['itary','~한']],                   b: '홀로 있는',       m: '혼자의·외딴', lv: '고급' },
+      { w: 'desolate',  p: [['de','완전히'],['sol','홀로'],['ate','~한']],     b: '완전히 홀로 남은', m: '황량한',   lv: 'GRE' },
+      { w: 'soliloquy', p: [['soli','홀로'],['loqu','말하다'],['y','것']],     b: '혼자 하는 말',    m: '독백',     lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'mut', group: 'latin', root: 'mut', meaning: '바꾸다',
+    origin: '라틴어', originWord: 'mutare (바꾸다)',
+    words: [
+      { w: 'mutual',    p: [['mut','바꾸다'],['ual','~하는']],                 b: '서로 바꾸는',     m: '상호 간의', lv: '수능' },
+      { w: 'commute',   p: [['com','함께'],['mut','바꾸다']],                  b: '차례로 바꿔 오가다', m: '통근하다', lv: '수능' },
+      { w: 'mutate',    p: [['mut','바꾸다'],['ate','~하다']],                 b: '바뀌다',          m: '변이하다', lv: '고급' },
+      { w: 'immutable', p: [['im','아닌'],['mut','바꾸다'],['able','할 수 있는']], b: '바꿀 수 없는', m: '불변의', lv: 'GRE' },
+      { w: 'transmute', p: [['trans','가로질러'],['mut','바꾸다']],            b: '완전히 다른 것으로 바꾸다', m: '변환하다', lv: 'GRE' },
+    ],
+  },
+
+  /* ===== 그리스어 어근 (GRE 확장) ===== */
+  {
+    id: 'anthrop', group: 'greek', root: 'anthrop', meaning: '인간',
+    origin: '그리스어', originWord: 'ánthrōpos (인간)',
+    words: [
+      { w: 'anthropology',    p: [['anthrop','인간'],['logy','학문']],         b: '인간을 연구하는 학문', m: '인류학', lv: '고급' },
+      { w: 'philanthropy',    p: [['phil','사랑'],['anthrop','인간'],['y','것']], b: '인간을 사랑함',   m: '자선',   lv: 'GRE' },
+      { w: 'misanthrope',     p: [['mis','싫어함'],['anthrop','인간'],['e','사람']], b: '인간을 싫어하는 사람', m: '인간 혐오자', lv: 'GRE' },
+      { w: 'anthropomorphic', p: [['anthropo','인간'],['morph','형태'],['ic','~한']], b: '인간 모습을 한', m: '의인화된', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'chron', group: 'greek', root: 'chron', meaning: '시간',
+    origin: '그리스어', originWord: 'khrónos (시간)',
+    words: [
+      { w: 'chronic',        p: [['chron','시간'],['ic','~의']],               b: '오랜 시간 이어지는', m: '만성의', lv: '수능' },
+      { w: 'chronological',  p: [['chrono','시간'],['logical','~순의']],        b: '시간 순서대로의', m: '연대순의', lv: '수능' },
+      { w: 'chronicle',      p: [['chron','시간'],['icle','기록']],             b: '시간 순으로 적은 것', m: '연대기', lv: '고급' },
+      { w: 'synchronize',    p: [['syn','함께'],['chron','시간'],['ize','~하다']], b: '시간을 함께 맞추다', m: '동시에 움직이다', lv: '고급' },
+      { w: 'anachronism',    p: [['ana','거슬러'],['chron','시간'],['ism','~한 것']], b: '시대를 거스른 것', m: '시대착오', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'dem', group: 'greek', root: 'dem', meaning: '사람들 · 백성',
+    origin: '그리스어', originWord: 'dêmos (백성)',
+    words: [
+      { w: 'democracy',   p: [['dem','사람들'],['cracy','통치']],              b: '사람들이 다스림', m: '민주주의', lv: '기초' },
+      { w: 'epidemic',    p: [['epi','사이에'],['dem','사람들'],['ic','~한 것']], b: '사람들 사이에 퍼진', m: '전염병', lv: '고급' },
+      { w: 'pandemic',    p: [['pan','모든'],['dem','사람들'],['ic','~한 것']], b: '모든 사람에게 퍼진', m: '세계적 유행병', lv: '고급' },
+      { w: 'demographic', p: [['demo','사람들'],['graph','기록'],['ic','~의']], b: '사람들을 기록한', m: '인구 통계의', lv: 'GRE' },
+      { w: 'demagogue',   p: [['dem','사람들'],['agogue','이끄는 자']],         b: '사람들을 선동해 이끄는 자', m: '선동가', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'path', group: 'greek', root: 'path', meaning: '감정 · 고통',
+    origin: '그리스어', originWord: 'páthos (감정·고통)',
+    words: [
+      { w: 'sympathy',  p: [['sym','함께'],['path','느낌'],['y','것']],        b: '함께 느낌',       m: '동정',     lv: '수능' },
+      { w: 'empathy',   p: [['em','안으로'],['path','느낌'],['y','것']],       b: '상대 안으로 들어가 느낌', m: '공감', lv: '고급' },
+      { w: 'pathetic',  p: [['path','감정'],['etic','~을 자극하는']],           b: '감정을 자극하는', m: '측은한·한심한', lv: '고급' },
+      { w: 'apathy',    p: [['a','없는'],['path','느낌'],['y','것']],          b: '느낌이 없음',     m: '무관심',   lv: 'GRE' },
+      { w: 'pathology', p: [['path','병'],['logy','학문']],                    b: '병을 연구하는 학문', m: '병리학', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'phil', group: 'greek', root: 'phil', meaning: '사랑 · 좋아함',
+    origin: '그리스어', originWord: 'phílos (사랑하는)',
+    words: [
+      { w: 'philosophy',   p: [['phil','사랑'],['soph','지혜'],['y','것']],     b: '지혜를 사랑함',   m: '철학',     lv: '기초' },
+      { w: 'philharmonic', p: [['phil','사랑'],['harmonic','화음']],            b: '화음을 사랑하는', m: '교향악의', lv: '고급' },
+      { w: 'philanthropy', p: [['phil','사랑'],['anthrop','인간'],['y','것']],  b: '인간을 사랑함',   m: '자선',     lv: 'GRE' },
+      { w: 'bibliophile',  p: [['biblio','책'],['phil','사랑'],['e','사람']],   b: '책을 사랑하는 사람', m: '애서가', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'soph', group: 'greek', root: 'soph', meaning: '지혜',
+    origin: '그리스어', originWord: 'sophós (지혜로운)',
+    words: [
+      { w: 'philosophy',    p: [['phil','사랑'],['soph','지혜'],['y','것']],    b: '지혜를 사랑함',   m: '철학',     lv: '기초' },
+      { w: 'sophisticated', p: [['soph','지혜'],['isticated','다듬어진']],      b: '지혜로 다듬어진', m: '정교한·세련된', lv: '고급' },
+      { w: 'sophomore',     p: [['soph','지혜로운'],['more','어리석은']],       b: '똑똑하면서도 설익은', m: '2학년생', lv: 'GRE' },
+      { w: 'sophistry',     p: [['soph','지혜'],['istry','~인 척하는 것']],     b: '지혜인 척하는 말', m: '궤변',   lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'arch', group: 'greek', root: 'arch', meaning: '으뜸 · 통치 · 처음',
+    origin: '그리스어', originWord: 'arkhḗ (으뜸·처음)',
+    words: [
+      { w: 'monarch',   p: [['mon','하나'],['arch','통치자']],                 b: '혼자 다스리는 자', m: '군주',    lv: '수능' },
+      { w: 'architect', p: [['arch','으뜸'],['tect','짓는 사람']],             b: '으뜸가는 건축가', m: '건축가',   lv: '수능' },
+      { w: 'anarchy',   p: [['an','없는'],['arch','통치'],['y','상태']],       b: '다스림이 없음',   m: '무정부 상태', lv: '고급' },
+      { w: 'hierarchy', p: [['hier','신성한'],['arch','통치'],['y','것']],     b: '신성한 순으로 다스림', m: '위계질서', lv: 'GRE' },
+      { w: 'archaic',   p: [['arch','처음'],['aic','~의']],                    b: '맨 처음 시대의',  m: '고풍의·낡은', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'crat', group: 'greek', root: 'crat · cracy', meaning: '권력 · 통치',
+    origin: '그리스어', originWord: 'krátos (힘)',
+    words: [
+      { w: 'democracy',   p: [['dem','사람들'],['cracy','통치']],              b: '사람들이 다스림', m: '민주주의', lv: '기초' },
+      { w: 'autocrat',    p: [['auto','스스로'],['crat','통치자']],            b: '혼자 다 정하는 통치자', m: '독재자', lv: '고급' },
+      { w: 'aristocrat',  p: [['aristo','가장 뛰어난'],['crat','통치자']],     b: '가장 뛰어난 자가 다스림', m: '귀족', lv: '고급' },
+      { w: 'bureaucracy', p: [['bureau','사무국'],['cracy','통치']],           b: '사무국이 다스림', m: '관료제',   lv: 'GRE' },
+      { w: 'plutocracy',  p: [['pluto','부'],['cracy','통치']],                b: '부자가 다스림',   m: '금권 정치', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'gen', group: 'greek', root: 'gen', meaning: '태생 · 낳다',
+    origin: '그리스어', originWord: 'génos (태생·종족)',
+    words: [
+      { w: 'generate',   p: [['gen','낳다'],['erate','~하다']],                b: '낳아 만들어 내다', m: '생성하다', lv: '수능' },
+      { w: 'genuine',    p: [['gen','태생'],['uine','~의']],                   b: '타고난 그대로의', m: '진짜의',   lv: '수능' },
+      { w: 'genetic',    p: [['gen','태생'],['etic','~의']],                   b: '태생에 관한',     m: '유전의',   lv: '고급' },
+      { w: 'indigenous', p: [['indi','안에서'],['gen','태어난'],['ous','~한']], b: '그 땅에서 태어난', m: '토착의',   lv: 'GRE' },
+      { w: 'congenital', p: [['con','함께'],['gen','태어남'],['ital','~의']],  b: '태어날 때부터 함께한', m: '선천적인', lv: 'GRE' },
+    ],
+  },
+  {
+    id: 'morph', group: 'greek', root: 'morph', meaning: '형태',
+    origin: '그리스어', originWord: 'morphḗ (형태)',
+    words: [
+      { w: 'metamorphosis',   p: [['meta','바뀜'],['morph','형태'],['osis','~됨']], b: '형태가 바뀜',   m: '변태·변형', lv: '고급' },
+      { w: 'morphology',      p: [['morph','형태'],['logy','학문']],            b: '형태를 연구하는 학문', m: '형태학', lv: 'GRE' },
+      { w: 'amorphous',       p: [['a','없는'],['morph','형태'],['ous','~한']], b: '정해진 형태가 없는', m: '무정형의', lv: 'GRE' },
+      { w: 'anthropomorphic', p: [['anthropo','인간'],['morph','형태'],['ic','~한']], b: '인간 형태를 한', m: '의인화된', lv: 'GRE' },
+    ],
+  },
 ];
 
 /* --- 카드 생성 ------------------------------------------------------ */
@@ -498,7 +899,7 @@ function rootCard(rootObj, word) {
 function buildRootDeck(rootId) {
   const r = ROOTS.find(x => x.id === rootId);
   if (!r) return [];
-  const order = { '기초': 0, '수능': 1, '고급': 2 };
+  const order = { '기초': 0, '수능': 1, '고급': 2, 'GRE': 3 };
   return r.words
     .slice()
     .sort((a, b) => (order[a.lv] || 1) - (order[b.lv] || 1))

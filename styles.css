@@ -302,6 +302,7 @@ body {
 .lv-기초 { background: #e3f4e9; color: #2f9e62; }
 .lv-수능 { background: #fbeed0; color: #b9821a; }
 .lv-고급 { background: #f8dede; color: #c0392b; }
+.lv-GRE  { background: #e7e0f7; color: #6e1a6e; }
 
 /* ---------- 어원 카드 — 뒷면(분해·뜻) ---------- */
 .root-card .card-en {
