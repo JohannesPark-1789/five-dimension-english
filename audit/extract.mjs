@@ -10,13 +10,14 @@
         audit/out/shapes.json  (생성형 문장의 고유 템플릿 = 실제 검수 단위)
         audit/out/corpus.tsv   (사람이 훑어보기용)
    ===================================================================== */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { createContext, runInContext } from 'node:vm';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT  = join(ROOT, 'audit', 'out');
+mkdirSync(OUT, { recursive: true });   // out/ 은 gitignore 대상 — 새로 클론하면 없다
 
 /* --- 데이터 모듈을 브라우저 흉내 샌드박스에서 실행 ------------------ */
 function loadModules(files) {
