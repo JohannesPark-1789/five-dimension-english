@@ -166,7 +166,7 @@ const ROOTS = [
     words: [
       { w: 'respect',     p: [['re','다시'],['spect','보다']],   b: '거듭 돌아보다',   m: '존경하다', lv: '기초' },
       { w: 'inspect',     p: [['in','안'],['spect','보다']],     b: '안을 들여다보다', m: '점검하다', lv: '수능' },
-      { w: 'suspect',     p: [['su','아래'],['spect','보다']],   b: '아래에서 몰래 보다', m: '의심하다', lv: '수능' },
+      { w: 'suspect',     p: [['sus','아래'],['pect','보다']],   b: '아래에서 몰래 보다', m: '의심하다', lv: '수능' },
       { w: 'prospect',    p: [['pro','앞'],['spect','보다']],    b: '앞을 내다봄',     m: '전망',     lv: '수능' },
       { w: 'spectator',   p: [['spect','보다'],['ator','사람']], b: '보는 사람',       m: '관중',     lv: '수능' },
       { w: 'perspective', p: [['per','통하여'],['spect','보다']], b: '꿰뚫어 보는 방식', m: '관점',    lv: '고급' },
@@ -198,9 +198,9 @@ const ROOTS = [
     id: 'voc', group: 'latin', root: 'voc · vok', meaning: '부르다 · 목소리',
     origin: '라틴어', originWord: 'vocāre (부르다)',
     words: [
-      { w: 'voice',      p: [['voc','목소리']],                   b: '목소리',        m: '목소리',   lv: '기초' },
+      { w: 'advocate',   p: [['ad','~쪽으로'],['voc','부르다'],['ate','하다']], b: '~쪽으로 불러 주다', m: '옹호하다', lv: '고급' },
       { w: 'vocal',      p: [['voc','목소리'],['al','~의']],      b: '목소리의',      m: '목소리의', lv: '수능' },
-      { w: 'vocabulary', p: [['voc','부르다'],['ulary','모음']],  b: '이름 불러 모은 것', m: '어휘',  lv: '기초' },
+      { w: 'vocabulary', p: [['voc','부르다'],['abulary','이름 모음']], b: '이름 불러 모은 것', m: '어휘',  lv: '기초' },
       { w: 'invoke',     p: [['in','안으로'],['voke','부르다']],  b: '안으로 불러들이다', m: '불러내다', lv: '고급' },
       { w: 'provoke',    p: [['pro','앞으로'],['voke','부르다']], b: '앞으로 불러내다', m: '자극하다', lv: '고급' },
     ],
@@ -354,7 +354,7 @@ const ROOTS = [
     words: [
       { w: 'spirit',  p: [['spir','숨'],['it','것']],         b: '숨, 곧 생명의 기운', m: '정신·영혼', lv: '수능' },
       { w: 'inspire', p: [['in','안으로'],['spire','숨쉬다']], b: '안으로 숨을 불어넣다', m: '영감을 주다', lv: '수능' },
-      { w: 'expire',  p: [['ex','밖으로'],['spire','숨쉬다']], b: '숨을 다 내쉬다', m: '만료되다', lv: '고급' },
+      { w: 'expire',  p: [['ex','밖으로'],['pire','숨쉬다']], b: '숨을 다 내쉬다 (spire 의 s 가 탈락)', m: '만료되다', lv: '고급' },
       { w: 'perspire',p: [['per','통하여'],['spire','숨쉬다']],b: '피부로 숨을 내보내다', m: '땀 흘리다', lv: '고급' },
       { w: 'conspire',p: [['con','함께'],['spire','숨쉬다']], b: '함께 숨죽여 모의하다', m: '음모를 꾸미다', lv: '고급' },
     ],
@@ -456,8 +456,8 @@ const ROOTS = [
     id: 'psych', group: 'greek', root: 'psych', meaning: '마음 · 정신',
     origin: '그리스어', originWord: 'psūkhḗ (영혼)',
     words: [
-      { w: 'psychology',   p: [['psych','마음'],['logy','학문']],   b: '마음에 관한 학문', m: '심리학',   lv: '수능' },
-      { w: 'psychologist', p: [['psych','마음'],['logist','학자']], b: '마음을 연구하는 사람', m: '심리학자', lv: '수능' },
+      { w: 'psychology',   p: [['psycho','마음'],['logy','학문']],   b: '마음에 관한 학문', m: '심리학',   lv: '수능' },
+      { w: 'psychologist', p: [['psycho','마음'],['logist','학자']], b: '마음을 연구하는 사람', m: '심리학자', lv: '수능' },
       { w: 'psychic',      p: [['psych','마음'],['ic','~의']],      b: '마음·정신의',     m: '초자연적인', lv: '고급' },
     ],
   },
@@ -511,8 +511,8 @@ const ROOTS = [
     id: 'contra', group: 'prefix', root: 'contra- · counter-', meaning: '반대 · 맞서',
     origin: '라틴어', originWord: 'contra (맞서)',
     words: [
-      { w: 'contrast',     p: [['contra','반대'],['st','서다']],            b: '반대로 세워 둠',     m: '대조',     lv: '수능' },
-      { w: 'contrary',     p: [['contra','반대'],['ary','~되는']],          b: '반대되는',          m: '정반대의', lv: '수능' },
+      { w: 'contrast',     p: [['contra','반대'],['st','서다(stare)']],            b: '반대로 세워 둠',     m: '대조',     lv: '수능' },
+      { w: 'contrary',     p: [['contr','반대'],['ary','~되는']],          b: '반대되는',          m: '정반대의', lv: '수능' },
       { w: 'contradict',   p: [['contra','반대'],['dict','말하다']],        b: '반대로 말하다',      m: '모순되다·반박하다', lv: '고급' },
       { w: 'controversy',  p: [['contro','반대'],['vers','돌다'],['y','것']], b: '의견이 반대로 도는 것', m: '논쟁',  lv: '고급' },
       { w: 'counterfeit',  p: [['counter','반대로'],['feit','만들다']],     b: '진짜에 맞서 만든',   m: '위조의',   lv: 'GRE' },
@@ -526,7 +526,7 @@ const ROOTS = [
       { w: 'malice',      p: [['mal','나쁜'],['ice','마음']],               b: '나쁜 마음',       m: '악의',     lv: '고급' },
       { w: 'malady',      p: [['mal','나쁜'],['ady','상태']],               b: '나쁜 상태',       m: '질병',     lv: 'GRE' },
       { w: 'malignant',   p: [['malign','해를 끼치다'],['ant','~하는']],    b: '해를 끼치는',     m: '악성의',   lv: 'GRE' },
-      { w: 'malevolent',  p: [['mal','나쁜'],['vol','바라다'],['ent','~한']], b: '나쁘게 되길 바라는', m: '악의적인', lv: 'GRE' },
+      { w: 'malevolent',  p: [['male','나쁘게'],['vol','바라다'],['ent','~한']], b: '나쁘게 되길 바라는', m: '악의적인', lv: 'GRE' },
     ],
   },
   {
@@ -557,7 +557,7 @@ const ROOTS = [
     id: 'suf-able', group: 'suffix', root: '-able · -ible', meaning: '~할 수 있는',
     origin: '라틴어', originWord: '-abilis (~할 만한)',
     words: [
-      { w: 'reliable',   p: [['rely','의지하다'],['able','할 수 있는']],         b: '의지할 수 있는', m: '믿을 만한',   lv: '수능' },
+      { w: 'reliable',   p: [['reli','의지하다'],['able','할 수 있는']],         b: '의지할 수 있는', m: '믿을 만한',   lv: '수능' },
       { w: 'flexible',   p: [['flex','구부리다'],['ible','할 수 있는']],         b: '구부릴 수 있는', m: '유연한',     lv: '수능' },
       { w: 'feasible',   p: [['feas','해내다'],['ible','할 수 있는']],           b: '해낼 수 있는',   m: '실현 가능한', lv: '고급' },
       { w: 'inevitable', p: [['in','아닌'],['evit','피하다'],['able','할 수 있는']], b: '피할 수 없는', m: '불가피한', lv: 'GRE' },
@@ -624,8 +624,8 @@ const ROOTS = [
     origin: '라틴어', originWord: 'caedere (베다·죽이다)',
     words: [
       { w: 'suicide',    p: [['sui','자기'],['cide','죽이다']],                b: '자기를 죽임',     m: '자살',     lv: '수능' },
-      { w: 'pesticide',  p: [['pest','해충'],['cide','죽이다']],               b: '해충을 죽이는 것', m: '살충제',   lv: '수능' },
-      { w: 'herbicide',  p: [['herb','풀'],['cide','죽이다']],                 b: '풀을 죽이는 것',  m: '제초제',   lv: '고급' },
+      { w: 'pesticide',  p: [['pesti','해충'],['cide','죽이다']],               b: '해충을 죽이는 것', m: '살충제',   lv: '수능' },
+      { w: 'herbicide',  p: [['herbi','풀'],['cide','죽이다']],                 b: '풀을 죽이는 것',  m: '제초제',   lv: '고급' },
       { w: 'homicide',   p: [['homi','사람'],['cide','죽이다']],               b: '사람을 죽임',     m: '살인',     lv: '고급' },
       { w: 'genocide',   p: [['geno','종족'],['cide','죽이다']],               b: '종족을 죽임',     m: '대량 학살', lv: 'GRE' },
     ],
@@ -725,7 +725,7 @@ const ROOTS = [
     origin: '라틴어', originWord: 'magnus (큰)',
     words: [
       { w: 'magnify',      p: [['magn','큰'],['ify','~하게 만들다']],          b: '크게 만들다',     m: '확대하다', lv: '수능' },
-      { w: 'magnificent',  p: [['magn','큰'],['fic','만들다'],['ent','~한']],  b: '크게 만들어진',   m: '웅장한',   lv: '고급' },
+      { w: 'magnificent',  p: [['magni','큰'],['fic','만들다'],['ent','~한']],  b: '크게 만들어진',   m: '웅장한',   lv: '고급' },
       { w: 'magnitude',    p: [['magn','큰'],['itude','정도']],                b: '큰 정도',         m: '규모·크기', lv: '고급' },
       { w: 'magnate',      p: [['magn','큰'],['ate','사람']],                  b: '크게 된 사람',    m: '거물',     lv: 'GRE' },
       { w: 'magnanimous',  p: [['magn','큰'],['anim','마음'],['ous','~한']],   b: '마음이 큰',       m: '도량이 넓은', lv: 'GRE' },
@@ -759,7 +759,7 @@ const ROOTS = [
     id: 'anthrop', group: 'greek', root: 'anthrop', meaning: '인간',
     origin: '그리스어', originWord: 'ánthrōpos (인간)',
     words: [
-      { w: 'anthropology',    p: [['anthrop','인간'],['logy','학문']],         b: '인간을 연구하는 학문', m: '인류학', lv: '고급' },
+      { w: 'anthropology',    p: [['anthropo','인간'],['logy','학문']],        b: '인간을 연구하는 학문', m: '인류학', lv: '고급' },
       { w: 'philanthropy',    p: [['phil','사랑'],['anthrop','인간'],['y','것']], b: '인간을 사랑함',   m: '자선',   lv: 'GRE' },
       { w: 'misanthrope',     p: [['mis','싫어함'],['anthrop','인간'],['e','사람']], b: '인간을 싫어하는 사람', m: '인간 혐오자', lv: 'GRE' },
       { w: 'anthropomorphic', p: [['anthropo','인간'],['morph','형태'],['ic','~한']], b: '인간 모습을 한', m: '의인화된', lv: 'GRE' },
@@ -780,7 +780,7 @@ const ROOTS = [
     id: 'dem', group: 'greek', root: 'dem', meaning: '사람들 · 백성',
     origin: '그리스어', originWord: 'dêmos (백성)',
     words: [
-      { w: 'democracy',   p: [['dem','사람들'],['cracy','통치']],              b: '사람들이 다스림', m: '민주주의', lv: '기초' },
+      { w: 'democracy',   p: [['demo','사람들'],['cracy','통치']],              b: '사람들이 다스림', m: '민주주의', lv: '기초' },
       { w: 'epidemic',    p: [['epi','사이에'],['dem','사람들'],['ic','~한 것']], b: '사람들 사이에 퍼진', m: '전염병', lv: '고급' },
       { w: 'pandemic',    p: [['pan','모든'],['dem','사람들'],['ic','~한 것']], b: '모든 사람에게 퍼진', m: '세계적 유행병', lv: '고급' },
       { w: 'demographic', p: [['demo','사람들'],['graph','기록'],['ic','~의']], b: '사람들을 기록한', m: '인구 통계의', lv: 'GRE' },
@@ -795,14 +795,14 @@ const ROOTS = [
       { w: 'empathy',   p: [['em','안으로'],['path','느낌'],['y','것']],       b: '상대 안으로 들어가 느낌', m: '공감', lv: '고급' },
       { w: 'pathetic',  p: [['path','감정'],['etic','~을 자극하는']],           b: '감정을 자극하는', m: '측은한·한심한', lv: '고급' },
       { w: 'apathy',    p: [['a','없는'],['path','느낌'],['y','것']],          b: '느낌이 없음',     m: '무관심',   lv: 'GRE' },
-      { w: 'pathology', p: [['path','병'],['logy','학문']],                    b: '병을 연구하는 학문', m: '병리학', lv: 'GRE' },
+      { w: 'pathology', p: [['patho','병'],['logy','학문']],                    b: '병을 연구하는 학문', m: '병리학', lv: 'GRE' },
     ],
   },
   {
     id: 'phil', group: 'greek', root: 'phil', meaning: '사랑 · 좋아함',
     origin: '그리스어', originWord: 'phílos (사랑하는)',
     words: [
-      { w: 'philosophy',   p: [['phil','사랑'],['soph','지혜'],['y','것']],     b: '지혜를 사랑함',   m: '철학',     lv: '기초' },
+      { w: 'philosophy',   p: [['philo','사랑'],['soph','지혜'],['y','것']],     b: '지혜를 사랑함',   m: '철학',     lv: '기초' },
       { w: 'philharmonic', p: [['phil','사랑'],['harmonic','화음']],            b: '화음을 사랑하는', m: '교향악의', lv: '고급' },
       { w: 'philanthropy', p: [['phil','사랑'],['anthrop','인간'],['y','것']],  b: '인간을 사랑함',   m: '자선',     lv: 'GRE' },
       { w: 'bibliophile',  p: [['biblio','책'],['phil','사랑'],['e','사람']],   b: '책을 사랑하는 사람', m: '애서가', lv: 'GRE' },
@@ -812,9 +812,9 @@ const ROOTS = [
     id: 'soph', group: 'greek', root: 'soph', meaning: '지혜',
     origin: '그리스어', originWord: 'sophós (지혜로운)',
     words: [
-      { w: 'philosophy',    p: [['phil','사랑'],['soph','지혜'],['y','것']],    b: '지혜를 사랑함',   m: '철학',     lv: '기초' },
+      { w: 'philosophy',    p: [['philo','사랑'],['soph','지혜'],['y','것']],    b: '지혜를 사랑함',   m: '철학',     lv: '기초' },
       { w: 'sophisticated', p: [['soph','지혜'],['isticated','다듬어진']],      b: '지혜로 다듬어진', m: '정교한·세련된', lv: '고급' },
-      { w: 'sophomore',     p: [['soph','지혜로운'],['more','어리석은']],       b: '똑똑하면서도 설익은', m: '2학년생', lv: 'GRE' },
+      { w: 'sophomore',     p: [['sopho','지혜로운'],['more','어리석은']],       b: '똑똑하면서도 설익은', m: '2학년생', lv: 'GRE' },
       { w: 'sophistry',     p: [['soph','지혜'],['istry','~인 척하는 것']],     b: '지혜인 척하는 말', m: '궤변',   lv: 'GRE' },
     ],
   },
@@ -823,7 +823,7 @@ const ROOTS = [
     origin: '그리스어', originWord: 'arkhḗ (으뜸·처음)',
     words: [
       { w: 'monarch',   p: [['mon','하나'],['arch','통치자']],                 b: '혼자 다스리는 자', m: '군주',    lv: '수능' },
-      { w: 'architect', p: [['arch','으뜸'],['tect','짓는 사람']],             b: '으뜸가는 건축가', m: '건축가',   lv: '수능' },
+      { w: 'architect', p: [['archi','으뜸'],['tect','짓는 사람']],             b: '으뜸가는 건축가', m: '건축가',   lv: '수능' },
       { w: 'anarchy',   p: [['an','없는'],['arch','통치'],['y','상태']],       b: '다스림이 없음',   m: '무정부 상태', lv: '고급' },
       { w: 'hierarchy', p: [['hier','신성한'],['arch','통치'],['y','것']],     b: '신성한 순으로 다스림', m: '위계질서', lv: 'GRE' },
       { w: 'archaic',   p: [['arch','처음'],['aic','~의']],                    b: '맨 처음 시대의',  m: '고풍의·낡은', lv: 'GRE' },
@@ -833,7 +833,7 @@ const ROOTS = [
     id: 'crat', group: 'greek', root: 'crat · cracy', meaning: '권력 · 통치',
     origin: '그리스어', originWord: 'krátos (힘)',
     words: [
-      { w: 'democracy',   p: [['dem','사람들'],['cracy','통치']],              b: '사람들이 다스림', m: '민주주의', lv: '기초' },
+      { w: 'democracy',   p: [['demo','사람들'],['cracy','통치']],              b: '사람들이 다스림', m: '민주주의', lv: '기초' },
       { w: 'autocrat',    p: [['auto','스스로'],['crat','통치자']],            b: '혼자 다 정하는 통치자', m: '독재자', lv: '고급' },
       { w: 'aristocrat',  p: [['aristo','가장 뛰어난'],['crat','통치자']],     b: '가장 뛰어난 자가 다스림', m: '귀족', lv: '고급' },
       { w: 'bureaucracy', p: [['bureau','사무국'],['cracy','통치']],           b: '사무국이 다스림', m: '관료제',   lv: 'GRE' },
@@ -856,7 +856,7 @@ const ROOTS = [
     origin: '그리스어', originWord: 'morphḗ (형태)',
     words: [
       { w: 'metamorphosis',   p: [['meta','바뀜'],['morph','형태'],['osis','~됨']], b: '형태가 바뀜',   m: '변태·변형', lv: '고급' },
-      { w: 'morphology',      p: [['morph','형태'],['logy','학문']],            b: '형태를 연구하는 학문', m: '형태학', lv: 'GRE' },
+      { w: 'morphology',      p: [['morpho','형태'],['logy','학문']],           b: '형태를 연구하는 학문', m: '형태학', lv: 'GRE' },
       { w: 'amorphous',       p: [['a','없는'],['morph','형태'],['ous','~한']], b: '정해진 형태가 없는', m: '무정형의', lv: 'GRE' },
       { w: 'anthropomorphic', p: [['anthropo','인간'],['morph','형태'],['ic','~한']], b: '인간 형태를 한', m: '의인화된', lv: 'GRE' },
     ],
