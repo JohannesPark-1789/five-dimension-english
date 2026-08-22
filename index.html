@@ -8,7 +8,7 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="icon.png?v=9" type="image/png" />
   <link rel="apple-touch-icon" href="icon.png?v=9" />
-  <link rel="stylesheet" href="styles.css?v=10" />
+  <link rel="stylesheet" href="styles.css?v=11" />
 </head>
 <body>
 <div id="app">
@@ -29,9 +29,12 @@
     <div id="overall-progress" class="overall"></div>
 
     <div class="settings">
-      <label for="voice-select">🔊 발음 목소리</label>
+      <label>🔊 발음 목소리</label>
       <div class="settings-row">
-        <select id="voice-select"></select>
+        <div class="voice-toggle">
+          <button class="voice-btn" data-voice="female">여성</button>
+          <button class="voice-btn" data-voice="male">남성</button>
+        </div>
         <button id="btn-voice-test" class="speak-btn">테스트</button>
       </div>
       <p id="voice-tip" class="voice-tip"></p>
@@ -132,9 +135,9 @@
 
 </div>
 
-<script src="data.js?v=14"></script>
-<script src="patterns.js?v=14"></script>
-<script src="roots.js?v=14"></script>
-<script src="app.js?v=14"></script>
+<script src="data.js?v=15"></script>
+<script src="patterns.js?v=15"></script>
+<script src="roots.js?v=15"></script>
+<script src="app.js?v=15"></script>
 </body>
 </html>

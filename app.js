@@ -76,79 +76,162 @@
     return a;
   }
 
-  /* ---------- TTS (발음 듣기) ------------------------------------- */
+  /* ---------- 발음 --------------------------------------------------
+     ElevenLabs 로 미리 만들어 둔 음성 파일(voice/audio/)을 재생한다.
+     파일이 없거나(아직 변환 안 한 문장) 브라우저가 재생을 막으면 기기
+     내장 음성으로 되돌아간다 — 발음이 아예 안 나오는 경우는 없다.
+     목소리는 여성·남성 둘뿐이다. 기기 음성 목록은 노출하지 않는다.
+     -------------------------------------------------------------------- */
   const VOICE_KEY = 'fivedim:voice';
+  let voiceSlot = localStorage.getItem(VOICE_KEY) === 'male' ? 'male' : 'female';
+  let readyVoices = [];      /* 음성 파일이 준비된 slot — manifest 가 알려준다 */
+
+  const manifestReady = fetch('voice/manifest.json?v=15')
+    .then(r => (r.ok ? r.json() : null))
+    .then(m => { readyVoices = m && m.voices ? m.voices.map(v => v.slot) : []; })
+    .catch(() => { readyVoices = []; })
+    .then(updateVoiceTip);
+
+  /* 문장 -> 파일 이름. voice/corpus.mjs 의 clipId 와 같은 규칙이어야 한다
+     (sha1 앞 20자). 어긋나면 파일을 못 찾고 기기 음성으로 조용히 내려간다. */
+  const idCache = new Map();
+  function clipId(text) {
+    if (!idCache.has(text)) {
+      idCache.set(text, crypto.subtle
+        .digest('SHA-1', new TextEncoder().encode(text))
+        .then(buf => Array.prototype.map
+          .call(new Uint8Array(buf), b => b.toString(16).padStart(2, '0'))
+          .join('').slice(0, 20)));
+    }
+    return idCache.get(text);
+  }
+  function clipUrl(id, slot) {
+    return 'voice/audio/' + slot + '/' + id.slice(0, 2) + '/' + id + '.mp3';
+  }
+  const canPlayFiles = () => !!(window.crypto && crypto.subtle && window.TextEncoder);
+
+  /* --- 기기 내장 음성 (되돌아갈 자리) --- */
   let enVoices = [];
-  let chosenVoice = null;
 
   function voiceScore(v) {
     const n = (v.name || '').toLowerCase();
     let s = 0;
-    if (/^en/i.test(v.lang)) s += 10;
     if (v.lang === 'en-US') s += 5;
     if (/natural|neural/.test(n)) s += 40;
     if (/google/.test(n)) s += 30;
     if (/online/.test(n)) s += 15;
-    if (/aria|jenny|emma|libby|michelle|ava|samantha/.test(n)) s += 5;
-    if (/david|mark/.test(n)) s -= 5;
     return s;
+  }
+
+  /* 이름으로 성별을 짐작한다. 여성 먼저 보므로 'Female' 이 'male' 에 걸리지 않는다. */
+  const FEMALE_NAME = /female|여성|aria|jenny|emma|libby|michelle|ava|samantha|zira|susan|karen|serena|moira|tessa|fiona|allison|joanna/;
+  const MALE_NAME   = /male|남성|guy|david|mark|christopher|eric|roger|steffan|brian|alex|daniel|fred|aaron|arthur|oliver|ryan|matthew/;
+  function genderScore(v, slot) {
+    const n = (v.name || '').toLowerCase();
+    if (FEMALE_NAME.test(n)) return slot === 'female' ? 25 : -25;
+    if (MALE_NAME.test(n))   return slot === 'male'   ? 25 : -25;
+    return 0;
   }
 
   function refreshVoices() {
     if (!window.speechSynthesis) return;
-    const all = speechSynthesis.getVoices() || [];
-    enVoices = all.filter(v => /^en/i.test(v.lang))
-                  .sort((a, b) => voiceScore(b) - voiceScore(a));
-    const sel = document.getElementById('voice-select');
-    if (!sel) return;
-    const saved = localStorage.getItem(VOICE_KEY);
-    sel.innerHTML = '';
-    if (enVoices.length === 0) {
-      sel.innerHTML = '<option>기기에 영어 음성이 없습니다</option>';
-      chosenVoice = null;
-    } else {
-      enVoices.forEach(v => {
-        const o = document.createElement('option');
-        o.value = v.name;
-        o.textContent = v.name + ' · ' + v.lang;
-        sel.appendChild(o);
-      });
-      chosenVoice = enVoices.find(v => v.name === saved) || enVoices[0];
-      sel.value = chosenVoice.name;
-    }
+    enVoices = (speechSynthesis.getVoices() || []).filter(v => /^en/i.test(v.lang));
     updateVoiceTip();
+  }
+  function deviceVoice() {
+    if (!enVoices.length) return null;
+    return enVoices.slice().sort((a, b) =>
+      (voiceScore(b) + genderScore(b, voiceSlot)) -
+      (voiceScore(a) + genderScore(a, voiceSlot)))[0];
   }
 
   function updateVoiceTip() {
     const tip = document.getElementById('voice-tip');
     if (!tip) return;
-    if (!chosenVoice) { tip.textContent = '발음 음성을 찾지 못했습니다.'; return; }
-    const n = chosenVoice.name.toLowerCase();
-    tip.textContent = /natural|neural|google/.test(n)
-      ? '고품질 음성이 선택되었어요 👍'
-      : '더 자연스러운 발음을 원하면 Microsoft Edge에서 열어 "Natural" 음성을 고르세요.';
+    if (readyVoices.indexOf(voiceSlot) !== -1) {
+      tip.textContent = 'ElevenLabs 음성으로 읽습니다. 한 번 들은 문장은 오프라인에서도 나옵니다.';
+    } else if (readyVoices.length) {
+      tip.textContent = '이 목소리는 아직 변환되지 않았습니다 — 기기 음성으로 읽습니다.';
+    } else if (enVoices.length) {
+      tip.textContent = '기기 음성으로 읽습니다.';
+    } else {
+      tip.textContent = '이 기기에서는 영어 발음을 낼 수 없습니다.';
+    }
   }
 
-  function speak(text, rate) {
+  /* --- 재생 --- */
+  let player = null;
+  let speakSeq = 0;          /* 카드를 빨리 넘길 때 옛 재생이 끼어들지 않게 */
+
+  function stopSpeak() {
+    speakSeq++;
+    if (player) { player.pause(); player = null; }
+    if (window.speechSynthesis) speechSynthesis.cancel();
+  }
+
+  function deviceSpeak(text, rate) {
     if (!window.speechSynthesis) return;
     speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(text);
-    u.lang = (chosenVoice && chosenVoice.lang) || 'en-US';
-    u.rate = rate || 0.95;
+    const v = deviceVoice();
+    u.lang = (v && v.lang) || 'en-US';
+    u.rate = rate;
     u.pitch = 1;
-    if (chosenVoice) u.voice = chosenVoice;
+    if (v) u.voice = v;
     speechSynthesis.speak(u);
   }
+
+  /* 느리게 듣기는 파일을 따로 만들지 않고 재생 속도를 낮춘다 —
+     변환 비용이 두 배가 되지 않고, 음높이는 브라우저가 유지해 준다. */
+  function speak(text, slow) {
+    stopSpeak();
+    const seq = speakSeq;
+    const fallback = () => { if (seq === speakSeq) deviceSpeak(text, slow ? 0.6 : 0.95); };
+    if (!canPlayFiles()) { fallback(); return; }
+    manifestReady.then(() => {
+      if (readyVoices.indexOf(voiceSlot) === -1) { fallback(); return; }
+      return clipId(text).then(id => {
+        if (seq !== speakSeq) return;
+        const a = new Audio(clipUrl(id, voiceSlot));
+        a.preservesPitch = true;
+        a.playbackRate = slow ? 0.7 : 1;
+        player = a;
+        return a.play().catch(fallback);
+      });
+    }).catch(fallback);
+  }
+
+  /* 카드가 뜰 때 미리 받아 둔다 — 뒤집는 순간 지체 없이 소리가 나온다.
+     서비스워커가 받은 것을 캐시에 넣으므로 두 번째부터는 오프라인에서도 된다. */
+  function prefetchClip(text) {
+    if (!canPlayFiles()) return;
+    manifestReady.then(() => {
+      if (readyVoices.indexOf(voiceSlot) === -1) return;
+      return clipId(text).then(id => fetch(clipUrl(id, voiceSlot)).catch(() => {}));
+    }).catch(() => {});
+  }
+
+  /* --- 여성·남성 토글 --- */
+  function renderVoiceToggle() {
+    document.querySelectorAll('.voice-btn').forEach(b => {
+      b.classList.toggle('active', b.getAttribute('data-voice') === voiceSlot);
+    });
+  }
+  function setVoiceSlot(v) {
+    voiceSlot = v === 'male' ? 'male' : 'female';
+    try { localStorage.setItem(VOICE_KEY, voiceSlot); } catch (e) { /* 무시 */ }
+    renderVoiceToggle();
+    updateVoiceTip();
+  }
+  document.querySelectorAll('.voice-btn').forEach(b => {
+    b.addEventListener('click', () => setVoiceSlot(b.getAttribute('data-voice')));
+  });
+  renderVoiceToggle();
 
   if (window.speechSynthesis) {
     refreshVoices();
     speechSynthesis.onvoiceschanged = refreshVoices;
   }
-  document.getElementById('voice-select').addEventListener('change', e => {
-    chosenVoice = enVoices.find(v => v.name === e.target.value) || null;
-    if (chosenVoice) localStorage.setItem(VOICE_KEY, chosenVoice.name);
-    updateVoiceTip();
-  });
   document.getElementById('btn-voice-test').addEventListener('click', () => {
     speak('What do you want to buy?');
   });
@@ -389,6 +472,7 @@
     }
     elActions.classList.add('hidden');
     elRevealHint.classList.remove('hidden');
+    prefetchClip(cardSpeakText(card));
     updateProgress();
   }
 
@@ -485,11 +569,11 @@
   elCard.addEventListener('click', revealCard);
   document.getElementById('btn-speak').addEventListener('click', e => {
     e.stopPropagation();
-    if (drill.queue.length) speak(cardSpeakText(drill.queue[0]), 0.95);
+    if (drill.queue.length) speak(cardSpeakText(drill.queue[0]));
   });
   document.getElementById('btn-speak-slow').addEventListener('click', e => {
     e.stopPropagation();
-    if (drill.queue.length) speak(cardSpeakText(drill.queue[0]), 0.6);
+    if (drill.queue.length) speak(cardSpeakText(drill.queue[0]), true);
   });
   document.getElementById('btn-again').addEventListener('click', () => answer(false));
   document.getElementById('btn-known').addEventListener('click', () => answer(true));
@@ -506,7 +590,7 @@
 
   document.querySelectorAll('[data-back]').forEach(btn => {
     btn.addEventListener('click', () => {
-      if (window.speechSynthesis) speechSynthesis.cancel();
+      stopSpeak();
       const dest = btn.getAttribute('data-back');
       if (dest === 'home') { renderHome(); showScreen('home'); }
       else if (dest === 'drill-exit') { drill.exitFn(); }
