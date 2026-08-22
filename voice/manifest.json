@@ -1,0 +1,21 @@
+{
+  "model": "eleven_flash_v2_5",
+  "format": "mp3_22050_32",
+  "hash": "sha1-20",
+  "path": "voice/audio/{slot}/{id0:2}/{id}.mp3",
+  "voices": [
+    {
+      "slot": "female",
+      "name": "Rachel",
+      "clips": 4950,
+      "bytes": 30721279
+    },
+    {
+      "slot": "male",
+      "name": "Adam",
+      "clips": 4950,
+      "bytes": 29296171
+    }
+  ],
+  "total": 4950
+}

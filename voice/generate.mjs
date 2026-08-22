@@ -64,11 +64,20 @@ if (opt('voice')) {
   if (!voices.length) throw new Error(`목소리 slot 은 ${VOICES.map(v => v.slot).join(' 또는 ')}`);
 }
 let list = filterTiers(loadCorpus(), opt('tier'));
+
+/* 값이 높은 것부터 만든다 — 크레딧이 떨어져 중간에 멈춰도 교재 문장·어원 단어는
+   채워져 있다. 드릴 문장은 기계적 변형이라 뒤로 미룬다. */
+const TIER_ORDER = ['pattern', 'phrase', 'lexeme', 'hardcoded', 'generated'];
+list = list
+  .map((x, i) => [x, i])                                    /* 같은 계층 안에서는 원래 순서 유지 */
+  .sort((a, b) => (TIER_ORDER.indexOf(a[0].tier) - TIER_ORDER.indexOf(b[0].tier)) || (a[1] - b[1]))
+  .map(([x]) => x);
 if (opt('limit')) list = list.slice(0, Number(opt('limit')));
 
-/* 만들 것만 남긴다 — 이미 있는 파일은 크레딧을 쓰지 않는다. */
+/* 만들 것만 남긴다 — 이미 있는 파일은 크레딧을 쓰지 않는다.
+   문장을 겉 루프에 두어 한 문장의 남녀 두 파일이 붙어 나가게 한다.  */
 const jobs = [];
-for (const v of voices) for (const x of list) {
+for (const x of list) for (const v of voices) {
   const rel = clipPath(v.slot, x.id);
   if (existsSync(join(ROOT, rel))) continue;
   jobs.push({ ...x, slot: v.slot, voiceId: v.id, voiceName: v.name, rel });
@@ -90,23 +99,44 @@ if (!DRY) {
     const sub  = await api('/user/subscription');
     const left = (sub.character_limit ?? 0) - (sub.character_count ?? 0);
     console.log(`계정 ${sub.tier} · 남은 크레딧 ${left.toLocaleString()} / ${(sub.character_limit ?? 0).toLocaleString()}`);
-    if (left < needCredits && !flag('force')) {
-      console.error(`\n크레딧이 ${(needCredits - left).toLocaleString()} 부족하다.`);
-      console.error('--tier= 나 --limit= 로 나눠 하거나, 다음 결제일에 이어서 하거나, --force 로 강행한다.');
-      process.exit(1);
+    if (left < needCredits) {
+      if (flag('fit')) {
+        /* 이번 주기에 남은 만큼만 하고 멈춘다. 벽에 부딪혀 실패를 쌓는 것보다
+           들어갈 것만 골라 보내는 편이 낫다 — 헛된 호출도 없고 다음 달에
+           그대로 이어진다. 상한에 딱 붙지 않게 여유를 조금 둔다.        */
+        const budget = Math.max(0, left - 200);
+        let used = 0, keep = 0;
+        for (const j of jobs) {
+          const c = Math.round(j.text.length * rate);
+          if (used + c > budget) break;
+          used += c; keep++;
+        }
+        const dropped = jobs.length - keep;
+        jobs.length = keep;
+        console.log(`--fit · 이번 주기에는 ${keep.toLocaleString()}개(약 ${used.toLocaleString()} 크레딧)만 만든다.`);
+        console.log(`        ${dropped.toLocaleString()}개는 다음 결제일 뒤에 같은 명령으로 이어서 하면 된다.`);
+        if (!keep) { console.log('남은 크레딧으로는 하나도 못 만든다. 다음 결제일에 다시.'); process.exit(0); }
+      } else if (!flag('force')) {
+        console.error(`\n크레딧이 ${(needCredits - left).toLocaleString()} 부족하다.`);
+        console.error('--fit 을 붙이면 남은 만큼만 하고 멈춘다 (다음 달에 이어서).');
+        console.error('아니면 --tier= 로 나누거나, --force 로 강행한다.');
+        process.exit(1);
+      }
     }
   } catch (e) {
     console.warn(`알림: 남은 크레딧을 확인하지 못했다 — ${why(e)}`);
     console.warn('      키에 「사용자 읽기」 권한이 없으면 정상이다. 확인 없이 진행한다.');
   }
 
+  /* /v1/voices 는 계정에 담긴 목소리만 싣는다 — 기본 제공 목소리는 목록에 없어도
+     쓸 수 있다(Rachel 이 그랬다). 그래서 없다고 막지 않고 알리기만 한다. 정말 못 쓰는
+     id 면 첫 변환 다섯 번에서 멈춘다.                                        */
   try {
     const avail = new Set((await api('/voices')).voices.map(v => v.voice_id));
-    for (const v of voices) {
-      if (!avail.has(v.id)) {
-        console.error(`계정에 목소리 ${v.name}(${v.id}) 이 없다. voice/config.mjs 에서 바꿀 것.`);
-        process.exit(1);
-      }
+    const missing = voices.filter(v => !avail.has(v.id));
+    if (missing.length) {
+      console.warn(`알림: ${missing.map(v => `${v.name}(${v.id})`).join(', ')} 이 계정 목소리 목록에 없다.`);
+      console.warn('      기본 제공 목소리는 목록에 없어도 되는 경우가 있어 그대로 진행한다.');
     }
   } catch (e) {
     console.warn(`알림: 목소리를 확인하지 못했다 — ${why(e)}`);
