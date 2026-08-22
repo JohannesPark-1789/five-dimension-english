@@ -1,0 +1,334 @@
+{
+ "batch": "A3-목적어",
+ "note": "판정자: Claude · 기준=미국 구어 영어의 연어(collocation) 자연스러움.",
+ "verdicts": [
+  {
+   "id": "obj:buy",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "buy a ticket"
+  },
+  {
+   "id": "obj:eat",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "eat lunch"
+  },
+  {
+   "id": "obj:read",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "read a book"
+  },
+  {
+   "id": "obj:write",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "write a letter"
+  },
+  {
+   "id": "obj:make",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "make a cake"
+  },
+  {
+   "id": "obj:study",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "study English"
+  },
+  {
+   "id": "obj:drink",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "drink coffee"
+  },
+  {
+   "id": "obj:learn",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "learn new words"
+  },
+  {
+   "id": "obj:cook",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "cook dinner"
+  },
+  {
+   "id": "obj:clean",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "clean your room"
+  },
+  {
+   "id": "obj:open",
+   "verdict": "ok",
+   "issue": "결합은 자연스럽다. \"Do you enjoy opening the window?\" 는 어색하다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "open the window"
+  },
+  {
+   "id": "obj:close",
+   "verdict": "ok",
+   "issue": "결합은 자연스럽다. \"Do you enjoy closing the door?\" 는 어색하다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "close the door"
+  },
+  {
+   "id": "obj:send",
+   "verdict": "ok",
+   "issue": "\"Do you enjoy sending an email?\" 은 다소 어색하다. 나머지 형태는 정상.",
+   "fix": "",
+   "confidence": "high",
+   "en": "send an email"
+  },
+  {
+   "id": "obj:teach",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "teach math"
+  },
+  {
+   "id": "obj:drive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "drive a car"
+  },
+  {
+   "id": "obj:draw",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "draw a picture"
+  },
+  {
+   "id": "obj:wash",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "wash the dishes"
+  },
+  {
+   "id": "obj:watch",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "watch a movie"
+  },
+  {
+   "id": "obj:catch",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "catch the ball"
+  },
+  {
+   "id": "obj:fix",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "fix a bike"
+  },
+  {
+   "id": "obj:build",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "build a house"
+  },
+  {
+   "id": "obj:sell",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "sell flowers"
+  },
+  {
+   "id": "obj:throw",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "throw the ball"
+  },
+  {
+   "id": "obj:meet",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "meet your friends"
+  },
+  {
+   "id": "obj:help",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "help your mom"
+  },
+  {
+   "id": "obj:invite",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "invite your neighbors"
+  },
+  {
+   "id": "obj:use",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "use a computer"
+  },
+  {
+   "id": "obj:find",
+   "verdict": "ok",
+   "issue": "결합은 자연스럽다. \"Do you enjoy finding your keys?\" 는 어색하다 — find 는 의도한 행위가 아니라 결과라서 enjoy 와 잘 안 붙는다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "find your keys"
+  },
+  {
+   "id": "obj:bring",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "bring your lunch"
+  },
+  {
+   "id": "obj:wear",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "wear a uniform"
+  },
+  {
+   "id": "obj:choose",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "choose a gift"
+  },
+  {
+   "id": "obj:carry",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "carry a box"
+  },
+  {
+   "id": "obj:break",
+   "verdict": "ok",
+   "issue": "결합은 자연스럽다. 다만 \"Do you enjoy breaking a glass?\" / \"Do you want to break a glass?\" 는 의미가 이상하다 — 일부러 깨는 상황이 전제된다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "break a glass"
+  },
+  {
+   "id": "obj:paint",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "paint the wall"
+  },
+  {
+   "id": "obj:plant",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "plant a tree"
+  },
+  {
+   "id": "obj:order",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "order pizza"
+  },
+  {
+   "id": "obj:save",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "save coins"
+  },
+  {
+   "id": "obj:count",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "count the stars"
+  },
+  {
+   "id": "obj:call",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "call your teacher"
+  },
+  {
+   "id": "obj:visit",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "visit your grandma"
+  },
+  {
+   "id": "obj:follow",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "follow your brother"
+  }
+ ]
+}

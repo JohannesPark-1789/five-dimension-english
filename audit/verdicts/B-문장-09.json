@@ -1,0 +1,62 @@
+{
+ "batch": "B-문장-09",
+ "note": "판정자: Claude · 기준=미국 구어/표준 영어(General American).",
+ "verdicts": [
+  {
+   "id": "pat:0200",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "while playing tennis"
+  },
+  {
+   "id": "pat:0201",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "The students asked me some questions."
+  },
+  {
+   "id": "pat:0202",
+   "verdict": "ok",
+   "issue": "미국식 표현으로 고쳐 반영했다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "the crowd riding the bus"
+  },
+  {
+   "id": "pat:0203",
+   "verdict": "ok",
+   "issue": "미국식 표현으로 고쳐 반영했다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "the team effort"
+  },
+  {
+   "id": "pat:0204",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "a threat against Korea"
+  },
+  {
+   "id": "pat:0205",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "friends to play with"
+  },
+  {
+   "id": "pat:0206",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "when you are left alone"
+  }
+ ]
+}

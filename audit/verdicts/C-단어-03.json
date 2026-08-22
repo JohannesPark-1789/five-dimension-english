@@ -1,0 +1,486 @@
+{
+ "batch": "C-단어-03",
+ "note": "판정자: Claude · 철자는 미국식 기준, 분해는 결합 재현 가능성 기준.",
+ "verdicts": [
+  {
+   "id": "root:pos:deposit",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "deposit"
+  },
+  {
+   "id": "root:tain:contain",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "contain"
+  },
+  {
+   "id": "root:tain:maintain",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "maintain"
+  },
+  {
+   "id": "root:tain:obtain",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "obtain"
+  },
+  {
+   "id": "root:tain:retain",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "retain"
+  },
+  {
+   "id": "root:tain:continue",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "continue"
+  },
+  {
+   "id": "root:cept:capture",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "capture"
+  },
+  {
+   "id": "root:cept:accept",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "accept"
+  },
+  {
+   "id": "root:cept:except",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "except"
+  },
+  {
+   "id": "root:cept:capable",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "capable"
+  },
+  {
+   "id": "root:cept:receive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "receive"
+  },
+  {
+   "id": "root:fact:factory",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "factory"
+  },
+  {
+   "id": "root:fact:fact",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "fact"
+  },
+  {
+   "id": "root:fact:effect",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "effect"
+  },
+  {
+   "id": "root:fact:perfect",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "perfect"
+  },
+  {
+   "id": "root:fact:fiction",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "fiction"
+  },
+  {
+   "id": "root:mot:move",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "move"
+  },
+  {
+   "id": "root:mot:motion",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "motion"
+  },
+  {
+   "id": "root:mot:motor",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "motor"
+  },
+  {
+   "id": "root:mot:remove",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "remove"
+  },
+  {
+   "id": "root:mot:emotion",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "emotion"
+  },
+  {
+   "id": "root:vert:convert",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "convert"
+  },
+  {
+   "id": "root:vert:reverse",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "reverse"
+  },
+  {
+   "id": "root:vert:version",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "version"
+  },
+  {
+   "id": "root:vert:universe",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "universe"
+  },
+  {
+   "id": "root:vert:advertise",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "advertise"
+  },
+  {
+   "id": "root:spir:spirit",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "spirit"
+  },
+  {
+   "id": "root:spir:inspire",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "inspire"
+  },
+  {
+   "id": "root:spir:expire",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "expire"
+  },
+  {
+   "id": "root:spir:perspire",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "perspire"
+  },
+  {
+   "id": "root:spir:conspire",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "conspire"
+  },
+  {
+   "id": "root:bio:biology",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "biology"
+  },
+  {
+   "id": "root:bio:biography",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "biography"
+  },
+  {
+   "id": "root:bio:antibiotic",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "antibiotic"
+  },
+  {
+   "id": "root:bio:biorhythm",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "biorhythm"
+  },
+  {
+   "id": "root:geo:geography",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "geography"
+  },
+  {
+   "id": "root:geo:geology",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "geology"
+  },
+  {
+   "id": "root:geo:geometry",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "geometry"
+  },
+  {
+   "id": "root:geo:geothermal",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "geothermal"
+  },
+  {
+   "id": "root:graph:photograph",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "photograph"
+  },
+  {
+   "id": "root:graph:autograph",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "autograph"
+  },
+  {
+   "id": "root:graph:paragraph",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "paragraph"
+  },
+  {
+   "id": "root:graph:telegram",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "telegram"
+  },
+  {
+   "id": "root:graph:diagram",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "diagram"
+  },
+  {
+   "id": "root:logy:dialogue",
+   "verdict": "ok",
+   "issue": "미국식은 dialog 도 널리 쓰지만 dialogue 가 여전히 표준이라 문제없다. 다만 같은 그룹의 catalog 는 단축형이라 표기 방침이 섞여 있다 — 의도한 것인지 확인.",
+   "fix": "",
+   "confidence": "high",
+   "en": "dialogue"
+  },
+  {
+   "id": "root:logy:logic",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "logic"
+  },
+  {
+   "id": "root:logy:apology",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "apology"
+  },
+  {
+   "id": "root:logy:technology",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "technology"
+  },
+  {
+   "id": "root:logy:catalog",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "catalog"
+  },
+  {
+   "id": "root:phon:telephone",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "telephone"
+  },
+  {
+   "id": "root:phon:microphone",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "microphone"
+  },
+  {
+   "id": "root:phon:symphony",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "symphony"
+  },
+  {
+   "id": "root:phon:phonics",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "phonics"
+  },
+  {
+   "id": "root:tele:telephone",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "telephone"
+  },
+  {
+   "id": "root:tele:television",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "television"
+  },
+  {
+   "id": "root:tele:telescope",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "telescope"
+  },
+  {
+   "id": "root:tele:telepathy",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "telepathy"
+  },
+  {
+   "id": "root:photo:photo",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "photo"
+  },
+  {
+   "id": "root:photo:photograph",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "photograph"
+  },
+  {
+   "id": "root:photo:photosynthesis",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "photosynthesis"
+  }
+ ]
+}

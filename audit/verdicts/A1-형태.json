@@ -1,0 +1,1934 @@
+{
+ "batch": "A1-형태",
+ "note": "판정자: Claude · 기준=미국 구어 영어(General American). 형태 적법성만 판정, 목적어는 A2·A3 소관. awkward 판정을 받은 (의문사×시제형) 4조합은 data.js 의 SKIP_COMBOS 로 그리드에서 제외했다.",
+ "verdicts": [
+  {
+   "id": "shape:dec|can|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You can go."
+  },
+  {
+   "id": "shape:dec|can|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You can meet your friends."
+  },
+  {
+   "id": "shape:dec|can|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You can buy a ticket."
+  },
+  {
+   "id": "shape:dec|continuous|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You are going."
+  },
+  {
+   "id": "shape:dec|continuous|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You are meeting your friends."
+  },
+  {
+   "id": "shape:dec|continuous|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You are buying a ticket."
+  },
+  {
+   "id": "shape:dec|enjoy|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You enjoy going."
+  },
+  {
+   "id": "shape:dec|enjoy|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You enjoy meeting your friends."
+  },
+  {
+   "id": "shape:dec|enjoy|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You enjoy buying a ticket."
+  },
+  {
+   "id": "shape:dec|enjoyed|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You enjoyed going."
+  },
+  {
+   "id": "shape:dec|enjoyed|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You enjoyed meeting your friends."
+  },
+  {
+   "id": "shape:dec|enjoyed|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You enjoyed buying a ticket."
+  },
+  {
+   "id": "shape:dec|future|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You will go."
+  },
+  {
+   "id": "shape:dec|future|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You will meet your friends."
+  },
+  {
+   "id": "shape:dec|future|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You will buy a ticket."
+  },
+  {
+   "id": "shape:dec|hadTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You had to go."
+  },
+  {
+   "id": "shape:dec|hadTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You had to meet your friends."
+  },
+  {
+   "id": "shape:dec|hadTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You had to buy a ticket."
+  },
+  {
+   "id": "shape:dec|haveTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You have to go."
+  },
+  {
+   "id": "shape:dec|haveTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You have to meet your friends."
+  },
+  {
+   "id": "shape:dec|haveTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You have to buy a ticket."
+  },
+  {
+   "id": "shape:dec|past|intransitive",
+   "verdict": "ok",
+   "issue": "동사 read 는 현재형과 과거형의 철자가 같아 \"You read a book.\" 이 두 단계에서 똑같이 나온다. 영어는 정상이고 한국어(읽는다 / 읽었다)로만 구분된다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "You went."
+  },
+  {
+   "id": "shape:dec|past|person",
+   "verdict": "ok",
+   "issue": "동사 read 는 현재형과 과거형의 철자가 같아 \"You read a book.\" 이 두 단계에서 똑같이 나온다. 영어는 정상이고 한국어(읽는다 / 읽었다)로만 구분된다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "You met your friends."
+  },
+  {
+   "id": "shape:dec|past|thing",
+   "verdict": "ok",
+   "issue": "동사 read 는 현재형과 과거형의 철자가 같아 \"You read a book.\" 이 두 단계에서 똑같이 나온다. 영어는 정상이고 한국어(읽는다 / 읽었다)로만 구분된다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "You bought a ticket."
+  },
+  {
+   "id": "shape:dec|present|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You go."
+  },
+  {
+   "id": "shape:dec|present|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You meet your friends."
+  },
+  {
+   "id": "shape:dec|present|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You buy a ticket."
+  },
+  {
+   "id": "shape:dec|wantedTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You wanted to go."
+  },
+  {
+   "id": "shape:dec|wantedTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You wanted to meet your friends."
+  },
+  {
+   "id": "shape:dec|wantedTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You wanted to buy a ticket."
+  },
+  {
+   "id": "shape:dec|wantTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You want to go."
+  },
+  {
+   "id": "shape:dec|wantTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You want to meet your friends."
+  },
+  {
+   "id": "shape:dec|wantTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You want to buy a ticket."
+  },
+  {
+   "id": "shape:how|can|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How can you go?"
+  },
+  {
+   "id": "shape:how|can|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How can you meet your friends?"
+  },
+  {
+   "id": "shape:how|can|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How can you buy a ticket?"
+  },
+  {
+   "id": "shape:how|continuous|intransitive",
+   "verdict": "ok",
+   "issue": "동사 go 에서 \"How are you going?\"은 미국에서 안부 인사로 읽힌다(수단을 물으려면 How are you getting there?). 나머지 5개 동사는 정상.",
+   "fix": "",
+   "confidence": "high",
+   "en": "How are you going?"
+  },
+  {
+   "id": "shape:how|continuous|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How are you meeting your friends?"
+  },
+  {
+   "id": "shape:how|continuous|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How are you buying a ticket?"
+  },
+  {
+   "id": "shape:how|enjoy|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How do you enjoy going?"
+  },
+  {
+   "id": "shape:how|enjoy|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How do you enjoy meeting your friends?"
+  },
+  {
+   "id": "shape:how|enjoy|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How do you enjoy buying a ticket?"
+  },
+  {
+   "id": "shape:how|enjoyed|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How did you enjoy going?"
+  },
+  {
+   "id": "shape:how|enjoyed|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How did you enjoy meeting your friends?"
+  },
+  {
+   "id": "shape:how|enjoyed|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How did you enjoy buying a ticket?"
+  },
+  {
+   "id": "shape:how|future|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How will you go?"
+  },
+  {
+   "id": "shape:how|future|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How will you meet your friends?"
+  },
+  {
+   "id": "shape:how|future|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How will you buy a ticket?"
+  },
+  {
+   "id": "shape:how|past|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How did you go?"
+  },
+  {
+   "id": "shape:how|past|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How did you meet your friends?"
+  },
+  {
+   "id": "shape:how|past|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How did you buy a ticket?"
+  },
+  {
+   "id": "shape:how|present|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How do you go?"
+  },
+  {
+   "id": "shape:how|present|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How do you meet your friends?"
+  },
+  {
+   "id": "shape:how|present|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How do you buy a ticket?"
+  },
+  {
+   "id": "shape:how|wantedTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How did you want to go?"
+  },
+  {
+   "id": "shape:how|wantedTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How did you want to meet your friends?"
+  },
+  {
+   "id": "shape:how|wantedTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How did you want to buy a ticket?"
+  },
+  {
+   "id": "shape:how|wantTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How do you want to go?"
+  },
+  {
+   "id": "shape:how|wantTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How do you want to meet your friends?"
+  },
+  {
+   "id": "shape:how|wantTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "How do you want to buy a ticket?"
+  },
+  {
+   "id": "shape:neg|can|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You can't go."
+  },
+  {
+   "id": "shape:neg|can|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You can't meet your friends."
+  },
+  {
+   "id": "shape:neg|can|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You can't buy a ticket."
+  },
+  {
+   "id": "shape:neg|continuous|intransitive",
+   "verdict": "ok",
+   "issue": "\"You aren't buying\" 과 \"You're not buying\" 둘 다 미국식으로 정상이다. 앱은 전자로 통일한다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "You aren't going."
+  },
+  {
+   "id": "shape:neg|continuous|person",
+   "verdict": "ok",
+   "issue": "\"You aren't buying\" 과 \"You're not buying\" 둘 다 미국식으로 정상이다. 앱은 전자로 통일한다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "You aren't meeting your friends."
+  },
+  {
+   "id": "shape:neg|continuous|thing",
+   "verdict": "ok",
+   "issue": "\"You aren't buying\" 과 \"You're not buying\" 둘 다 미국식으로 정상이다. 앱은 전자로 통일한다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "You aren't buying a ticket."
+  },
+  {
+   "id": "shape:neg|enjoy|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You don't enjoy going."
+  },
+  {
+   "id": "shape:neg|enjoy|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You don't enjoy meeting your friends."
+  },
+  {
+   "id": "shape:neg|enjoy|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You don't enjoy buying a ticket."
+  },
+  {
+   "id": "shape:neg|enjoyed|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You didn't enjoy going."
+  },
+  {
+   "id": "shape:neg|enjoyed|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You didn't enjoy meeting your friends."
+  },
+  {
+   "id": "shape:neg|enjoyed|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You didn't enjoy buying a ticket."
+  },
+  {
+   "id": "shape:neg|future|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You won't go."
+  },
+  {
+   "id": "shape:neg|future|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You won't meet your friends."
+  },
+  {
+   "id": "shape:neg|future|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You won't buy a ticket."
+  },
+  {
+   "id": "shape:neg|hadTo|intransitive",
+   "verdict": "ok",
+   "issue": "\"didn't have to\" 도 금지가 아니라 불필요(~하지 않아도 됐다).",
+   "fix": "",
+   "confidence": "high",
+   "en": "You didn't have to go."
+  },
+  {
+   "id": "shape:neg|hadTo|person",
+   "verdict": "ok",
+   "issue": "\"didn't have to\" 도 금지가 아니라 불필요(~하지 않아도 됐다).",
+   "fix": "",
+   "confidence": "high",
+   "en": "You didn't have to meet your friends."
+  },
+  {
+   "id": "shape:neg|hadTo|thing",
+   "verdict": "ok",
+   "issue": "\"didn't have to\" 도 금지가 아니라 불필요(~하지 않아도 됐다).",
+   "fix": "",
+   "confidence": "high",
+   "en": "You didn't have to buy a ticket."
+  },
+  {
+   "id": "shape:neg|haveTo|intransitive",
+   "verdict": "ok",
+   "issue": "\"don't have to\" 는 금지가 아니라 불필요다. 한국어를 \"사면 안 된다\"가 아니라 \"사지 않아도 된다\"로 뽑는 이유 — 학습자가 제일 많이 틀리는 지점이다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "You don't have to go."
+  },
+  {
+   "id": "shape:neg|haveTo|person",
+   "verdict": "ok",
+   "issue": "\"don't have to\" 는 금지가 아니라 불필요다. 한국어를 \"사면 안 된다\"가 아니라 \"사지 않아도 된다\"로 뽑는 이유 — 학습자가 제일 많이 틀리는 지점이다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "You don't have to meet your friends."
+  },
+  {
+   "id": "shape:neg|haveTo|thing",
+   "verdict": "ok",
+   "issue": "\"don't have to\" 는 금지가 아니라 불필요다. 한국어를 \"사면 안 된다\"가 아니라 \"사지 않아도 된다\"로 뽑는 이유 — 학습자가 제일 많이 틀리는 지점이다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "You don't have to buy a ticket."
+  },
+  {
+   "id": "shape:neg|past|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You didn't go."
+  },
+  {
+   "id": "shape:neg|past|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You didn't meet your friends."
+  },
+  {
+   "id": "shape:neg|past|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You didn't buy a ticket."
+  },
+  {
+   "id": "shape:neg|present|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You don't go."
+  },
+  {
+   "id": "shape:neg|present|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You don't meet your friends."
+  },
+  {
+   "id": "shape:neg|present|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You don't buy a ticket."
+  },
+  {
+   "id": "shape:neg|wantedTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You didn't want to go."
+  },
+  {
+   "id": "shape:neg|wantedTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You didn't want to meet your friends."
+  },
+  {
+   "id": "shape:neg|wantedTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You didn't want to buy a ticket."
+  },
+  {
+   "id": "shape:neg|wantTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You don't want to go."
+  },
+  {
+   "id": "shape:neg|wantTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You don't want to meet your friends."
+  },
+  {
+   "id": "shape:neg|wantTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You don't want to buy a ticket."
+  },
+  {
+   "id": "shape:none|can|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Can you go?"
+  },
+  {
+   "id": "shape:none|can|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Can you meet your friends?"
+  },
+  {
+   "id": "shape:none|can|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Can you buy a ticket?"
+  },
+  {
+   "id": "shape:none|continuous|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Are you going?"
+  },
+  {
+   "id": "shape:none|continuous|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Are you meeting your friends?"
+  },
+  {
+   "id": "shape:none|continuous|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Are you buying a ticket?"
+  },
+  {
+   "id": "shape:none|enjoy|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Do you enjoy going?"
+  },
+  {
+   "id": "shape:none|enjoy|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Do you enjoy meeting your friends?"
+  },
+  {
+   "id": "shape:none|enjoy|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Do you enjoy buying a ticket?"
+  },
+  {
+   "id": "shape:none|enjoyed|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Did you enjoy going?"
+  },
+  {
+   "id": "shape:none|enjoyed|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Did you enjoy meeting your friends?"
+  },
+  {
+   "id": "shape:none|enjoyed|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Did you enjoy buying a ticket?"
+  },
+  {
+   "id": "shape:none|future|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Will you go?"
+  },
+  {
+   "id": "shape:none|future|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Will you meet your friends?"
+  },
+  {
+   "id": "shape:none|future|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Will you buy a ticket?"
+  },
+  {
+   "id": "shape:none|hadTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Did you have to go?"
+  },
+  {
+   "id": "shape:none|hadTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Did you have to meet your friends?"
+  },
+  {
+   "id": "shape:none|hadTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Did you have to buy a ticket?"
+  },
+  {
+   "id": "shape:none|haveTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Do you have to go?"
+  },
+  {
+   "id": "shape:none|haveTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Do you have to meet your friends?"
+  },
+  {
+   "id": "shape:none|haveTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Do you have to buy a ticket?"
+  },
+  {
+   "id": "shape:none|past|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Did you go?"
+  },
+  {
+   "id": "shape:none|past|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Did you meet your friends?"
+  },
+  {
+   "id": "shape:none|past|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Did you buy a ticket?"
+  },
+  {
+   "id": "shape:none|present|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Do you go?"
+  },
+  {
+   "id": "shape:none|present|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Do you meet your friends?"
+  },
+  {
+   "id": "shape:none|present|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Do you buy a ticket?"
+  },
+  {
+   "id": "shape:none|wantedTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Did you want to go?"
+  },
+  {
+   "id": "shape:none|wantedTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Did you want to meet your friends?"
+  },
+  {
+   "id": "shape:none|wantedTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Did you want to buy a ticket?"
+  },
+  {
+   "id": "shape:none|wantTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Do you want to go?"
+  },
+  {
+   "id": "shape:none|wantTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Do you want to meet your friends?"
+  },
+  {
+   "id": "shape:none|wantTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Do you want to buy a ticket?"
+  },
+  {
+   "id": "shape:what|can|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "What can you buy?"
+  },
+  {
+   "id": "shape:what|continuous|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "What are you buying?"
+  },
+  {
+   "id": "shape:what|enjoy|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "What do you enjoy buying?"
+  },
+  {
+   "id": "shape:what|enjoyed|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "What did you enjoy buying?"
+  },
+  {
+   "id": "shape:what|future|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "What will you buy?"
+  },
+  {
+   "id": "shape:what|hadTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "What did you have to buy?"
+  },
+  {
+   "id": "shape:what|haveTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "What do you have to buy?"
+  },
+  {
+   "id": "shape:what|past|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "What did you buy?"
+  },
+  {
+   "id": "shape:what|present|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "What do you buy?"
+  },
+  {
+   "id": "shape:what|wantedTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "What did you want to buy?"
+  },
+  {
+   "id": "shape:what|wantTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "What do you want to buy?"
+  },
+  {
+   "id": "shape:when|can|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When can you go?"
+  },
+  {
+   "id": "shape:when|can|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When can you meet your friends?"
+  },
+  {
+   "id": "shape:when|can|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When can you buy a ticket?"
+  },
+  {
+   "id": "shape:when|continuous|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When are you going?"
+  },
+  {
+   "id": "shape:when|continuous|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When are you meeting your friends?"
+  },
+  {
+   "id": "shape:when|continuous|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When are you buying a ticket?"
+  },
+  {
+   "id": "shape:when|enjoy|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When do you enjoy going?"
+  },
+  {
+   "id": "shape:when|enjoy|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When do you enjoy meeting your friends?"
+  },
+  {
+   "id": "shape:when|enjoy|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When do you enjoy buying a ticket?"
+  },
+  {
+   "id": "shape:when|enjoyed|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When did you enjoy going?"
+  },
+  {
+   "id": "shape:when|enjoyed|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When did you enjoy meeting your friends?"
+  },
+  {
+   "id": "shape:when|enjoyed|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When did you enjoy buying a ticket?"
+  },
+  {
+   "id": "shape:when|future|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When will you go?"
+  },
+  {
+   "id": "shape:when|future|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When will you meet your friends?"
+  },
+  {
+   "id": "shape:when|future|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When will you buy a ticket?"
+  },
+  {
+   "id": "shape:when|hadTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When did you have to go?"
+  },
+  {
+   "id": "shape:when|hadTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When did you have to meet your friends?"
+  },
+  {
+   "id": "shape:when|hadTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When did you have to buy a ticket?"
+  },
+  {
+   "id": "shape:when|haveTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When do you have to go?"
+  },
+  {
+   "id": "shape:when|haveTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When do you have to meet your friends?"
+  },
+  {
+   "id": "shape:when|haveTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When do you have to buy a ticket?"
+  },
+  {
+   "id": "shape:when|past|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When did you go?"
+  },
+  {
+   "id": "shape:when|past|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When did you meet your friends?"
+  },
+  {
+   "id": "shape:when|past|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When did you buy a ticket?"
+  },
+  {
+   "id": "shape:when|present|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When do you go?"
+  },
+  {
+   "id": "shape:when|present|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When do you meet your friends?"
+  },
+  {
+   "id": "shape:when|present|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When do you buy a ticket?"
+  },
+  {
+   "id": "shape:when|wantedTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When did you want to go?"
+  },
+  {
+   "id": "shape:when|wantedTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When did you want to meet your friends?"
+  },
+  {
+   "id": "shape:when|wantedTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When did you want to buy a ticket?"
+  },
+  {
+   "id": "shape:when|wantTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When do you want to go?"
+  },
+  {
+   "id": "shape:when|wantTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When do you want to meet your friends?"
+  },
+  {
+   "id": "shape:when|wantTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "When do you want to buy a ticket?"
+  },
+  {
+   "id": "shape:where|can|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where can you go?"
+  },
+  {
+   "id": "shape:where|can|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where can you meet your friends?"
+  },
+  {
+   "id": "shape:where|can|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where can you buy a ticket?"
+  },
+  {
+   "id": "shape:where|continuous|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where are you going?"
+  },
+  {
+   "id": "shape:where|continuous|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where are you meeting your friends?"
+  },
+  {
+   "id": "shape:where|continuous|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where are you buying a ticket?"
+  },
+  {
+   "id": "shape:where|enjoy|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where do you enjoy going?"
+  },
+  {
+   "id": "shape:where|enjoy|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where do you enjoy meeting your friends?"
+  },
+  {
+   "id": "shape:where|enjoy|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where do you enjoy buying a ticket?"
+  },
+  {
+   "id": "shape:where|enjoyed|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where did you enjoy going?"
+  },
+  {
+   "id": "shape:where|enjoyed|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where did you enjoy meeting your friends?"
+  },
+  {
+   "id": "shape:where|enjoyed|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where did you enjoy buying a ticket?"
+  },
+  {
+   "id": "shape:where|future|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where will you go?"
+  },
+  {
+   "id": "shape:where|future|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where will you meet your friends?"
+  },
+  {
+   "id": "shape:where|future|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where will you buy a ticket?"
+  },
+  {
+   "id": "shape:where|hadTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where did you have to go?"
+  },
+  {
+   "id": "shape:where|hadTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where did you have to meet your friends?"
+  },
+  {
+   "id": "shape:where|hadTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where did you have to buy a ticket?"
+  },
+  {
+   "id": "shape:where|haveTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where do you have to go?"
+  },
+  {
+   "id": "shape:where|haveTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where do you have to meet your friends?"
+  },
+  {
+   "id": "shape:where|haveTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where do you have to buy a ticket?"
+  },
+  {
+   "id": "shape:where|past|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where did you go?"
+  },
+  {
+   "id": "shape:where|past|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where did you meet your friends?"
+  },
+  {
+   "id": "shape:where|past|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where did you buy a ticket?"
+  },
+  {
+   "id": "shape:where|present|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where do you go?"
+  },
+  {
+   "id": "shape:where|present|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where do you meet your friends?"
+  },
+  {
+   "id": "shape:where|present|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where do you buy a ticket?"
+  },
+  {
+   "id": "shape:where|wantedTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where did you want to go?"
+  },
+  {
+   "id": "shape:where|wantedTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where did you want to meet your friends?"
+  },
+  {
+   "id": "shape:where|wantedTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where did you want to buy a ticket?"
+  },
+  {
+   "id": "shape:where|wantTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where do you want to go?"
+  },
+  {
+   "id": "shape:where|wantTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where do you want to meet your friends?"
+  },
+  {
+   "id": "shape:where|wantTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Where do you want to buy a ticket?"
+  },
+  {
+   "id": "shape:who|can|person",
+   "verdict": "ok",
+   "issue": "목적격 who — 구어 미국영어에서는 who 가 표준이다. 격식 문어라면 whom.",
+   "fix": "",
+   "confidence": "high",
+   "en": "Who can you meet?"
+  },
+  {
+   "id": "shape:who|continuous|person",
+   "verdict": "ok",
+   "issue": "목적격 who — 구어 미국영어에서는 who 가 표준이다. 격식 문어라면 whom.",
+   "fix": "",
+   "confidence": "high",
+   "en": "Who are you meeting?"
+  },
+  {
+   "id": "shape:who|enjoy|person",
+   "verdict": "ok",
+   "issue": "목적격 who — 구어 미국영어에서는 who 가 표준이다. 격식 문어라면 whom.",
+   "fix": "",
+   "confidence": "high",
+   "en": "Who do you enjoy meeting?"
+  },
+  {
+   "id": "shape:who|enjoyed|person",
+   "verdict": "ok",
+   "issue": "목적격 who — 구어 미국영어에서는 who 가 표준이다. 격식 문어라면 whom.",
+   "fix": "",
+   "confidence": "high",
+   "en": "Who did you enjoy meeting?"
+  },
+  {
+   "id": "shape:who|future|person",
+   "verdict": "ok",
+   "issue": "목적격 who — 구어 미국영어에서는 who 가 표준이다. 격식 문어라면 whom.",
+   "fix": "",
+   "confidence": "high",
+   "en": "Who will you meet?"
+  },
+  {
+   "id": "shape:who|hadTo|person",
+   "verdict": "ok",
+   "issue": "목적격 who — 구어 미국영어에서는 who 가 표준이다. 격식 문어라면 whom.",
+   "fix": "",
+   "confidence": "high",
+   "en": "Who did you have to meet?"
+  },
+  {
+   "id": "shape:who|haveTo|person",
+   "verdict": "ok",
+   "issue": "목적격 who — 구어 미국영어에서는 who 가 표준이다. 격식 문어라면 whom.",
+   "fix": "",
+   "confidence": "high",
+   "en": "Who do you have to meet?"
+  },
+  {
+   "id": "shape:who|past|person",
+   "verdict": "ok",
+   "issue": "목적격 who — 구어 미국영어에서는 who 가 표준이다. 격식 문어라면 whom.",
+   "fix": "",
+   "confidence": "high",
+   "en": "Who did you meet?"
+  },
+  {
+   "id": "shape:who|present|person",
+   "verdict": "ok",
+   "issue": "목적격 who — 구어 미국영어에서는 who 가 표준이다. 격식 문어라면 whom.",
+   "fix": "",
+   "confidence": "high",
+   "en": "Who do you meet?"
+  },
+  {
+   "id": "shape:who|wantedTo|person",
+   "verdict": "ok",
+   "issue": "목적격 who — 구어 미국영어에서는 who 가 표준이다. 격식 문어라면 whom.",
+   "fix": "",
+   "confidence": "high",
+   "en": "Who did you want to meet?"
+  },
+  {
+   "id": "shape:who|wantTo|person",
+   "verdict": "ok",
+   "issue": "목적격 who — 구어 미국영어에서는 who 가 표준이다. 격식 문어라면 whom.",
+   "fix": "",
+   "confidence": "high",
+   "en": "Who do you want to meet?"
+  },
+  {
+   "id": "shape:why|continuous|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why are you going?"
+  },
+  {
+   "id": "shape:why|continuous|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why are you meeting your friends?"
+  },
+  {
+   "id": "shape:why|continuous|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why are you buying a ticket?"
+  },
+  {
+   "id": "shape:why|enjoy|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why do you enjoy going?"
+  },
+  {
+   "id": "shape:why|enjoy|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why do you enjoy meeting your friends?"
+  },
+  {
+   "id": "shape:why|enjoy|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why do you enjoy buying a ticket?"
+  },
+  {
+   "id": "shape:why|enjoyed|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why did you enjoy going?"
+  },
+  {
+   "id": "shape:why|enjoyed|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why did you enjoy meeting your friends?"
+  },
+  {
+   "id": "shape:why|enjoyed|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why did you enjoy buying a ticket?"
+  },
+  {
+   "id": "shape:why|hadTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why did you have to go?"
+  },
+  {
+   "id": "shape:why|hadTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why did you have to meet your friends?"
+  },
+  {
+   "id": "shape:why|hadTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why did you have to buy a ticket?"
+  },
+  {
+   "id": "shape:why|haveTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why do you have to go?"
+  },
+  {
+   "id": "shape:why|haveTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why do you have to meet your friends?"
+  },
+  {
+   "id": "shape:why|haveTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why do you have to buy a ticket?"
+  },
+  {
+   "id": "shape:why|past|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why did you go?"
+  },
+  {
+   "id": "shape:why|past|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why did you meet your friends?"
+  },
+  {
+   "id": "shape:why|past|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why did you buy a ticket?"
+  },
+  {
+   "id": "shape:why|present|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why do you go?"
+  },
+  {
+   "id": "shape:why|present|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why do you meet your friends?"
+  },
+  {
+   "id": "shape:why|present|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why do you buy a ticket?"
+  },
+  {
+   "id": "shape:why|wantedTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why did you want to go?"
+  },
+  {
+   "id": "shape:why|wantedTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why did you want to meet your friends?"
+  },
+  {
+   "id": "shape:why|wantedTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why did you want to buy a ticket?"
+  },
+  {
+   "id": "shape:why|wantTo|intransitive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why do you want to go?"
+  },
+  {
+   "id": "shape:why|wantTo|person",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why do you want to meet your friends?"
+  },
+  {
+   "id": "shape:why|wantTo|thing",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Why do you want to buy a ticket?"
+  }
+ ]
+}

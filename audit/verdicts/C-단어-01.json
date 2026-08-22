@@ -1,0 +1,486 @@
+{
+ "batch": "C-단어-01",
+ "note": "판정자: Claude · 철자는 미국식 기준, 분해는 결합 재현 가능성 기준.",
+ "verdicts": [
+  {
+   "id": "root:re:return",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "return"
+  },
+  {
+   "id": "root:re:rebuild",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "rebuild"
+  },
+  {
+   "id": "root:re:recall",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "recall"
+  },
+  {
+   "id": "root:re:recover",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "recover"
+  },
+  {
+   "id": "root:re:recycle",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "recycle"
+  },
+  {
+   "id": "root:un:unhappy",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "unhappy"
+  },
+  {
+   "id": "root:un:unlock",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "unlock"
+  },
+  {
+   "id": "root:un:unfair",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "unfair"
+  },
+  {
+   "id": "root:un:unknown",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "unknown"
+  },
+  {
+   "id": "root:un:undo",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "undo"
+  },
+  {
+   "id": "root:dis:dislike",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "dislike"
+  },
+  {
+   "id": "root:dis:disagree",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "disagree"
+  },
+  {
+   "id": "root:dis:disappear",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "disappear"
+  },
+  {
+   "id": "root:dis:disorder",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "disorder"
+  },
+  {
+   "id": "root:dis:discount",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "discount"
+  },
+  {
+   "id": "root:in-not:incorrect",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "incorrect"
+  },
+  {
+   "id": "root:in-not:invisible",
+   "verdict": "ok",
+   "issue": "직역(\"보이지 않는\")과 실제 뜻(\"보이지 않는\")이 똑같아 기억고리 역할을 못 한다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "invisible"
+  },
+  {
+   "id": "root:in-not:impossible",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "impossible"
+  },
+  {
+   "id": "root:in-not:informal",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "informal"
+  },
+  {
+   "id": "root:in-not:independent",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "independent"
+  },
+  {
+   "id": "root:in-into:include",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "include"
+  },
+  {
+   "id": "root:in-into:import",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "import"
+  },
+  {
+   "id": "root:in-into:inject",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "inject"
+  },
+  {
+   "id": "root:in-into:invade",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "invade"
+  },
+  {
+   "id": "root:in-into:input",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "input"
+  },
+  {
+   "id": "root:pre:prepare",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "prepare"
+  },
+  {
+   "id": "root:pre:preview",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "preview"
+  },
+  {
+   "id": "root:pre:predict",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "predict"
+  },
+  {
+   "id": "root:pre:prevent",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "prevent"
+  },
+  {
+   "id": "root:pre:prehistoric",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "prehistoric"
+  },
+  {
+   "id": "root:pro:progress",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "progress"
+  },
+  {
+   "id": "root:pro:project",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "project"
+  },
+  {
+   "id": "root:pro:promote",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "promote"
+  },
+  {
+   "id": "root:pro:propose",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "propose"
+  },
+  {
+   "id": "root:pro:produce",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "produce"
+  },
+  {
+   "id": "root:ex:exit",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "exit"
+  },
+  {
+   "id": "root:ex:export",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "export"
+  },
+  {
+   "id": "root:ex:expand",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "expand"
+  },
+  {
+   "id": "root:ex:exclude",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "exclude"
+  },
+  {
+   "id": "root:ex:extract",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "extract"
+  },
+  {
+   "id": "root:sub:subway",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "subway"
+  },
+  {
+   "id": "root:sub:submarine",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "submarine"
+  },
+  {
+   "id": "root:sub:subtitle",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "subtitle"
+  },
+  {
+   "id": "root:sub:subject",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "subject"
+  },
+  {
+   "id": "root:sub:suburb",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "suburb"
+  },
+  {
+   "id": "root:inter:internet",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "internet"
+  },
+  {
+   "id": "root:inter:international",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "international"
+  },
+  {
+   "id": "root:inter:interview",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "interview"
+  },
+  {
+   "id": "root:inter:interact",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "interact"
+  },
+  {
+   "id": "root:inter:interrupt",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "interrupt"
+  },
+  {
+   "id": "root:trans:transport",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "transport"
+  },
+  {
+   "id": "root:trans:transfer",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "transfer"
+  },
+  {
+   "id": "root:trans:translate",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "translate"
+  },
+  {
+   "id": "root:trans:transform",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "transform"
+  },
+  {
+   "id": "root:trans:transmit",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "transmit"
+  },
+  {
+   "id": "root:com:connect",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "connect"
+  },
+  {
+   "id": "root:com:combine",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "combine"
+  },
+  {
+   "id": "root:com:contact",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "contact"
+  },
+  {
+   "id": "root:com:company",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "company"
+  },
+  {
+   "id": "root:com:cooperate",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "cooperate"
+  }
+ ]
+}

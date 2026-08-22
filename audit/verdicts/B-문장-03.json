@@ -1,0 +1,206 @@
+{
+ "batch": "B-문장-03",
+ "note": "판정자: Claude · 기준=미국 구어/표준 영어(General American).",
+ "verdicts": [
+  {
+   "id": "pat:0050",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "They will walk there."
+  },
+  {
+   "id": "pat:0051",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "They plan to drink the water."
+  },
+  {
+   "id": "pat:0052",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "They left me some apples."
+  },
+  {
+   "id": "pat:0053",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "They are very fast."
+  },
+  {
+   "id": "pat:0054",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "what they were eating"
+  },
+  {
+   "id": "pat:0055",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "what they used to do"
+  },
+  {
+   "id": "pat:0056",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "to meet him"
+  },
+  {
+   "id": "pat:0057",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "persuading him"
+  },
+  {
+   "id": "pat:0058",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the homework to finish"
+  },
+  {
+   "id": "pat:0059",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "I left the door open."
+  },
+  {
+   "id": "pat:0060",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "I knew that he was guilty."
+  },
+  {
+   "id": "pat:0061",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "I found that it was difficult."
+  },
+  {
+   "id": "pat:0062",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "I want you to drive my car."
+  },
+  {
+   "id": "pat:0063",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "I swim every day."
+  },
+  {
+   "id": "pat:0064",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the fact that I had no money"
+  },
+  {
+   "id": "pat:0065",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "I cried."
+  },
+  {
+   "id": "pat:0066",
+   "verdict": "ok",
+   "issue": "패턴 라벨 오류 — \"who are waiting\"은 관계절(a5)이지 현재분사 수식(a3)이 아니다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "the people who are waiting for me"
+  },
+  {
+   "id": "pat:0067",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "to make me think"
+  },
+  {
+   "id": "pat:0068",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the teacher who likes me"
+  },
+  {
+   "id": "pat:0069",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "to rest under the tree"
+  },
+  {
+   "id": "pat:0070",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the boy who showed me the way"
+  },
+  {
+   "id": "pat:0071",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the lady who sent me flowers"
+  },
+  {
+   "id": "pat:0072",
+   "verdict": "ok",
+   "issue": "패턴 라벨 오류 — \"who are shouting\"은 관계절(a5)이지 현재분사 수식(a3)이 아니다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "the people who are shouting at me"
+  },
+  {
+   "id": "pat:0073",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "giving my watch to my daughter"
+  },
+  {
+   "id": "pat:0074",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "My father used to read me books."
+  }
+ ]
+}

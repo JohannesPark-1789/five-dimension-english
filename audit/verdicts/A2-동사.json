@@ -1,0 +1,30 @@
+{
+ "batch": "A2-동사",
+ "note": "판정자: Claude · 목적어 슬롯 도입 후 재판정. obj 를 가진 동사 26개는 목적어 문제가 해소되어 배치에서 빠졌다.",
+ "verdicts": [
+  {
+   "id": "verb:sing:finite",
+   "verdict": "ok",
+   "issue": "sing 은 절대용법이 표준이다. \"Do you sing?\" 은 정상이고, 목적어를 붙인 \"Do you sing a song?\" 은 오히려 군더더기다. 그래서 obj 를 두지 않았다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "Do you sing? / Where did you sing? / Why do you have to sing?"
+  },
+  {
+   "id": "verb:sing:prog",
+   "verdict": "ok",
+   "issue": "sing 은 절대용법이 표준이다. \"Do you sing?\" 은 정상이고, 목적어를 붙인 \"Do you sing a song?\" 은 오히려 군더더기다. 그래서 obj 를 두지 않았다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "Are you singing? / Where are you singing?"
+  },
+  {
+   "id": "verb:sing:enjoy",
+   "verdict": "ok",
+   "issue": "sing 은 절대용법이 표준이다. \"Do you sing?\" 은 정상이고, 목적어를 붙인 \"Do you sing a song?\" 은 오히려 군더더기다. 그래서 obj 를 두지 않았다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "Do you enjoy singing? / Why do you enjoy singing?"
+  }
+ ]
+}

@@ -1,0 +1,206 @@
+{
+ "batch": "B-문장-08",
+ "note": "판정자: Claude · 기준=미국 구어/표준 영어(General American).",
+ "verdicts": [
+  {
+   "id": "pat:0175",
+   "verdict": "ok",
+   "issue": "pat:0117 와 영어가 같다(한국어만 다름). 둘 중 하나 정리 검토.",
+   "fix": "",
+   "confidence": "high",
+   "en": "if you turn right"
+  },
+  {
+   "id": "pat:0176",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "why he likes to cook"
+  },
+  {
+   "id": "pat:0177",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "why I have to give her a notebook"
+  },
+  {
+   "id": "pat:0178",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "a student who likes cooking"
+  },
+  {
+   "id": "pat:0179",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the fact that we have to drink six to eight glasses of water"
+  },
+  {
+   "id": "pat:0180",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "as soon as we made the decision"
+  },
+  {
+   "id": "pat:0181",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "if we look at the book"
+  },
+  {
+   "id": "pat:0182",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the fact that we were wearing shorts"
+  },
+  {
+   "id": "pat:0183",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "what we want to see"
+  },
+  {
+   "id": "pat:0184",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "if we cook food"
+  },
+  {
+   "id": "pat:0185",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "because we are Korean"
+  },
+  {
+   "id": "pat:0186",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "We have never seen the book."
+  },
+  {
+   "id": "pat:0187",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "We call it an apartment."
+  },
+  {
+   "id": "pat:0188",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "We elected him chairman."
+  },
+  {
+   "id": "pat:0189",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "We watched the children grow."
+  },
+  {
+   "id": "pat:0190",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "whether we met his friend or not"
+  },
+  {
+   "id": "pat:0191",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "while listening to music"
+  },
+  {
+   "id": "pat:0192",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "treated by the doctors"
+  },
+  {
+   "id": "pat:0193",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "now that they have finally met me"
+  },
+  {
+   "id": "pat:0194",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "That policeman caught the thief."
+  },
+  {
+   "id": "pat:0195",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Will you lend me a pen?"
+  },
+  {
+   "id": "pat:0196",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "giving up halfway"
+  },
+  {
+   "id": "pat:0197",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "despite being hit by a car"
+  },
+  {
+   "id": "pat:0198",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the player injured during the soccer match"
+  },
+  {
+   "id": "pat:0199",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the man crying loudly"
+  }
+ ]
+}

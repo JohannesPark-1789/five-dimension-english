@@ -1,0 +1,486 @@
+{
+ "batch": "C-단어-06",
+ "note": "판정자: Claude · 철자는 미국식 기준, 분해는 결합 재현 가능성 기준.",
+ "verdicts": [
+  {
+   "id": "root:flu:superfluous",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "superfluous"
+  },
+  {
+   "id": "root:pend:depend",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "depend"
+  },
+  {
+   "id": "root:pend:suspend",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "suspend"
+  },
+  {
+   "id": "root:pend:indispensable",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "indispensable"
+  },
+  {
+   "id": "root:pend:impending",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "impending"
+  },
+  {
+   "id": "root:pend:pensive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "pensive"
+  },
+  {
+   "id": "root:magn:magnify",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "magnify"
+  },
+  {
+   "id": "root:magn:magnificent",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "magnificent"
+  },
+  {
+   "id": "root:magn:magnitude",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "magnitude"
+  },
+  {
+   "id": "root:magn:magnate",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "magnate"
+  },
+  {
+   "id": "root:magn:magnanimous",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "magnanimous"
+  },
+  {
+   "id": "root:sol:solo",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "solo"
+  },
+  {
+   "id": "root:sol:sole",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "sole"
+  },
+  {
+   "id": "root:sol:solitary",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "solitary"
+  },
+  {
+   "id": "root:sol:desolate",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "desolate"
+  },
+  {
+   "id": "root:sol:soliloquy",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "soliloquy"
+  },
+  {
+   "id": "root:mut:mutual",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "mutual"
+  },
+  {
+   "id": "root:mut:commute",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "commute"
+  },
+  {
+   "id": "root:mut:mutate",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "mutate"
+  },
+  {
+   "id": "root:mut:immutable",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "immutable"
+  },
+  {
+   "id": "root:mut:transmute",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "transmute"
+  },
+  {
+   "id": "root:anthrop:anthropology",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "anthropology"
+  },
+  {
+   "id": "root:anthrop:philanthropy",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "philanthropy"
+  },
+  {
+   "id": "root:anthrop:misanthrope",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "misanthrope"
+  },
+  {
+   "id": "root:anthrop:anthropomorphic",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "anthropomorphic"
+  },
+  {
+   "id": "root:chron:chronic",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "chronic"
+  },
+  {
+   "id": "root:chron:chronological",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "chronological"
+  },
+  {
+   "id": "root:chron:chronicle",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "chronicle"
+  },
+  {
+   "id": "root:chron:synchronize",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "synchronize"
+  },
+  {
+   "id": "root:chron:anachronism",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "anachronism"
+  },
+  {
+   "id": "root:dem:democracy",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "democracy"
+  },
+  {
+   "id": "root:dem:epidemic",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "epidemic"
+  },
+  {
+   "id": "root:dem:pandemic",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "pandemic"
+  },
+  {
+   "id": "root:dem:demographic",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "demographic"
+  },
+  {
+   "id": "root:dem:demagogue",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "demagogue"
+  },
+  {
+   "id": "root:path:sympathy",
+   "verdict": "ok",
+   "issue": "같은 단어가 syn 그룹에서는 sym+pathy 로 분해돼 있다. 통일 필요.",
+   "fix": "",
+   "confidence": "high",
+   "en": "sympathy"
+  },
+  {
+   "id": "root:path:empathy",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "empathy"
+  },
+  {
+   "id": "root:path:pathetic",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "pathetic"
+  },
+  {
+   "id": "root:path:apathy",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "apathy"
+  },
+  {
+   "id": "root:path:pathology",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "pathology"
+  },
+  {
+   "id": "root:phil:philosophy",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "philosophy"
+  },
+  {
+   "id": "root:phil:philharmonic",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "philharmonic"
+  },
+  {
+   "id": "root:phil:philanthropy",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "philanthropy"
+  },
+  {
+   "id": "root:phil:bibliophile",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "bibliophile"
+  },
+  {
+   "id": "root:soph:philosophy",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "philosophy"
+  },
+  {
+   "id": "root:soph:sophisticated",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "sophisticated"
+  },
+  {
+   "id": "root:soph:sophomore",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "sophomore"
+  },
+  {
+   "id": "root:soph:sophistry",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "sophistry"
+  },
+  {
+   "id": "root:arch:monarch",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "monarch"
+  },
+  {
+   "id": "root:arch:architect",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "architect"
+  },
+  {
+   "id": "root:arch:anarchy",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "anarchy"
+  },
+  {
+   "id": "root:arch:hierarchy",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "hierarchy"
+  },
+  {
+   "id": "root:arch:archaic",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "archaic"
+  },
+  {
+   "id": "root:crat:democracy",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "democracy"
+  },
+  {
+   "id": "root:crat:autocrat",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "autocrat"
+  },
+  {
+   "id": "root:crat:aristocrat",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "aristocrat"
+  },
+  {
+   "id": "root:crat:bureaucracy",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "bureaucracy"
+  },
+  {
+   "id": "root:crat:plutocracy",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "plutocracy"
+  },
+  {
+   "id": "root:gen:generate",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "generate"
+  },
+  {
+   "id": "root:gen:genuine",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "genuine"
+  }
+ ]
+}

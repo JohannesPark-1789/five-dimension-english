@@ -1,0 +1,62 @@
+{
+ "batch": "C-단어-07",
+ "note": "판정자: Claude · 철자는 미국식 기준, 분해는 결합 재현 가능성 기준.",
+ "verdicts": [
+  {
+   "id": "root:gen:genetic",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "genetic"
+  },
+  {
+   "id": "root:gen:indigenous",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "indigenous"
+  },
+  {
+   "id": "root:gen:congenital",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "congenital"
+  },
+  {
+   "id": "root:morph:metamorphosis",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "metamorphosis"
+  },
+  {
+   "id": "root:morph:morphology",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "morphology"
+  },
+  {
+   "id": "root:morph:amorphous",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "amorphous"
+  },
+  {
+   "id": "root:morph:anthropomorphic",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "anthropomorphic"
+  }
+ ]
+}

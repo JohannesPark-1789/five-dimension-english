@@ -1,0 +1,206 @@
+{
+ "batch": "B-문장-06",
+ "note": "판정자: Claude · 기준=미국 구어/표준 영어(General American).",
+ "verdicts": [
+  {
+   "id": "pat:0125",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "if I were a billionaire"
+  },
+  {
+   "id": "pat:0126",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "if I lived in a big city"
+  },
+  {
+   "id": "pat:0127",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "if he had met her ten years ago"
+  },
+  {
+   "id": "pat:0128",
+   "verdict": "ok",
+   "issue": "pat:0129 와 영어가 같다(한국어만 다름). 둘 중 하나 정리 검토.",
+   "fix": "",
+   "confidence": "high",
+   "en": "if they had not met me"
+  },
+  {
+   "id": "pat:0129",
+   "verdict": "ok",
+   "issue": "pat:0128 와 영어가 같다(한국어만 다름). 둘 중 하나 정리 검토.",
+   "fix": "",
+   "confidence": "high",
+   "en": "if they had not met me"
+  },
+  {
+   "id": "pat:0130",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "if I could say that to you"
+  },
+  {
+   "id": "pat:0131",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "if I were her"
+  },
+  {
+   "id": "pat:0132",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "if I had driven safely"
+  },
+  {
+   "id": "pat:0133",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "if I had not learned English then"
+  },
+  {
+   "id": "pat:0134",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "if I were rich enough"
+  },
+  {
+   "id": "pat:0135",
+   "verdict": "ok",
+   "issue": "미국식 표현으로 고쳐 반영했다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "if you had not helped me over those three years"
+  },
+  {
+   "id": "pat:0136",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "if the dam had been built"
+  },
+  {
+   "id": "pat:0137",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "if we had not set the alarm"
+  },
+  {
+   "id": "pat:0138",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "if we were not here now"
+  },
+  {
+   "id": "pat:0139",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "having many friends"
+  },
+  {
+   "id": "pat:0140",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "because I am very tired"
+  },
+  {
+   "id": "pat:0141",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "to meet friends every day"
+  },
+  {
+   "id": "pat:0142",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the people loved by everyone"
+  },
+  {
+   "id": "pat:0143",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "not knowing what to say"
+  },
+  {
+   "id": "pat:0144",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the child in the room"
+  },
+  {
+   "id": "pat:0145",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the people carried to the hospital"
+  },
+  {
+   "id": "pat:0146",
+   "verdict": "ok",
+   "issue": "영어 \"the one\"은 성별이 없는데 한국어는 \"그녀\"로 못박았다. 영어는 정상.",
+   "fix": "",
+   "confidence": "high",
+   "en": "the one singing softly"
+  },
+  {
+   "id": "pat:0147",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "though he was living near her house"
+  },
+  {
+   "id": "pat:0148",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "though it seems like giving up halfway"
+  },
+  {
+   "id": "pat:0149",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "though she can practice singing"
+  }
+ ]
+}

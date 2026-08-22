@@ -1,0 +1,486 @@
+{
+ "batch": "C-단어-02",
+ "note": "판정자: Claude · 철자는 미국식 기준, 분해는 결합 재현 가능성 기준.",
+ "verdicts": [
+  {
+   "id": "root:spect:respect",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "respect"
+  },
+  {
+   "id": "root:spect:inspect",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "inspect"
+  },
+  {
+   "id": "root:spect:suspect",
+   "verdict": "ok",
+   "issue": "형태소 표기를 고쳐 반영했다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "suspect"
+  },
+  {
+   "id": "root:spect:prospect",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "prospect"
+  },
+  {
+   "id": "root:spect:spectator",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "spectator"
+  },
+  {
+   "id": "root:spect:perspective",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "perspective"
+  },
+  {
+   "id": "root:vis:visible",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "visible"
+  },
+  {
+   "id": "root:vis:vision",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "vision"
+  },
+  {
+   "id": "root:vis:visit",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "visit"
+  },
+  {
+   "id": "root:vis:evidence",
+   "verdict": "ok",
+   "issue": "분해가 e+vid 까지만 — 접미사 -ence 가 빠졌다. 다른 카드(vis+ion 등)는 접미사까지 적어 일관성이 없다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "evidence"
+  },
+  {
+   "id": "root:vis:supervise",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "supervise"
+  },
+  {
+   "id": "root:dict:dictionary",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "dictionary"
+  },
+  {
+   "id": "root:dict:predict",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "predict"
+  },
+  {
+   "id": "root:dict:contradict",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "contradict"
+  },
+  {
+   "id": "root:dict:dictator",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "dictator"
+  },
+  {
+   "id": "root:dict:dictation",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "dictation"
+  },
+  {
+   "id": "root:voc:advocate",
+   "verdict": "ok",
+   "issue": "분해 불가였던 voice 를 어근이 살아 있는 advocate(ad+voc+ate)로 교체했다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "advocate"
+  },
+  {
+   "id": "root:voc:vocal",
+   "verdict": "ok",
+   "issue": "직역과 실제 뜻이 똑같다(\"목소리의\"). 기억고리 역할을 못 한다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "vocal"
+  },
+  {
+   "id": "root:voc:vocabulary",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "vocabulary"
+  },
+  {
+   "id": "root:voc:invoke",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "invoke"
+  },
+  {
+   "id": "root:voc:provoke",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "provoke"
+  },
+  {
+   "id": "root:script:describe",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "describe"
+  },
+  {
+   "id": "root:script:subscribe",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "subscribe"
+  },
+  {
+   "id": "root:script:prescribe",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "prescribe"
+  },
+  {
+   "id": "root:script:manuscript",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "manuscript"
+  },
+  {
+   "id": "root:script:script",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "script"
+  },
+  {
+   "id": "root:port:import",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "import"
+  },
+  {
+   "id": "root:port:export",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "export"
+  },
+  {
+   "id": "root:port:transport",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "transport"
+  },
+  {
+   "id": "root:port:support",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "support"
+  },
+  {
+   "id": "root:port:portable",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "portable"
+  },
+  {
+   "id": "root:fer:transfer",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "transfer"
+  },
+  {
+   "id": "root:fer:refer",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "refer"
+  },
+  {
+   "id": "root:fer:prefer",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "prefer"
+  },
+  {
+   "id": "root:fer:offer",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "offer"
+  },
+  {
+   "id": "root:fer:suffer",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "suffer"
+  },
+  {
+   "id": "root:miss:submit",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "submit"
+  },
+  {
+   "id": "root:miss:admit",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "admit"
+  },
+  {
+   "id": "root:miss:permit",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "permit"
+  },
+  {
+   "id": "root:miss:mission",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "mission"
+  },
+  {
+   "id": "root:miss:transmit",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "transmit"
+  },
+  {
+   "id": "root:duct:introduce",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "introduce"
+  },
+  {
+   "id": "root:duct:produce",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "produce"
+  },
+  {
+   "id": "root:duct:reduce",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "reduce"
+  },
+  {
+   "id": "root:duct:conduct",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "conduct"
+  },
+  {
+   "id": "root:duct:educate",
+   "verdict": "ok",
+   "issue": "분해가 e+duc 까지만 — 접미사 -ate 누락. 위와 같은 일관성 문제.",
+   "fix": "",
+   "confidence": "high",
+   "en": "educate"
+  },
+  {
+   "id": "root:tract:attract",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "attract"
+  },
+  {
+   "id": "root:tract:extract",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "extract"
+  },
+  {
+   "id": "root:tract:subtract",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "subtract"
+  },
+  {
+   "id": "root:tract:contract",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "contract"
+  },
+  {
+   "id": "root:tract:tractor",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "tractor"
+  },
+  {
+   "id": "root:ject:inject",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "inject"
+  },
+  {
+   "id": "root:ject:reject",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "reject"
+  },
+  {
+   "id": "root:ject:project",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "project"
+  },
+  {
+   "id": "root:ject:eject",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "eject"
+  },
+  {
+   "id": "root:ject:object",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "object"
+  },
+  {
+   "id": "root:pos:position",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "position"
+  },
+  {
+   "id": "root:pos:expose",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "expose"
+  },
+  {
+   "id": "root:pos:compose",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "compose"
+  },
+  {
+   "id": "root:pos:propose",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "propose"
+  }
+ ]
+}

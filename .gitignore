@@ -8,3 +8,7 @@ desktop.ini
 
 # 로그
 *.log
+
+# 검수 파이프라인 생성물 (audit/run.mjs 로 재생성)
+audit/out/
+audit/verdicts/*.template.json

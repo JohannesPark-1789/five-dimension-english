@@ -1,0 +1,486 @@
+{
+ "batch": "C-단어-04",
+ "note": "판정자: Claude · 철자는 미국식 기준, 분해는 결합 재현 가능성 기준.",
+ "verdicts": [
+  {
+   "id": "root:photo:photogenic",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "photogenic"
+  },
+  {
+   "id": "root:scope:telescope",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "telescope"
+  },
+  {
+   "id": "root:scope:microscope",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "microscope"
+  },
+  {
+   "id": "root:scope:periscope",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "periscope"
+  },
+  {
+   "id": "root:auto:automatic",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "automatic"
+  },
+  {
+   "id": "root:auto:automobile",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "automobile"
+  },
+  {
+   "id": "root:auto:autograph",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "autograph"
+  },
+  {
+   "id": "root:auto:autobiography",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "autobiography"
+  },
+  {
+   "id": "root:psych:psychology",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "psychology"
+  },
+  {
+   "id": "root:psych:psychologist",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "psychologist"
+  },
+  {
+   "id": "root:psych:psychic",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "psychic"
+  },
+  {
+   "id": "root:ab:absent",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "absent"
+  },
+  {
+   "id": "root:ab:absorb",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "absorb"
+  },
+  {
+   "id": "root:ab:abnormal",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "abnormal"
+  },
+  {
+   "id": "root:ab:abstract",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "abstract"
+  },
+  {
+   "id": "root:ab:abstain",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "abstain"
+  },
+  {
+   "id": "root:circum:circulate",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "circulate"
+  },
+  {
+   "id": "root:circum:circumstance",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "circumstance"
+  },
+  {
+   "id": "root:circum:circumference",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "circumference"
+  },
+  {
+   "id": "root:circum:circumspect",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "circumspect"
+  },
+  {
+   "id": "root:circum:circumvent",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "circumvent"
+  },
+  {
+   "id": "root:per:perform",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "perform"
+  },
+  {
+   "id": "root:per:persuade",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "persuade"
+  },
+  {
+   "id": "root:per:persist",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "persist"
+  },
+  {
+   "id": "root:per:pervade",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "pervade"
+  },
+  {
+   "id": "root:per:perennial",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "perennial"
+  },
+  {
+   "id": "root:super:surface",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "surface"
+  },
+  {
+   "id": "root:super:superior",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "superior"
+  },
+  {
+   "id": "root:super:surpass",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "surpass"
+  },
+  {
+   "id": "root:super:surplus",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "surplus"
+  },
+  {
+   "id": "root:super:supersede",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "supersede"
+  },
+  {
+   "id": "root:contra:contrast",
+   "verdict": "ok",
+   "issue": "형태소 표기를 고쳐 반영했다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "contrast"
+  },
+  {
+   "id": "root:contra:contrary",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "contrary"
+  },
+  {
+   "id": "root:contra:contradict",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "contradict"
+  },
+  {
+   "id": "root:contra:controversy",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "controversy"
+  },
+  {
+   "id": "root:contra:counterfeit",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "counterfeit"
+  },
+  {
+   "id": "root:mal:malfunction",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "malfunction"
+  },
+  {
+   "id": "root:mal:malice",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "malice"
+  },
+  {
+   "id": "root:mal:malady",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "malady"
+  },
+  {
+   "id": "root:mal:malignant",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "malignant"
+  },
+  {
+   "id": "root:mal:malevolent",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "malevolent"
+  },
+  {
+   "id": "root:bene:benefit",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "benefit"
+  },
+  {
+   "id": "root:bene:beneficial",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "beneficial"
+  },
+  {
+   "id": "root:bene:benefactor",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "benefactor"
+  },
+  {
+   "id": "root:bene:benign",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "benign"
+  },
+  {
+   "id": "root:bene:benevolent",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "benevolent"
+  },
+  {
+   "id": "root:syn:symbol",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "symbol"
+  },
+  {
+   "id": "root:syn:sympathy",
+   "verdict": "ok",
+   "issue": "같은 단어가 path 그룹에서는 sym+path+y 로 분해돼 있다. 분해 방식이 그룹마다 다르면 학습자가 헷갈린다 — 하나로 통일할 것.",
+   "fix": "",
+   "confidence": "high",
+   "en": "sympathy"
+  },
+  {
+   "id": "root:syn:synonym",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "synonym"
+  },
+  {
+   "id": "root:syn:synthesis",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "synthesis"
+  },
+  {
+   "id": "root:syn:synchronize",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "synchronize"
+  },
+  {
+   "id": "root:suf-able:reliable",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "reliable"
+  },
+  {
+   "id": "root:suf-able:flexible",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "flexible"
+  },
+  {
+   "id": "root:suf-able:feasible",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "feasible"
+  },
+  {
+   "id": "root:suf-able:inevitable",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "inevitable"
+  },
+  {
+   "id": "root:suf-able:plausible",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "plausible"
+  },
+  {
+   "id": "root:suf-ous:famous",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "famous"
+  },
+  {
+   "id": "root:suf-ous:generous",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "generous"
+  },
+  {
+   "id": "root:suf-ous:anonymous",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "anonymous"
+  },
+  {
+   "id": "root:suf-ous:ambiguous",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "ambiguous"
+  }
+ ]
+}

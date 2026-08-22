@@ -1,0 +1,206 @@
+{
+ "batch": "B-문장-02",
+ "note": "판정자: Claude · 기준=미국 구어/표준 영어(General American).",
+ "verdicts": [
+  {
+   "id": "pat:0025",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "whether he makes me think or not"
+  },
+  {
+   "id": "pat:0026",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "whether he planted the trees"
+  },
+  {
+   "id": "pat:0027",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "what he said about me"
+  },
+  {
+   "id": "pat:0028",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "whether he taught me an important lesson or not"
+  },
+  {
+   "id": "pat:0029",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "whether he sleeps late or not"
+  },
+  {
+   "id": "pat:0030",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "because he was sick"
+  },
+  {
+   "id": "pat:0031",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "because he studied hard"
+  },
+  {
+   "id": "pat:0032",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "after he finished the work"
+  },
+  {
+   "id": "pat:0033",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the tree between them"
+  },
+  {
+   "id": "pat:0034",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "She wished you success."
+  },
+  {
+   "id": "pat:0035",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the fact that she plays badminton"
+  },
+  {
+   "id": "pat:0036",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "She sent me a postcard."
+  },
+  {
+   "id": "pat:0037",
+   "verdict": "ok",
+   "issue": "미국식 표현으로 고쳐 반영했다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "She has taught children how to dance."
+  },
+  {
+   "id": "pat:0038",
+   "verdict": "ok",
+   "issue": "미국식 표현으로 고쳐 반영했다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "She got to school yesterday."
+  },
+  {
+   "id": "pat:0039",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "as soon as she saw her mother"
+  },
+  {
+   "id": "pat:0040",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "She gradually became tired."
+  },
+  {
+   "id": "pat:0041",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "persuaded by her"
+  },
+  {
+   "id": "pat:0042",
+   "verdict": "ok",
+   "issue": "패턴 라벨 오류 — containing 은 현재분사인데 \"과거분사 수식(a4)\"로 분류돼 있다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "a photo containing her image"
+  },
+  {
+   "id": "pat:0043",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "though he lives near her house"
+  },
+  {
+   "id": "pat:0044",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "He makes me think."
+  },
+  {
+   "id": "pat:0045",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "He discovered something."
+  },
+  {
+   "id": "pat:0046",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "He went crazy."
+  },
+  {
+   "id": "pat:0047",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "He used to be happy."
+  },
+  {
+   "id": "pat:0048",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "He attended the meeting."
+  },
+  {
+   "id": "pat:0049",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "to send them a letter"
+  }
+ ]
+}

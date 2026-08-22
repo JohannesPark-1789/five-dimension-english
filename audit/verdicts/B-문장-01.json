@@ -1,0 +1,206 @@
+{
+ "batch": "B-문장-01",
+ "note": "판정자: Claude · 기준=미국 구어/표준 영어(General American).",
+ "verdicts": [
+  {
+   "id": "pat:0000",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the gramophone invented by Edison"
+  },
+  {
+   "id": "pat:0001",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the caricature drawn by Mike"
+  },
+  {
+   "id": "pat:0002",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the article written by Mike"
+  },
+  {
+   "id": "pat:0003",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "to make Sally open her box"
+  },
+  {
+   "id": "pat:0004",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "because Sarah scolded the girl"
+  },
+  {
+   "id": "pat:0005",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "because Sarah disliked him"
+  },
+  {
+   "id": "pat:0006",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Tina was surprised."
+  },
+  {
+   "id": "pat:0007",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Tom is very tired."
+  },
+  {
+   "id": "pat:0008",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "as soon as Tom saw his teacher"
+  },
+  {
+   "id": "pat:0009",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "because he was poor"
+  },
+  {
+   "id": "pat:0010",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "children who will grow up strong and healthy"
+  },
+  {
+   "id": "pat:0011",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Do they meet their friends every day?"
+  },
+  {
+   "id": "pat:0012",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "when you walk out into the street"
+  },
+  {
+   "id": "pat:0013",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "some children swimming in the river"
+  },
+  {
+   "id": "pat:0014",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "The river is drying up."
+  },
+  {
+   "id": "pat:0015",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "The farmer has been working since early morning."
+  },
+  {
+   "id": "pat:0016",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "to steal the money"
+  },
+  {
+   "id": "pat:0017",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the girl with red hair"
+  },
+  {
+   "id": "pat:0018",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "a dog moving toward the man"
+  },
+  {
+   "id": "pat:0019",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "The baby's mother always smiles."
+  },
+  {
+   "id": "pat:0020",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "keeping the promise"
+  },
+  {
+   "id": "pat:0021",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "gathering the information"
+  },
+  {
+   "id": "pat:0022",
+   "verdict": "ok",
+   "issue": "미국식 표현으로 고쳐 반영했다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "the first person who was waiting in line"
+  },
+  {
+   "id": "pat:0023",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "a big red car parked outside the house"
+  },
+  {
+   "id": "pat:0024",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "because he was invited to the party"
+  }
+ ]
+}

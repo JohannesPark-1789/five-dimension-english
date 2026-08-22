@@ -1,0 +1,14 @@
+{
+ "batch": "D-코드",
+ "note": "판정자: Claude · 기준=미국 구어 영어(General American).",
+ "verdicts": [
+  {
+   "id": "code:app.js:0",
+   "verdict": "ok",
+   "issue": "TTS 엔진 워밍업용. 화면에는 안 보이지만 음성으로 나가므로 코퍼스에 포함했다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "What do you want to buy?"
+  }
+ ]
+}

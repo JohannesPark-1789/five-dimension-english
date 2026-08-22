@@ -1,0 +1,486 @@
+{
+ "batch": "C-단어-05",
+ "note": "판정자: Claude · 철자는 미국식 기준, 분해는 결합 재현 가능성 기준.",
+ "verdicts": [
+  {
+   "id": "root:suf-ous:meticulous",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "meticulous"
+  },
+  {
+   "id": "root:suf-ize:realize",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "realize"
+  },
+  {
+   "id": "root:suf-ize:criticize",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "criticize"
+  },
+  {
+   "id": "root:suf-ize:emphasize",
+   "verdict": "ok",
+   "issue": "직역과 실제 뜻이 똑같다(\"강조하다\").",
+   "fix": "",
+   "confidence": "high",
+   "en": "emphasize"
+  },
+  {
+   "id": "root:suf-ize:jeopardize",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "jeopardize"
+  },
+  {
+   "id": "root:suf-ize:scrutinize",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "scrutinize"
+  },
+  {
+   "id": "root:suf-ify:clarify",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "clarify"
+  },
+  {
+   "id": "root:suf-ify:justify",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "justify"
+  },
+  {
+   "id": "root:suf-ify:magnify",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "magnify"
+  },
+  {
+   "id": "root:suf-ify:intensify",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "intensify"
+  },
+  {
+   "id": "root:suf-ify:exemplify",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "exemplify"
+  },
+  {
+   "id": "root:suf-ism:criticism",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "criticism"
+  },
+  {
+   "id": "root:suf-ism:optimism",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "optimism"
+  },
+  {
+   "id": "root:suf-ism:skepticism",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "skepticism"
+  },
+  {
+   "id": "root:suf-ism:altruism",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "altruism"
+  },
+  {
+   "id": "root:suf-ism:plagiarism",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "plagiarism"
+  },
+  {
+   "id": "root:suf-ity:ability",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "ability"
+  },
+  {
+   "id": "root:suf-ity:adversity",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "adversity"
+  },
+  {
+   "id": "root:suf-ity:proximity",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "proximity"
+  },
+  {
+   "id": "root:suf-ity:integrity",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "integrity"
+  },
+  {
+   "id": "root:suf-ity:austerity",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "austerity"
+  },
+  {
+   "id": "root:suf-cide:suicide",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "suicide"
+  },
+  {
+   "id": "root:suf-cide:pesticide",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "pesticide"
+  },
+  {
+   "id": "root:suf-cide:herbicide",
+   "verdict": "ok",
+   "issue": "어원 분해를 고쳐 반영했다 — 형태소를 이어 붙이면 표제어가 나온다. (1차 검수 R5 통과)",
+   "fix": "",
+   "confidence": "high",
+   "en": "herbicide"
+  },
+  {
+   "id": "root:suf-cide:homicide",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "homicide"
+  },
+  {
+   "id": "root:suf-cide:genocide",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "genocide"
+  },
+  {
+   "id": "root:suf-ant:persistent",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "persistent"
+  },
+  {
+   "id": "root:suf-ant:arrogant",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "arrogant"
+  },
+  {
+   "id": "root:suf-ant:vigilant",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "vigilant"
+  },
+  {
+   "id": "root:suf-ant:complacent",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "complacent"
+  },
+  {
+   "id": "root:suf-ant:belligerent",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "belligerent"
+  },
+  {
+   "id": "root:cred:credit",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "credit"
+  },
+  {
+   "id": "root:cred:incredible",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "incredible"
+  },
+  {
+   "id": "root:cred:credible",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "credible"
+  },
+  {
+   "id": "root:cred:credentials",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "credentials"
+  },
+  {
+   "id": "root:cred:credulous",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "credulous"
+  },
+  {
+   "id": "root:loqu:eloquent",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "eloquent"
+  },
+  {
+   "id": "root:loqu:elocution",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "elocution"
+  },
+  {
+   "id": "root:loqu:colloquial",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "colloquial"
+  },
+  {
+   "id": "root:loqu:soliloquy",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "soliloquy"
+  },
+  {
+   "id": "root:loqu:loquacious",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "loquacious"
+  },
+  {
+   "id": "root:greg:congregate",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "congregate"
+  },
+  {
+   "id": "root:greg:segregate",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "segregate"
+  },
+  {
+   "id": "root:greg:gregarious",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "gregarious"
+  },
+  {
+   "id": "root:greg:aggregate",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "aggregate"
+  },
+  {
+   "id": "root:greg:egregious",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "egregious"
+  },
+  {
+   "id": "root:plac:placid",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "placid"
+  },
+  {
+   "id": "root:plac:placebo",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "placebo"
+  },
+  {
+   "id": "root:plac:placate",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "placate"
+  },
+  {
+   "id": "root:plac:complacent",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "complacent"
+  },
+  {
+   "id": "root:plac:implacable",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "implacable"
+  },
+  {
+   "id": "root:sequ:sequence",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "sequence"
+  },
+  {
+   "id": "root:sequ:consequence",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "consequence"
+  },
+  {
+   "id": "root:sequ:subsequent",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "subsequent"
+  },
+  {
+   "id": "root:sequ:consecutive",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "consecutive"
+  },
+  {
+   "id": "root:sequ:obsequious",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "obsequious"
+  },
+  {
+   "id": "root:flu:fluent",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "fluent"
+  },
+  {
+   "id": "root:flu:influence",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "influence"
+  },
+  {
+   "id": "root:flu:fluctuate",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "fluctuate"
+  },
+  {
+   "id": "root:flu:affluent",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "affluent"
+  }
+ ]
+}

@@ -1,0 +1,206 @@
+{
+ "batch": "B-문장-04",
+ "note": "판정자: Claude · 기준=미국 구어/표준 영어(General American).",
+ "verdicts": [
+  {
+   "id": "pat:0075",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the fact that my dad invited the Browns"
+  },
+  {
+   "id": "pat:0076",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the person who will light up my life"
+  },
+  {
+   "id": "pat:0077",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "answering my question"
+  },
+  {
+   "id": "pat:0078",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "because the weather was so nice"
+  },
+  {
+   "id": "pat:0079",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "cut by a sharp knife"
+  },
+  {
+   "id": "pat:0080",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "to sell old clothes and dishes"
+  },
+  {
+   "id": "pat:0081",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the man standing next to me"
+  },
+  {
+   "id": "pat:0082",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the subject I hate the most"
+  },
+  {
+   "id": "pat:0083",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "when I entered the classroom"
+  },
+  {
+   "id": "pat:0084",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the man I saved"
+  },
+  {
+   "id": "pat:0085",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "whether I saw the advertisement"
+  },
+  {
+   "id": "pat:0086",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "whether I have heard of it"
+  },
+  {
+   "id": "pat:0087",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "if I meet her"
+  },
+  {
+   "id": "pat:0088",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "as soon as I called her"
+  },
+  {
+   "id": "pat:0089",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "if I eat too much"
+  },
+  {
+   "id": "pat:0090",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the guy I told you about"
+  },
+  {
+   "id": "pat:0091",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "what I want to buy"
+  },
+  {
+   "id": "pat:0092",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "while I was swimming"
+  },
+  {
+   "id": "pat:0093",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "when I swim"
+  },
+  {
+   "id": "pat:0094",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the person I met yesterday"
+  },
+  {
+   "id": "pat:0095",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the TV program I watched last night"
+  },
+  {
+   "id": "pat:0096",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the fact that I am learning English"
+  },
+  {
+   "id": "pat:0097",
+   "verdict": "ok",
+   "issue": "둥근 아포스트로피(’). 나머지 코퍼스는 전부 직선(') — 통일 필요.",
+   "fix": "",
+   "confidence": "high",
+   "en": "whether I have a driver’s license or not"
+  },
+  {
+   "id": "pat:0098",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "what I want"
+  },
+  {
+   "id": "pat:0099",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the man I work for"
+  }
+ ]
+}

@@ -1,0 +1,206 @@
+{
+ "batch": "B-문장-05",
+ "note": "판정자: Claude · 기준=미국 구어/표준 영어(General American).",
+ "verdicts": [
+  {
+   "id": "pat:0100",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "what I wore"
+  },
+  {
+   "id": "pat:0101",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the teacher I like"
+  },
+  {
+   "id": "pat:0102",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the guy I met at the party"
+  },
+  {
+   "id": "pat:0103",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "studying abroad next year"
+  },
+  {
+   "id": "pat:0104",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You resemble your father."
+  },
+  {
+   "id": "pat:0105",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "You are diligent."
+  },
+  {
+   "id": "pat:0106",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "as long as you drive carefully"
+  },
+  {
+   "id": "pat:0107",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "who wrote the letter"
+  },
+  {
+   "id": "pat:0108",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "who wanted to meet me"
+  },
+  {
+   "id": "pat:0109",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "who can give me a chance"
+  },
+  {
+   "id": "pat:0110",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "if snow and ice cover the river"
+  },
+  {
+   "id": "pat:0111",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "a TV program about other cultures"
+  },
+  {
+   "id": "pat:0112",
+   "verdict": "ok",
+   "issue": "패턴 라벨 오류 — \"give presents to the children\"은 전치사구를 쓴 3형식이다. 4형식 예문이라면 \"give the children presents\".",
+   "fix": "",
+   "confidence": "high",
+   "en": "When do you give the children presents?"
+  },
+  {
+   "id": "pat:0113",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "understanding your parents"
+  },
+  {
+   "id": "pat:0114",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "if your master buys him"
+  },
+  {
+   "id": "pat:0115",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "what you can buy"
+  },
+  {
+   "id": "pat:0116",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the fact that you give presents to the children"
+  },
+  {
+   "id": "pat:0117",
+   "verdict": "ok",
+   "issue": "pat:0175 와 영어가 같다(한국어만 다름). 둘 중 하나 정리 검토.",
+   "fix": "",
+   "confidence": "high",
+   "en": "if you turn right"
+  },
+  {
+   "id": "pat:0118",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the fact that you can do that"
+  },
+  {
+   "id": "pat:0119",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "after being elected president"
+  },
+  {
+   "id": "pat:0120",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "a company in Tokyo"
+  },
+  {
+   "id": "pat:0121",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "deciding to give it back"
+  },
+  {
+   "id": "pat:0122",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "children to take care of"
+  },
+  {
+   "id": "pat:0123",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "if he teaches science"
+  },
+  {
+   "id": "pat:0124",
+   "verdict": "ok",
+   "issue": "미국식 표현으로 고쳐 반영했다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "if I were born again"
+  }
+ ]
+}

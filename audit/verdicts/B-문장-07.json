@@ -1,0 +1,206 @@
+{
+ "batch": "B-문장-07",
+ "note": "판정자: Claude · 기준=미국 구어/표준 영어(General American).",
+ "verdicts": [
+  {
+   "id": "pat:0150",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "though they can see the city"
+  },
+  {
+   "id": "pat:0151",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "though they speak English well"
+  },
+  {
+   "id": "pat:0152",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "though I call her"
+  },
+  {
+   "id": "pat:0153",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "though I meet friends every day"
+  },
+  {
+   "id": "pat:0154",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "though we work at the same place"
+  },
+  {
+   "id": "pat:0155",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "because people sold it"
+  },
+  {
+   "id": "pat:0156",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "to look up a word in the dictionary"
+  },
+  {
+   "id": "pat:0157",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "taking pictures"
+  },
+  {
+   "id": "pat:0158",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Birds sing."
+  },
+  {
+   "id": "pat:0159",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "a problem to think about"
+  },
+  {
+   "id": "pat:0160",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "taking a shower"
+  },
+  {
+   "id": "pat:0161",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "to take a shower"
+  },
+  {
+   "id": "pat:0162",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "swimming"
+  },
+  {
+   "id": "pat:0163",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "how to read a poem"
+  },
+  {
+   "id": "pat:0164",
+   "verdict": "ok",
+   "issue": "한국어 \"시간이 납니다\"는 오역이다(= 짬이 난다). 괄호 설명이 진짜 뜻. 영어 \"Time flies.\"는 정상.",
+   "fix": "",
+   "confidence": "high",
+   "en": "Time flies."
+  },
+  {
+   "id": "pat:0165",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the people who live downstairs"
+  },
+  {
+   "id": "pat:0166",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "friends wearing glasses"
+  },
+  {
+   "id": "pat:0167",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "where he bought me lunch"
+  },
+  {
+   "id": "pat:0168",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "because I was fired yesterday"
+  },
+  {
+   "id": "pat:0169",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "when he can show John his room"
+  },
+  {
+   "id": "pat:0170",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "when I give presents to the children"
+  },
+  {
+   "id": "pat:0171",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the girl scolded by her mother"
+  },
+  {
+   "id": "pat:0172",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "Many years have passed."
+  },
+  {
+   "id": "pat:0173",
+   "verdict": "ok",
+   "issue": "미국식 표현으로 고쳐 반영했다.",
+   "fix": "",
+   "confidence": "high",
+   "en": "keeping a diary in English"
+  },
+  {
+   "id": "pat:0174",
+   "verdict": "ok",
+   "issue": "",
+   "fix": "",
+   "confidence": "high",
+   "en": "the woman who speaks English well"
+  }
+ ]
+}
