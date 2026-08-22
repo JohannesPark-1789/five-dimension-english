@@ -19,6 +19,10 @@
     if (!p.verbs) p.verbs = {};
     if (!p.patterns) p.patterns = {};
     if (!p.roots) p.roots = {};
+    /* BASIC 단계 구성이 바뀌면 저장된 단계 번호가 다른 단계를 가리키게 된다.
+       (평서문·부정문이 앞에 붙으면서 전체가 두 칸씩 밀렸다)
+       그래서 구성이 바뀔 때마다 BASIC 진도만 비운다 — 패턴·어원 진도는 그대로. */
+    if (p.basicVer !== 2) { p.verbs = {}; p.basicVer = 2; }
     return p;
   }
   let progress = loadProgress();
