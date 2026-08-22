@@ -110,7 +110,7 @@ if (!DRY) {
     }
   } catch (e) {
     console.warn(`알림: 목소리를 확인하지 못했다 — ${why(e)}`);
-    console.warn('      키에 「목소리 읽기」 권한이 없으면 정상이다. 확인 없이 진행한다.');
+    console.warn('      키에 「음성」(Voices) 읽기 권한이 없으면 정상이다. 확인 없이 진행한다.');
   }
 }
 if (DRY) { console.log('--dry — 호출하지 않고 끝낸다.'); process.exit(0); }
