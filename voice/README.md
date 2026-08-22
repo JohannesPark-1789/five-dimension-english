@@ -81,9 +81,39 @@ node voice/generate.mjs --tier=generated                # 나머지 — 달을 �
 export ELEVENLABS_API_KEY=sk_...
 ```
 
-Claude Code 웹에서 돌린다면 세션에 붙여넣는 대신
-**환경 설정의 Environment variables** 에 `ELEVENLABS_API_KEY` 로 넣는다.
-일이 끝나면 그 키는 ElevenLabs 화면에서 폐기하면 된다.
+### Claude Code 웹(클라우드 세션)에서 돌릴 때
+
+세션 대화창에 붙여넣지 말고 **환경(environment)의 환경변수**에 넣는다.
+
+1. [claude.ai/code](https://claude.ai/code) → 메시지 입력창 **위쪽 줄의 구름 아이콘**
+   (현재 환경 이름이 적혀 있다). 설정 페이지나 직접 URL 은 없다.
+2. 목록에서 쓰는 환경에 마우스를 올리면 오른쪽에 뜨는 **톱니 아이콘**을 누른다.
+3. **Environment variables** 칸에 `.env` 형식으로 한 줄 넣고 저장한다.
+   ```
+   ELEVENLABS_API_KEY=sk_...
+   ```
+4. **새 세션을 시작한다.** 세션은 시작할 때 값을 한 번 복사하므로 **이미 돌아가는
+   세션은 새 변수를 보지 못한다.**
+
+알아 둘 것 두 가지 —
+
+- 클라우드 환경에는 전용 비밀 저장소가 없다. 공식 문서는 여기에 자격증명을 넣지
+  말라고 권고한다 — **그 환경을 쓰는 사람은 값을 읽을 수 있다.** 개인 환경이면
+  실질적으로 본인뿐이지만, 팀 공용 환경이면 구성원 전부다.
+- 그래서 키에 **크레딧 상한**을 걸고 **「텍스트 음성 변환」만** 허용하는 것이
+  중요하다. 노출돼도 피해가 그 상한 안으로 묶인다.
+
+**키를 아예 내보내지 않으려면** 이 저장소를 로컬에 클론해 직접 돌리는 편이 낫다.
+음성 파일 76 MB 도 어차피 커밋해야 하니 손이 더 가지도 않는다.
+
+```bash
+git clone https://github.com/JohannesPark-1789/five-dimension-english
+cd five-dimension-english && git checkout <브랜치>
+export ELEVENLABS_API_KEY=sk_...
+node voice/compare.mjs && node voice/generate.mjs
+```
+
+어느 쪽이든 일이 끝나면 키는 ElevenLabs 화면에서 폐기한다.
 
 ## 앱이 파일을 찾는 방식
 
