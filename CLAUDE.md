@@ -55,8 +55,8 @@ ELEVENLABS_API_KEY=... node voice/generate.mjs      # 변환 (이어서 하기 �
 
 - 데이터 파일이 130 KB 를 넘었다. 계속 커지면 JSON 분리 + 지연 로딩을 검토한다.
 - PDF 10 MB 가 저장소에 함께 있다. 배포물에서 제외할지 정할 것.
-- 음성 파일이 약 76 MB · 9,900개다. 기본은 `.gitignore` 로 빼 두었다 — 배포 방식을 정할 것
-  (GitHub Pages 로 낼 거면 저장소에 넣어야 한다).
+- 음성 파일이 약 66 MB · 9,900개다 (실측 기준). GitHub Pages 로 배포하므로 저장소에 들어간다 —
+  커밋은 전체 변환이 끝난 뒤 한 번에. 자세한 것은 `voice/README.md`.
 
 ## 영어 검수
 

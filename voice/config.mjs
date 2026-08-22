@@ -24,11 +24,14 @@ export const CREDITS_PER_CHAR = {
    (mp3_44100_128 은 Creator 이상 플랜에서만 된다)                      */
 export const FORMAT = process.env.EL_FORMAT || 'mp3_22050_32';
 
-/* 포맷별 대략 바이트/초 — 용량 추정용 */
-export const BYTES_PER_SEC = {
-  mp3_22050_32:  4000,
-  mp3_44100_64:  8000,
-  mp3_44100_128: 16000,
+/* 파일 크기 추정 — compare.mjs 로 만든 32개를 실측해 맞춘 값이다.
+   문장당 고정 2.9 KB(헤더·앞뒤 여백)에 글자당 161 바이트가 붙는다.
+   짧은 문장이 많아 고정분 비중이 크다 — 초당 비트레이트로 어림하면 15% 넘게 튄다.
+   실측한 것은 mp3_22050_32 뿐이고, 나머지는 비트레이트 비로 글자당만 늘렸다.   */
+export const SIZE_MODEL = {
+  mp3_22050_32:  { perChar: 161, perClip: 2868 },   // 실측
+  mp3_44100_64:  { perChar: 322, perClip: 3400 },   // 추정
+  mp3_44100_128: { perChar: 644, perClip: 4400 },   // 추정
 };
 
 /* 목소리 둘. id 는 ElevenLabs 기본 제공 목소리.

@@ -7,7 +7,7 @@
    ===================================================================== */
 import { existsSync, statSync } from 'node:fs';
 import { loadCorpus, filterTiers, clipPath, ROOT } from './corpus.mjs';
-import { MODEL, CREDITS_PER_CHAR, FORMAT, BYTES_PER_SEC, VOICES } from './config.mjs';
+import { MODEL, CREDITS_PER_CHAR, FORMAT, SIZE_MODEL, VOICES } from './config.mjs';
 import { join } from 'node:path';
 
 const arg = k => (process.argv.find(a => a.startsWith(`--${k}=`)) || '').split('=')[1];
@@ -41,9 +41,10 @@ for (const v of VOICES) for (const x of list) {
 const todo        = VOICES.length * list.length - done;
 const todoCredits = Math.round(credits * (todo / (VOICES.length * list.length || 1)));
 
-/* 용량 — 영어는 대략 초당 15자로 읽는다. 앞뒤 여백 0.3초를 더한다. */
-const secs  = chars / 15 + list.length * 0.3;
-const bytes = secs * (BYTES_PER_SEC[FORMAT] || 4000) * VOICES.length;
+/* 용량 — 실측해 맞춘 식 (config.mjs 의 SIZE_MODEL 주석 참조) */
+const sz    = SIZE_MODEL[FORMAT] || SIZE_MODEL.mp3_22050_32;
+const bytes = (chars * sz.perChar + list.length * sz.perClip) * VOICES.length;
+const secs  = chars / 15 + list.length * 0.3;      /* 재생 시간은 초당 15자로 어림 */
 const mb    = n => (n / 1024 / 1024).toFixed(1) + ' MB';
 
 const byTier = {};
