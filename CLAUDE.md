@@ -36,9 +36,13 @@ npm 설치 불필요. 정적 서버로 열면 된다 (`.claude/launch.json` 참�
 오프라인에서도 소리가 나고, 비용은 한 번만 든다. 자세한 것은 [`voice/README.md`](voice/README.md).
 
 ```bash
-node voice/estimate.mjs                            # 비용·용량 (API 호출 없음)
+node voice/estimate.mjs --plan=creator              # 비용·용량·달 나누기 (API 호출 없음)
+ELEVENLABS_API_KEY=... node voice/compare.mjs       # 두 모델 귀로 비교 (약 600 크레딧)
 ELEVENLABS_API_KEY=... node voice/generate.mjs      # 변환 (이어서 하기 가능)
 ```
+
+전체 변환은 253,594 크레딧이다. Creator 플랜(121,000/월)이면 3개월에 나누면 추가 $0,
+한 번에 하면 약 $40, Flash 모델이면 약 $2. 자세한 계획은 `voice/README.md`.
 
 문장 목록은 `audit/extract.mjs` 것을 그대로 쓴다 — 문장을 뽑는 방법을 두 벌 만들지 않는다.
 파일 이름은 `sha1(문장)` 앞 20자다. 앱(`app.js`)과 `voice/corpus.mjs` 가 **같은 규칙**을

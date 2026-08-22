@@ -19,3 +19,4 @@ audit/verdicts/*.template.json
 voice/audio/
 voice/manifest.json
 voice/failed.json
+voice/compare/

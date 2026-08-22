@@ -10,9 +10,10 @@
 ## 쓰는 법
 
 ```bash
-node voice/estimate.mjs                       # 비용·용량 먼저 확인 (호출 없음)
+node voice/estimate.mjs --plan=creator        # 비용·용량·달 나누기 (호출 없음)
 
 export ELEVENLABS_API_KEY=...
+node voice/compare.mjs                             # 두 모델 귀로 비교 (약 600 크레딧)
 node voice/generate.mjs --tier=pattern --limit=5   # 소리 먼저 들어보기 (약 300 크레딧)
 node voice/generate.mjs                            # 전체 변환
 ```
@@ -20,6 +21,9 @@ node voice/generate.mjs                            # 전체 변환
 - 이미 만든 파일은 건너뛴다. **중간에 끊겨도 다시 실행하면 이어서** 한다.
 - 시작 전에 계정의 남은 크레딧을 확인하고, 부족하면 진행하지 않는다.
 - 실패한 문장은 `voice/failed.json` 에 남고, 다시 실행하면 그것만 재시도한다.
+
+`estimate.mjs --plan=<플랜>` 은 그 플랜의 월 할당량으로 달을 나눠 하는 일정을 보여준다.
+`--reserve=20000` 을 붙이면 달마다 그만큼은 다른 용도로 남긴다.
 
 | 옵션 | 뜻 |
 |---|---|
@@ -30,6 +34,31 @@ node voice/generate.mjs                            # 전체 변환
 | `--conc=4` | 동시 요청 수 |
 | `EL_MODEL=eleven_flash_v2_5` | 값이 절반인 모델 (품질 조금 낮음) |
 | `EL_FORMAT=mp3_44100_64` | 더 좋은 음질 (용량 두 배) |
+
+## 크레딧 계획 — Creator 플랜 ($22/월 · 121,000)
+
+전체 변환은 `eleven_multilingual_v2` 로 **253,594 크레딧**이다. 한 달 할당량의 두 배가 넘는다.
+
+| 방법 | 추가 비용 | 걸리는 시간 |
+|---|---|---|
+| 기본 모델, 3개월에 나눠서 | **$0** | 3개월 |
+| 기본 모델, 한 번에 | 약 **$40** | 하루 |
+| `EL_MODEL=eleven_flash_v2_5`, 한 번에 | 약 **$2** | 하루 |
+| Flash, 2개월에 나눠서 | **$0** | 2개월 |
+
+Flash 는 값이 절반이고 품질은 조금 낮다. 문장이 2초 안쪽으로 짧아 차이가 작을
+수 있으니 **`node voice/compare.mjs` 로 두 모델을 직접 들어보고 정한다** (약 600 크레딧).
+
+교재 문장·구·단어(547개)만 먼저 하면 **16,078 크레딧**으로 끝난다 —
+한 달 할당량 안이고, 값이 가장 높은 부분이다. 드릴 문장 4,403개가 나머지 94% 를 쓴다.
+
+```bash
+node voice/generate.mjs --tier=pattern,phrase,lexeme    # 16,078 크레딧
+node voice/generate.mjs --tier=generated                # 나머지 — 달을 나눠서
+```
+
+달을 나눠 할 때는 `generate.mjs` 를 그냥 다시 실행하면 된다. 만든 것은
+건너뛰므로 끊긴 자리에서 이어진다. 크레딧이 떨어지면 스스로 멈춘다.
 
 ## 키를 넘기는 법
 

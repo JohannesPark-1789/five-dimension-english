@@ -86,5 +86,35 @@ for (const p of PLANS) {
 console.log(`
   초과 단가는 $/1,000크레딧 기준 공개 추정치다. 결제 전 ElevenLabs
   플랜 화면에서 실제 단가를 확인할 것. 월 할당량은 매달 초기화되므로
-  큰 변환은 달을 걸쳐 나누면 추가 비용 없이 끝난다.
-`);
+  큰 변환은 달을 걸쳐 나누면 추가 비용 없이 끝난다.`);
+
+/* --plan=creator : 내 플랜에서 달을 나눠 하면 어떻게 되는지 --------- */
+const planName = (arg('plan') || '').toLowerCase();
+if (planName) {
+  const plan = PLANS.find(p => p.name.toLowerCase() === planName);
+  if (!plan) throw new Error(`모르는 플랜: ${planName} (${PLANS.map(p => p.name).join(', ')})`);
+
+  /* 다른 용도로도 크레딧을 쓴다면 --reserve= 로 남겨 둔다 */
+  const reserve = Number(arg('reserve') || 0);
+  const perMonth = plan.credits - reserve;
+  if (perMonth <= 0) throw new Error('--reserve 가 월 할당량보다 크다');
+
+  console.log(`
+${plan.name} 플랜에서 나눠 하기 ──────────────────────`);
+  if (reserve) console.log(`  달마다 ${reserve.toLocaleString()} 크레딧은 다른 용도로 남긴다 → 변환에 ${perMonth.toLocaleString()}`);
+
+  let left = credits, month = 0;
+  while (left > 0 && month < 24) {
+    month++;
+    const use = Math.min(left, perMonth);
+    left -= use;
+    console.log(`  ${month}개월차  ${use.toLocaleString()} 크레딧 변환` +
+                (left ? `  · 남음 ${left.toLocaleString()}` : '  · 완료'));
+  }
+  const over = Math.max(0, credits - perMonth);
+  const oneShot = plan.over == null ? null : (over / 1000) * plan.over;
+  console.log(`
+  한 달에 다 하면   추가 ${oneShot == null ? '불가 (무료 플랜)' : '$' + oneShot.toFixed(2)}`);
+  console.log(`  ${month}개월에 나누면  추가 $0`);
+}
+console.log('');
